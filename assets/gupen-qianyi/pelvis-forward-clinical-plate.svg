@@ -1,0 +1,175 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 860" role="img" aria-labelledby="title desc">
+  <title id="title">骨盆前移临床解剖图版</title>
+  <desc id="desc">米白临床手稿风格图版，展示骨盆前移、矢状面垂线、膝超伸、腹内压与足跟承重的关系。</desc>
+  <defs>
+    <filter id="paperNoise" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="4" seed="12"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.11"/>
+      </feComponentTransfer>
+    </filter>
+    <filter id="softShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#4d3928" flood-opacity=".13"/>
+    </filter>
+    <marker id="arrow-rust" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#9f5b43"/>
+    </marker>
+    <marker id="arrow-olive" viewBox="0 0 10 10" refX="8.4" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#798065"/>
+    </marker>
+    <style>
+      .bg{fill:#f5eddc}
+      .ink{stroke:#3d3025}
+      .muted{stroke:#a99478}
+      .soft{stroke:#cdbb9e}
+      .rust{stroke:#9f5b43}
+      .olive{stroke:#798065}
+      .fill-bone{fill:#fff8ea}
+      .fill-soft{fill:#eadcc4}
+      .fill-rust{fill:#c98b74}
+      .fill-olive{fill:#d9dec3}
+      .thin{fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+      .med{fill:none;stroke-width:4;stroke-linecap:round;stroke-linejoin:round}
+      .heavy{fill:none;stroke-width:7;stroke-linecap:round;stroke-linejoin:round}
+      .label{font-family:"Songti SC","STSong","Noto Serif CJK SC","SimSun",serif;fill:#3b2d22}
+      .small{font-size:20px}
+      .tiny{font-size:15px;fill:#746656}
+      .num{font-family:Georgia,"Times New Roman",serif;font-style:italic;fill:#a0835b}
+    </style>
+  </defs>
+
+  <rect class="bg" width="1200" height="860"/>
+  <rect width="1200" height="860" filter="url(#paperNoise)"/>
+  <rect x="36" y="34" width="1128" height="792" rx="18" fill="none" stroke="#bda989" stroke-width="2"/>
+  <rect x="54" y="52" width="1092" height="756" rx="12" fill="none" stroke="#d3c3a7" stroke-width="1.5"/>
+
+  <g opacity=".55">
+    <path class="thin muted" d="M98 145 C70 128 66 91 92 68 C119 96 125 125 98 145Z"/>
+    <path class="thin muted" d="M119 188 C90 173 88 135 116 112 C141 141 145 170 119 188Z"/>
+    <path class="thin muted" d="M82 230 C55 210 55 175 86 156 C108 187 110 214 82 230Z"/>
+    <path class="thin muted" d="M111 267 C82 254 75 219 101 194 C131 218 137 247 111 267Z"/>
+    <path class="thin muted" d="M101 73 C133 129 136 196 92 277"/>
+    <path class="thin muted" d="M1108 672 C1137 689 1140 725 1113 748 C1087 720 1082 691 1108 672Z"/>
+    <path class="thin muted" d="M1083 631 C1114 648 1116 686 1087 709 C1062 679 1059 650 1083 631Z"/>
+    <path class="thin muted" d="M1119 586 C1147 606 1145 642 1114 660 C1093 629 1091 602 1119 586Z"/>
+    <path class="thin muted" d="M1094 744 C1064 689 1062 623 1111 577"/>
+  </g>
+
+  <text x="600" y="102" text-anchor="middle" class="label" font-size="21" letter-spacing="8">CLINICAL TRAINING NOTE</text>
+  <path class="thin muted" d="M414 128 H786"/>
+  <path class="thin muted" d="M548 142 C570 128 630 128 652 142"/>
+  <text x="600" y="206" text-anchor="middle" class="label" font-size="68" font-weight="700">骨盆前移改善思路</text>
+  <text x="600" y="258" text-anchor="middle" class="label" font-size="28" fill="#6c5a48">矢状面承重线、腹内压与足跟支撑的重新建立</text>
+
+  <g transform="translate(75 300)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="505" height="410" rx="22" fill="#fff9ee" opacity=".64" stroke="#c8b797" stroke-width="2"/>
+    <path class="thin muted" d="M22 42 C22 18 42 20 42 20 H463 C463 20 483 18 483 42"/>
+    <path class="thin muted" d="M22 368 C22 392 42 390 42 390 H463 C463 390 483 392 483 368"/>
+    <text x="56" y="72" class="num" font-size="62">01</text>
+    <text x="150" y="62" class="label" font-size="28" font-weight="700">先看线：大转子是否越过踝垂线</text>
+    <line x1="167" y1="100" x2="167" y2="360" stroke="#798065" stroke-width="4" stroke-dasharray="10 10"/>
+    <text x="58" y="120" class="tiny">理想垂线</text>
+    <text x="58" y="142" class="tiny">踝 · 膝 · 髋 · 肩</text>
+
+    <g transform="translate(155 36)">
+      <circle cx="172" cy="84" r="31" class="fill-bone ink" stroke-width="4"/>
+      <path class="thin soft" d="M162 76 C174 70 185 72 194 82"/>
+      <path class="heavy ink" d="M174 116 C149 161 151 213 185 262"/>
+      <path class="med soft" d="M163 136 C205 154 231 188 238 227"/>
+      <path class="thin soft" d="M166 158 C200 172 222 196 228 222"/>
+      <path class="med ink" d="M128 263 C162 221 217 225 251 270 C231 306 185 321 142 298 C128 289 123 277 128 263Z"/>
+      <circle cx="161" cy="270" r="13" class="thin ink"/>
+      <circle cx="218" cy="271" r="13" class="thin ink"/>
+      <path class="thin soft" d="M148 286 C171 299 202 300 232 284"/>
+      <path class="heavy ink" d="M153 301 C143 353 149 387 179 432"/>
+      <path class="heavy ink" d="M217 300 C243 342 261 381 281 430"/>
+      <path class="heavy ink" d="M179 432 C157 454 130 465 104 462"/>
+      <path class="heavy ink" d="M281 430 C262 452 236 463 211 462"/>
+      <path class="med rust" d="M153 364 C189 352 224 354 258 367"/>
+      <path class="med olive" d="M91 463 C133 441 191 440 239 462"/>
+    </g>
+
+    <path d="M167 298 H328" stroke="#9f5b43" stroke-width="5" marker-end="url(#arrow-rust)"/>
+    <text x="331" y="291" class="label small" fill="#9f5b43" font-weight="700">骨盆整体前移</text>
+    <text x="331" y="318" class="tiny">不是单纯前倾</text>
+    <path d="M351 214 C390 228 420 250 440 286" class="med rust" marker-end="url(#arrow-rust)"/>
+    <text x="376" y="190" class="label small" fill="#9f5b43" font-weight="700">腰椎硬顶</text>
+    <text x="374" y="216" class="tiny">上身后仰平衡</text>
+    <text x="353" y="376" class="label small" fill="#9f5b43" font-weight="700">膝超伸</text>
+    <text x="353" y="402" class="tiny">用关节末端换稳定</text>
+  </g>
+
+  <g transform="translate(620 300)" filter="url(#softShadow)">
+    <rect x="0" y="0" width="505" height="410" rx="22" fill="#fff9ee" opacity=".64" stroke="#c8b797" stroke-width="2"/>
+    <path class="thin muted" d="M22 42 C22 18 42 20 42 20 H463 C463 20 483 18 483 42"/>
+    <path class="thin muted" d="M22 368 C22 392 42 390 42 390 H463 C463 390 483 392 483 368"/>
+    <text x="56" y="72" class="num" font-size="62">02</text>
+    <text x="150" y="62" class="label" font-size="28" font-weight="700">再看压力：胸廓、骨盆与腹内压</text>
+
+    <g transform="translate(52 95)">
+      <path class="med ink" d="M140 52 C103 72 84 112 92 158 C102 214 150 232 197 213 C236 196 253 158 244 117 C236 78 196 50 140 52Z"/>
+      <path class="thin soft" d="M113 83 C145 70 190 72 221 94"/>
+      <path class="thin soft" d="M108 111 C148 98 199 101 231 126"/>
+      <path class="thin soft" d="M111 142 C150 130 197 132 226 156"/>
+      <path class="thin soft" d="M123 174 C155 166 191 168 212 187"/>
+      <path class="med rust" d="M104 202 C142 179 190 179 230 202"/>
+      <path class="thin ink" d="M168 58 L168 207"/>
+      <path class="thin ink" d="M141 63 C132 104 132 155 147 205"/>
+      <path class="thin ink" d="M196 64 C206 106 204 157 188 205"/>
+      <text x="74" y="252" class="label small" font-weight="700">膈肌像杯盖</text>
+      <text x="64" y="279" class="tiny">胸廓压缩时，压力会向前下方逃逸</text>
+    </g>
+
+    <g transform="translate(294 108)">
+      <path class="med ink" d="M56 115 C75 69 132 66 174 112 C160 154 116 175 72 156 C58 149 51 132 56 115Z"/>
+      <path class="thin soft" d="M76 139 C106 154 139 153 162 135"/>
+      <circle cx="87" cy="122" r="12" class="thin ink"/>
+      <circle cx="144" cy="123" r="12" class="thin ink"/>
+      <path class="med rust" d="M96 104 C119 77 153 76 184 100" marker-end="url(#arrow-rust)"/>
+      <path class="med rust" d="M109 161 C128 191 152 204 182 208" marker-end="url(#arrow-rust)"/>
+      <path class="med olive" d="M41 209 C82 232 150 232 205 210" marker-end="url(#arrow-olive)"/>
+      <text x="23" y="39" class="label small" fill="#9f5b43" font-weight="700">骨盆跑到前方</text>
+      <text x="18" y="65" class="tiny">小腹和下背更容易受压</text>
+      <text x="20" y="255" class="label small" fill="#798065" font-weight="700">目标：足跟向下，身体向上</text>
+    </g>
+
+    <line x1="248" y1="124" x2="248" y2="344" stroke="#cdbb9e" stroke-width="1.5"/>
+  </g>
+
+  <g transform="translate(109 740)">
+    <text x="492" y="0" text-anchor="middle" class="label" font-size="32" font-weight="700">判断与改善顺序</text>
+    <path class="thin muted" d="M255 14 H728"/>
+  </g>
+
+  <g transform="translate(100 770)">
+    <circle cx="55" cy="34" r="31" fill="#fff8ea" stroke="#c8b797" stroke-width="2"/>
+    <path class="med ink" d="M40 48 C55 30 77 31 91 48"/>
+    <path class="med olive" d="M25 55 C53 68 86 66 105 54" marker-end="url(#arrow-olive)"/>
+    <text x="55" y="92" text-anchor="middle" class="label" font-size="18">足跟承重</text>
+    <path class="med muted" d="M136 34 H208" marker-end="url(#arrow-olive)"/>
+
+    <circle cx="265" cy="34" r="31" fill="#fff8ea" stroke="#c8b797" stroke-width="2"/>
+    <path class="med ink" d="M242 36 C256 10 289 12 303 38 C288 63 259 66 240 50Z"/>
+    <path class="med rust" d="M222 36 H276" marker-end="url(#arrow-rust)"/>
+    <text x="265" y="92" text-anchor="middle" class="label" font-size="18">骨盆回线</text>
+    <path class="med muted" d="M346 34 H418" marker-end="url(#arrow-olive)"/>
+
+    <circle cx="475" cy="34" r="31" fill="#fff8ea" stroke="#c8b797" stroke-width="2"/>
+    <path class="thin ink" d="M454 18 C480 7 505 18 510 43 C501 65 472 68 454 50Z"/>
+    <path class="med rust" d="M454 52 C475 38 494 38 513 52"/>
+    <text x="475" y="92" text-anchor="middle" class="label" font-size="18">腹压重分布</text>
+    <path class="med muted" d="M556 34 H628" marker-end="url(#arrow-olive)"/>
+
+    <circle cx="685" cy="34" r="31" fill="#fff8ea" stroke="#c8b797" stroke-width="2"/>
+    <path class="heavy ink" d="M685 8 C670 32 672 56 690 74"/>
+    <path class="med olive" d="M658 75 C682 58 706 58 730 75"/>
+    <text x="685" y="92" text-anchor="middle" class="label" font-size="18">向上支撑</text>
+    <path class="med muted" d="M766 34 H838" marker-end="url(#arrow-olive)"/>
+
+    <circle cx="895" cy="34" r="31" fill="#fff8ea" stroke="#c8b797" stroke-width="2"/>
+    <path class="heavy ink" d="M888 10 C873 37 878 59 902 75"/>
+    <path class="med ink" d="M873 77 H926"/>
+    <text x="895" y="92" text-anchor="middle" class="label" font-size="18">站立整合</text>
+  </g>
+</svg>
