@@ -51,6 +51,53 @@
       border-bottom: 1px solid var(--line);
     }
 
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      padding: 8px 13px 8px 8px;
+      border: 1px solid rgba(163, 79, 63, 0.34);
+      border-radius: 999px;
+      background: rgba(255, 248, 234, 0.48);
+      box-shadow: 0 10px 26px rgba(68, 48, 31, 0.07);
+      color: var(--deep);
+    }
+
+    .brand-seal {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      place-items: center;
+      border: 1px solid var(--muscle-soft);
+      border-radius: 50%;
+      background: var(--bone);
+      color: var(--muscle);
+      font-size: 23px;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .brand-text {
+      display: grid;
+      gap: 1px;
+    }
+
+    .brand-text b {
+      color: #35281e;
+      font-size: 17px;
+      line-height: 1.15;
+      letter-spacing: 0.04em;
+    }
+
+    .brand-text span {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.15;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
     .eyebrow {
       margin: 0 0 14px;
       color: var(--muscle);
@@ -434,6 +481,25 @@
       letter-spacing: 0;
     }
 
+    .signature {
+      display: flex;
+      justify-content: space-between;
+      gap: 18px;
+      align-items: center;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid rgba(255, 248, 234, 0.2);
+      color: rgba(255, 248, 234, 0.78);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .signature b {
+      color: #fff8ea;
+      font-size: 17px;
+      letter-spacing: 0.04em;
+    }
+
     @media (max-width: 900px) {
       .page {
         padding: 28px 16px 44px;
@@ -477,6 +543,10 @@
         width: 190px;
         margin-top: 16px;
       }
+
+      .signature {
+        display: grid;
+      }
     }
 
     @media print {
@@ -512,6 +582,13 @@
   <main class="page">
     <header class="hero">
       <div>
+        <div class="brand-mark" aria-label="Lara 体态觉醒">
+          <span class="brand-seal">L</span>
+          <span class="brand-text">
+            <b>Lara 体态觉醒</b>
+            <span>Posture Awakening</span>
+          </span>
+        </div>
         <p class="eyebrow">POSTURE · CORE PRESSURE · LOWER ABDOMEN</p>
         <h1>悬垂腹训练思路</h1>
         <p class="lead">
@@ -791,6 +868,10 @@
 
       <div class="closing">
         <p>悬垂腹的改变，不是把腹部练得更紧，而是让腹部重新成为身体中轴的一部分。</p>
+        <div class="signature">
+          <b>Lara 体态觉醒</b>
+          <span>体态觉醒与功能重建 · 学生讲义</span>
+        </div>
       </div>
     </section>
   </main>
