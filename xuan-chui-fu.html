@@ -1,0 +1,793 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>悬垂腹训练思路</title>
+  <style>
+    :root {
+      --paper: #f3ebdc;
+      --paper-2: #eadfcb;
+      --ink: #34291f;
+      --muted: #746656;
+      --line: #cbbba3;
+      --bone: #fff8ea;
+      --muscle: #a34f3f;
+      --muscle-soft: #d9a18e;
+      --deep: #66503d;
+      --olive: #7b8064;
+      --shadow: rgba(68, 48, 31, 0.13);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 12% 0%, rgba(255, 248, 234, 0.95), transparent 34rem),
+        linear-gradient(135deg, #efe4d0 0%, var(--paper) 42%, #e7d8bf 100%);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", Arial, sans-serif;
+      line-height: 1.75;
+      letter-spacing: 0;
+    }
+
+    .page {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 44px 22px 64px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(310px, 0.92fr);
+      gap: 34px;
+      align-items: center;
+      min-height: 560px;
+      padding-bottom: 28px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--muscle);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(42px, 6.2vw, 78px);
+      line-height: 1.04;
+      letter-spacing: 0;
+      color: #2f241b;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 26px 0 0;
+      color: #56483a;
+      font-size: 20px;
+      line-height: 1.82;
+    }
+
+    .lead strong,
+    .intro strong {
+      color: var(--muscle);
+    }
+
+    .hero-points {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 34px;
+    }
+
+    .point {
+      min-height: 132px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 248, 234, 0.42);
+      box-shadow: 0 12px 28px rgba(68, 48, 31, 0.07);
+    }
+
+    .point b {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--deep);
+      font-size: 15px;
+    }
+
+    .point span {
+      display: block;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .anatomy-board {
+      position: relative;
+      min-height: 520px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background:
+        linear-gradient(90deg, rgba(103, 81, 61, 0.06) 1px, transparent 1px),
+        linear-gradient(rgba(103, 81, 61, 0.05) 1px, transparent 1px),
+        rgba(255, 249, 238, 0.38);
+      background-size: 26px 26px;
+      box-shadow: 0 18px 52px var(--shadow);
+      overflow: hidden;
+    }
+
+    .anatomy-board svg {
+      width: 100%;
+      height: 100%;
+      min-height: 520px;
+      display: block;
+    }
+
+    .figure-caption {
+      position: absolute;
+      left: 18px;
+      right: 18px;
+      bottom: 18px;
+      padding: 14px 16px;
+      border: 1px solid rgba(203, 187, 163, 0.8);
+      border-radius: 8px;
+      background: rgba(243, 235, 220, 0.86);
+      color: var(--deep);
+      font-size: 14px;
+      line-height: 1.6;
+      backdrop-filter: blur(7px);
+    }
+
+    section {
+      padding: 48px 0 0;
+    }
+
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
+      gap: 28px;
+      align-items: start;
+      padding-bottom: 22px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .kicker {
+      margin: 0 0 8px;
+      color: var(--muscle);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    h2 {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(30px, 4vw, 46px);
+      line-height: 1.16;
+      color: #34271d;
+      letter-spacing: 0;
+    }
+
+    .intro {
+      margin: 0;
+      color: #5e5042;
+      font-size: 18px;
+      line-height: 1.86;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .cell {
+      min-height: 230px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 249, 238, 0.45);
+    }
+
+    .cell h3 {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin: 0 0 12px;
+      color: #3d2e22;
+      font-size: 20px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .num {
+      display: inline-grid;
+      flex: 0 0 auto;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border: 1px solid var(--muscle-soft);
+      border-radius: 50%;
+      color: var(--muscle);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 17px;
+      font-weight: 700;
+    }
+
+    .cell p,
+    .note p,
+    .phase p,
+    .check p {
+      margin: 0;
+      color: #5f5144;
+      font-size: 15px;
+      line-height: 1.78;
+    }
+
+    .cell p + p {
+      margin-top: 10px;
+    }
+
+    .callout {
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      gap: 18px;
+      align-items: stretch;
+      margin-top: 22px;
+    }
+
+    .quote {
+      padding: 26px;
+      border-radius: 8px;
+      background: #3a2d23;
+      color: #fff8ea;
+      box-shadow: 0 18px 44px var(--shadow);
+    }
+
+    .quote p {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(25px, 3vw, 38px);
+      line-height: 1.28;
+      letter-spacing: 0;
+    }
+
+    .note {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 248, 234, 0.54);
+    }
+
+    .diagnosis {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .type-card {
+      position: relative;
+      min-height: 310px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 249, 238, 0.45);
+      overflow: hidden;
+    }
+
+    .type-card svg {
+      position: absolute;
+      right: -10px;
+      bottom: -16px;
+      width: 210px;
+      opacity: 0.72;
+    }
+
+    .type-card h3 {
+      max-width: 78%;
+      margin: 0 0 12px;
+      color: #3d2e22;
+      font-size: 22px;
+      line-height: 1.3;
+    }
+
+    .type-card p {
+      position: relative;
+      z-index: 1;
+      max-width: 74%;
+      margin: 0;
+      color: #5f5144;
+      font-size: 15px;
+      line-height: 1.78;
+    }
+
+    .type-card .tag {
+      display: inline-block;
+      margin-bottom: 14px;
+      padding: 4px 9px;
+      border: 1px solid var(--muscle-soft);
+      border-radius: 999px;
+      color: var(--muscle);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 14px;
+      margin-top: 22px;
+      counter-reset: phase;
+    }
+
+    .phase {
+      display: grid;
+      grid-template-columns: 84px minmax(0, 0.54fr) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 249, 238, 0.45);
+    }
+
+    .phase::before {
+      counter-increment: phase;
+      content: "0" counter(phase);
+      display: grid;
+      place-items: center;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: var(--paper-2);
+      color: var(--muscle);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 22px;
+      font-weight: 700;
+      border: 1px solid var(--line);
+    }
+
+    .phase h3 {
+      margin: 2px 0 0;
+      color: #3b2d22;
+      font-size: 21px;
+      line-height: 1.35;
+    }
+
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 14px;
+      margin-top: 22px;
+    }
+
+    .check {
+      min-height: 220px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(255, 249, 238, 0.45);
+    }
+
+    .check b {
+      display: block;
+      margin-bottom: 12px;
+      color: var(--muscle);
+      font-size: 14px;
+      letter-spacing: 0.04em;
+    }
+
+    .avoid {
+      margin-top: 22px;
+      padding: 26px;
+      border-left: 5px solid var(--muscle);
+      background: rgba(163, 79, 63, 0.08);
+      border-radius: 8px;
+    }
+
+    .avoid h3 {
+      margin: 0 0 12px;
+      color: #3a2d23;
+      font-size: 22px;
+    }
+
+    .avoid p {
+      margin: 0;
+      color: #5b4b3d;
+      font-size: 16px;
+      line-height: 1.86;
+    }
+
+    .closing {
+      margin-top: 56px;
+      padding: 34px;
+      border-radius: 8px;
+      background: #33271e;
+      color: #fff8ea;
+    }
+
+    .closing p {
+      max-width: 900px;
+      margin: 0;
+      font-family: Georgia, "Times New Roman", "Songti SC", serif;
+      font-size: clamp(26px, 3.7vw, 46px);
+      line-height: 1.34;
+      letter-spacing: 0;
+    }
+
+    @media (max-width: 900px) {
+      .page {
+        padding: 28px 16px 44px;
+      }
+
+      .hero,
+      .section-head,
+      .callout,
+      .diagnosis {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .hero-points,
+      .grid,
+      .grid.two,
+      .checks {
+        grid-template-columns: 1fr;
+      }
+
+      .phase {
+        grid-template-columns: 62px 1fr;
+      }
+
+      .phase p {
+        grid-column: 2;
+      }
+
+      .type-card p,
+      .type-card h3 {
+        max-width: 100%;
+      }
+
+      .type-card svg {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: 190px;
+        margin-top: 16px;
+      }
+    }
+
+    @media print {
+      body {
+        background: var(--paper);
+      }
+
+      .page {
+        max-width: none;
+        padding: 18mm;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .cell,
+      .type-card,
+      .phase,
+      .check,
+      .note,
+      .quote,
+      .closing,
+      .avoid,
+      .anatomy-board {
+        break-inside: avoid;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <div>
+        <p class="eyebrow">POSTURE · CORE PRESSURE · LOWER ABDOMEN</p>
+        <h1>悬垂腹训练思路</h1>
+        <p class="lead">
+          悬垂腹的核心，不是“肚子不够用力”，而是<strong>腹内压没有被身体向上托住</strong>。
+          训练的方向不是把腹部练硬，而是让胸廓、骨盆、脊柱重新排好位置，让小腹学会从下往上参与。
+        </p>
+        <div class="hero-points">
+          <div class="point">
+            <b>先看排列</b>
+            <span>胸廓和骨盆像杯盖和杯底，错位以后，腹压就会往前、往下跑。</span>
+          </div>
+          <div class="point">
+            <b>再看呼吸</b>
+            <span>吸气能不能进入腰背、侧腰、下腹，决定腹腔是不是一个完整气囊。</span>
+          </div>
+          <div class="point">
+            <b>最后看顺序</b>
+            <span>正确收腹不是上腹先夹紧，而是最小腹向上提，肋骨自然回收。</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="anatomy-board" aria-label="悬垂腹解剖逻辑示意图">
+        <svg viewBox="0 0 420 540" role="img" aria-labelledby="diagram-title diagram-desc">
+          <title id="diagram-title">胸廓骨盆与腹内压示意</title>
+          <desc id="diagram-desc">米白解剖风格线稿，显示胸廓、骨盆和腹压向下的关系。</desc>
+          <defs>
+            <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#a34f3f"></path>
+            </marker>
+            <marker id="olive-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M 0 0 L 10 5 L 0 10 z" fill="#7b8064"></path>
+            </marker>
+          </defs>
+
+          <path d="M210 64 C196 90 190 124 190 172 C190 214 198 250 208 286 C224 338 232 384 216 452" fill="none" stroke="#66503d" stroke-width="5" stroke-linecap="round"></path>
+          <path d="M210 64 C224 90 230 124 230 172 C230 214 222 250 212 286 C196 338 188 384 204 452" fill="none" stroke="#b9a88f" stroke-width="2" stroke-linecap="round"></path>
+
+          <path d="M140 126 C154 90 184 72 210 74 C236 72 266 90 280 126 C268 152 246 166 210 166 C174 166 152 152 140 126 Z" fill="#fff8ea" stroke="#66503d" stroke-width="3"></path>
+          <path d="M142 137 C170 126 190 122 210 123 C230 122 250 126 278 137" fill="none" stroke="#cbbba3" stroke-width="2"></path>
+          <path d="M154 153 C178 142 194 138 210 139 C226 138 242 142 266 153" fill="none" stroke="#cbbba3" stroke-width="2"></path>
+          <path d="M170 82 C152 120 150 158 168 194" fill="none" stroke="#66503d" stroke-width="2"></path>
+          <path d="M250 82 C268 120 270 158 252 194" fill="none" stroke="#66503d" stroke-width="2"></path>
+
+          <ellipse cx="210" cy="256" rx="78" ry="112" fill="rgba(217, 161, 142, 0.34)" stroke="#a34f3f" stroke-width="3"></ellipse>
+          <path d="M166 214 C188 235 232 235 254 214" fill="none" stroke="#a34f3f" stroke-width="4" stroke-linecap="round"></path>
+          <path d="M156 282 C184 306 236 306 264 282" fill="none" stroke="#a34f3f" stroke-width="4" stroke-linecap="round"></path>
+
+          <path d="M138 408 C154 360 184 342 210 356 C236 342 266 360 282 408 C262 436 240 454 210 454 C180 454 158 436 138 408 Z" fill="#fff8ea" stroke="#66503d" stroke-width="3"></path>
+          <path d="M162 406 C184 392 236 392 258 406" fill="none" stroke="#cbbba3" stroke-width="2"></path>
+          <circle cx="176" cy="410" r="10" fill="none" stroke="#66503d" stroke-width="2"></circle>
+          <circle cx="244" cy="410" r="10" fill="none" stroke="#66503d" stroke-width="2"></circle>
+
+          <path d="M108 114 C78 160 72 236 92 294" fill="none" stroke="#a34f3f" stroke-width="3" marker-end="url(#arrow)"></path>
+          <path d="M312 114 C342 160 348 236 328 294" fill="none" stroke="#a34f3f" stroke-width="3" marker-end="url(#arrow)"></path>
+          <path d="M210 198 C210 244 210 304 210 352" fill="none" stroke="#a34f3f" stroke-width="4" stroke-dasharray="10 9" marker-end="url(#arrow)"></path>
+          <path d="M136 468 C164 494 256 494 284 468" fill="none" stroke="#7b8064" stroke-width="4" marker-end="url(#olive-arrow)"></path>
+          <path d="M294 245 C328 236 350 220 364 194" fill="none" stroke="#7b8064" stroke-width="3" marker-end="url(#olive-arrow)"></path>
+
+          <text x="42" y="92" fill="#66503d" font-size="15" font-weight="700">胸廓</text>
+          <text x="42" y="114" fill="#746656" font-size="12">杯盖位置</text>
+          <text x="286" y="190" fill="#a34f3f" font-size="15" font-weight="700">腹压偏下</text>
+          <text x="286" y="212" fill="#746656" font-size="12">小腹被动承压</text>
+          <text x="42" y="394" fill="#66503d" font-size="15" font-weight="700">骨盆</text>
+          <text x="42" y="416" fill="#746656" font-size="12">杯底支撑</text>
+          <text x="248" y="482" fill="#7b8064" font-size="15" font-weight="700">训练目标</text>
+          <text x="248" y="504" fill="#746656" font-size="12">下腹向上托住</text>
+        </svg>
+        <div class="figure-caption">
+          这张图的重点不是肌肉名字，而是方向：悬垂腹训练要把“向下掉的压力”重新变成“向上托的支持”。
+        </div>
+      </div>
+    </header>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="kicker">01 · 底层定义</p>
+          <h2>悬垂腹到底是什么</h2>
+        </div>
+        <p class="intro">
+          悬垂腹通常表现为上腹相对平，肋骨以下到小腹整体向下坠，像水滴一样挂在腹腔前下方。
+          它不等于单纯脂肪，也不等于“核心弱”。更准确地说，是<strong>身体失去了把腹腔内容物向上托住的功能</strong>。
+        </p>
+      </div>
+
+      <div class="grid">
+        <article class="cell">
+          <h3><span class="num">1</span>腹压方向错了</h3>
+          <p>理想状态下，吸气时腹腔像气囊一样前后左右上下均匀扩张；呼气时从下腹、盆底向上回收。</p>
+          <p>悬垂腹常见的是吸气进不到腰背和下腹，呼气又从上腹先夹紧，压力就更容易往小腹和盆底方向堆。</p>
+        </article>
+        <article class="cell">
+          <h3><span class="num">2</span>收腹顺序错了</h3>
+          <p>很多人以为收腹是“把肚子吸进去”，结果每次都是上腹先用力，肋骨下缘变硬，小腹反而没有参与。</p>
+          <p>真正要恢复的是：最小腹向上提，侧腰向内包，上腹自然向内向下降。</p>
+        </article>
+        <article class="cell">
+          <h3><span class="num">3</span>抗重力能力掉了</h3>
+          <p>站立时，身体需要把内脏、腹压、胸廓、骨盆一起向上支撑。</p>
+          <p>当骨盆前移、膝盖超伸、重心压在前脚掌，身体就像一个向前折的杯子，小腹会成为压力出口。</p>
+        </article>
+      </div>
+
+      <div class="callout">
+        <div class="quote">
+          <p>悬垂腹不是把肚子练紧，而是把腹压重新托回身体中轴。</p>
+        </div>
+        <div class="note">
+          <p>
+            所以训练不能只问“做什么腹部动作”，而要先问四件事：
+            胸廓能不能扩张，骨盆有没有前移，腰背能不能吸气，小腹能不能在呼气时向上参与。
+            这四件事没有恢复，越努力收腹，越容易练成上腹紧、小腹垂。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="kicker">02 · 学生自查</p>
+          <h2>先分清是哪种悬垂腹</h2>
+        </div>
+        <p class="intro">
+          同样是小腹下垂，背后的入口不一定一样。常见有两个主线：
+          一个来自<strong>前侧胸廓压缩</strong>，一个来自<strong>骨盆前移和重心前压</strong>。
+          分清入口，训练才不会乱。
+        </p>
+      </div>
+
+      <div class="diagnosis">
+        <article class="type-card">
+          <span class="tag">前侧胸廓压缩型</span>
+          <h3>小肋骨角型悬垂腹</h3>
+          <p>
+            这类人常见胸廓窄、肋骨角偏小、前侧胸口像被压住。
+            一收腹，上腹最先硬起来；一吸气，气进不到前胸和侧腰。
+            训练重点不是一开始就卷腹，而是先恢复胸廓弹性，让吸气能把肋骨和腰背打开。
+          </p>
+          <svg viewBox="0 0 180 220" aria-hidden="true">
+            <path d="M90 30 C68 58 56 88 58 120 C60 154 72 176 90 192 C108 176 120 154 122 120 C124 88 112 58 90 30 Z" fill="none" stroke="#66503d" stroke-width="4"></path>
+            <path d="M60 108 C76 96 104 96 120 108" fill="none" stroke="#a34f3f" stroke-width="4"></path>
+            <path d="M76 52 C62 84 62 126 78 158" fill="none" stroke="#cbbba3" stroke-width="3"></path>
+            <path d="M104 52 C118 84 118 126 102 158" fill="none" stroke="#cbbba3" stroke-width="3"></path>
+          </svg>
+        </article>
+
+        <article class="type-card">
+          <span class="tag">重心前压型</span>
+          <h3>骨盆前移型悬垂腹</h3>
+          <p>
+            这类人侧面看骨盆整体往前顶，腰曲偏大，膝盖容易超伸，站着时重心更多压在前脚掌。
+            小腹不是单独松，而是整个人的重心没有被脚后跟和骨盆向上支撑。
+            训练重点是先让重心回到中线和脚后跟，再谈小腹上提。
+          </p>
+          <svg viewBox="0 0 180 220" aria-hidden="true">
+            <path d="M90 28 C82 64 78 98 90 132 C102 166 98 186 88 204" fill="none" stroke="#66503d" stroke-width="5" stroke-linecap="round"></path>
+            <path d="M58 146 C72 118 98 112 124 146 C116 172 102 188 82 188 C68 180 58 166 58 146 Z" fill="none" stroke="#66503d" stroke-width="4"></path>
+            <path d="M98 128 C124 138 136 158 136 182" fill="none" stroke="#a34f3f" stroke-width="4" marker-end="url(#mini-arrow)"></path>
+            <defs>
+              <marker id="mini-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#a34f3f"></path>
+              </marker>
+            </defs>
+          </svg>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="kicker">03 · 训练路径</p>
+          <h2>解决悬垂腹的四层顺序</h2>
+        </div>
+        <p class="intro">
+          这四层是训练优先级，不是具体动作清单。学生只要记住顺序，就不会用“更累的腹部动作”去覆盖真正的问题。
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="phase">
+          <h3>先恢复中轴排列</h3>
+          <p>
+            胸廓、骨盆、脊柱要先回到比较垂直的关系。只有杯盖和杯底对上，腹内压才有机会形成均匀的圆筒。
+            如果骨盆前移、肋骨压缩、腰椎被顶住，任何腹部训练都会先被代偿吃掉。
+          </p>
+        </article>
+        <article class="phase">
+          <h3>再恢复呼吸容量</h3>
+          <p>
+            训练不是追求“腹部瘪”，而是让吸气能进入前胸、侧腰、下背和下腹。
+            能扩张，才有回收；不能扩张的人，通常只能靠上腹硬夹。
+          </p>
+        </article>
+        <article class="phase">
+          <h3>建立下腹上提顺序</h3>
+          <p>
+            呼气时的关键是从最小腹、盆底方向向上托，不是把肚脐以上先锁死。
+            学生要感受到小腹像拉链一样往上走，肋骨只是自然回收，不是暴力下压。
+          </p>
+        </article>
+        <article class="phase">
+          <h3>整合到站立抗重力</h3>
+          <p>
+            悬垂腹最终要回到站、走、蹲、拿东西这些日常场景。
+            如果只在垫上会收，一站起来又骨盆前顶、膝盖超伸，小腹还是会被重力和腹压推下去。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="kicker">04 · 训练是否有效</p>
+          <h2>看四个变化，不看酸不酸</h2>
+        </div>
+        <p class="intro">
+          悬垂腹训练的反馈，不是腹肌酸不酸，也不是当天体重有没有变。
+          真正要看的是形态、呼吸、顺序和站姿有没有变。
+        </p>
+      </div>
+
+      <div class="checks">
+        <article class="check">
+          <b>形态变化</b>
+          <p>放松站立时，肋骨以下的坠感变轻，小腹不再明显向下挂，肚脐不再一直往下耷拉。</p>
+        </article>
+        <article class="check">
+          <b>呼吸变化</b>
+          <p>吸气时不只是胸口抬，也能感觉侧腰、后腰、下腹有轻微撑开的压力。</p>
+        </article>
+        <article class="check">
+          <b>顺序变化</b>
+          <p>收核心时，上腹不再第一个硬起来，小腹能先轻轻向上参与，肋骨随后自然回收。</p>
+        </article>
+        <article class="check">
+          <b>站姿变化</b>
+          <p>站立时不再总想把骨盆往前顶，脚后跟更有存在感，身体像从地面被托高。</p>
+        </article>
+      </div>
+
+      <div class="avoid">
+        <h3>初期最容易走错的方向</h3>
+        <p>
+          不要一上来追求卷腹、仰卧起坐、强平板、低位举腿，或者任何让腹部明显向外鼓包的训练。
+          这些动作本身不是永远不能做，但在悬垂腹早期，如果身体还不会分配腹压，只会让上腹更紧、小腹更被动。
+          对产后、漏尿、盆底坠胀、腹直肌分离明显的人，更要先把呼吸和压力方向练对。
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <div>
+          <p class="kicker">05 · 学生要记住</p>
+          <h2>一句话总结</h2>
+        </div>
+        <p class="intro">
+          你不是要把肚子“吸没”，你是要让身体重新拥有向上的支撑。
+          当胸廓能扩张，骨盆能承托，小腹能从下往上参与，悬垂腹才会真正改变。
+        </p>
+      </div>
+
+      <div class="grid two">
+        <article class="cell">
+          <h3><span class="num">✓</span>正确训练方向</h3>
+          <p>先排列，再呼吸；先下腹上提，再整合站立；先让身体会托住压力，再谈更强的腹部训练。</p>
+        </article>
+        <article class="cell">
+          <h3><span class="num">×</span>错误训练方向</h3>
+          <p>只盯着肚子做高强度腹肌训练，只追求收紧和酸胀，不管胸廓、骨盆、呼吸和重心。</p>
+        </article>
+      </div>
+
+      <div class="closing">
+        <p>悬垂腹的改变，不是把腹部练得更紧，而是让腹部重新成为身体中轴的一部分。</p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
