@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>体态觉醒与功能重建 · 6天师资进修 | Lara 老师</title>
+<meta name="description" content="融合 DNS / APTA / PRI / 关节松动四大国际体系，6天系统教你评估、松解、训练，从根本调整体态——让身体既好看又好用。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,400..700&family=JetBrains+Mono:wght@400;500;700&family=Noto+Sans+SC:wght@300;400;500;700&family=Noto+Serif+SC:wght@500;700;900&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#f0ede4;
+  --ink-2:#faf8f3;
+  --ink-3:#ffffff;
+  --paper:#262420;
+  --paper-dim:rgba(38,36,32,.68);
+  --paper-faint:rgba(38,36,32,.46);
+  --ember:#d97757;
+  --ember-soft:#e8a583;
+  --amber:#b85c38;
+  --line:rgba(38,36,32,.13);
+  --line-soft:rgba(38,36,32,.06);
+  --mono:"JetBrains Mono",ui-monospace,monospace;
+  --serif:"Noto Serif SC","Fraunces",serif;
+  --sans:"Noto Sans SC",system-ui,sans-serif;
+  --frau:"Fraunces",serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--ink);color:var(--paper);font-family:var(--sans);
+  font-weight:300;line-height:1.75;overflow-x:hidden;-webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.9'/%3E%3C/svg%3E");
+  opacity:.035;mix-blend-mode:multiply;
+}
+body::after{
+  content:"";position:fixed;top:-30%;left:50%;transform:translateX(-50%);
+  width:120vw;height:80vh;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse at center,rgba(217,119,87,.16),transparent 62%);
+  filter:blur(50px);opacity:.7;
+}
+::selection{background:var(--ember);color:#fff}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;position:relative;z-index:2}
+.mono{font-family:var(--mono);font-weight:400;letter-spacing:.02em}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ember);font-weight:500}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:20px 32px;transition:.5s cubic-bezier(.16,1,.3,1);border-bottom:1px solid transparent}
+nav.scrolled{background:rgba(240,237,228,.85);backdrop-filter:blur(16px);border-bottom:1px solid var(--line);padding:14px 32px}
+.brand{font-family:var(--mono);font-weight:700;font-size:15px;letter-spacing:.04em;display:flex;align-items:center;gap:9px}
+.brand .dot{width:8px;height:8px;background:var(--ember);border-radius:50%;box-shadow:0 0 12px var(--ember);animation:pulse 2.4s infinite}
+@keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.45;transform:scale(.8)}}
+.nav-links{display:flex;gap:30px;align-items:center}
+.nav-links a{font-size:13.5px;color:var(--paper-dim);transition:.3s;letter-spacing:.02em}
+.nav-links a:hover{color:var(--paper)}
+.nav-cta{font-family:var(--mono);font-size:13px;font-weight:500;border:1px solid var(--ember);color:var(--ember);padding:9px 18px;border-radius:2px;transition:.3s}
+.nav-cta:hover{background:var(--ember);color:#fff}
+@media(max-width:780px){.nav-links a:not(.nav-cta){display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:140px 0 80px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.2fr .9fr;gap:56px;align-items:center}
+@media(max-width:920px){.hero-grid{grid-template-columns:1fr;gap:40px}}
+.term-line{font-family:var(--mono);font-size:15px;color:var(--paper-dim);margin-bottom:30px;display:inline-flex;align-items:center;gap:10px;opacity:0;animation:rise .8s .1s forwards}
+.term-line .prompt{color:var(--ember)}
+h1{font-family:var(--serif);font-weight:900;font-size:clamp(38px,6vw,78px);line-height:1.06;letter-spacing:-.01em;margin-bottom:28px}
+h1 .em{color:var(--ember);font-style:normal}
+h1 .it{font-family:var(--frau);font-style:italic;font-weight:400;color:var(--amber)}
+h1 span{display:block;opacity:0;animation:rise .9s forwards}
+h1 span:nth-child(1){animation-delay:.25s}
+h1 span:nth-child(2){animation-delay:.4s}
+.lede{font-size:clamp(16px,1.7vw,19px);color:var(--paper-dim);max-width:32em;margin-bottom:38px;line-height:1.85;opacity:0;animation:rise .9s .6s forwards}
+.lede b{color:var(--paper);font-weight:500}
+.hero-cta{display:flex;gap:16px;flex-wrap:wrap;opacity:0;animation:rise .9s .75s forwards}
+.btn{font-family:var(--mono);font-size:14px;font-weight:500;letter-spacing:.02em;padding:15px 28px;border-radius:2px;transition:.35s cubic-bezier(.16,1,.3,1);display:inline-flex;align-items:center;gap:9px;cursor:pointer}
+.btn-primary{background:var(--ember);color:#fff;font-weight:700}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 14px 34px rgba(217,119,87,.35)}
+.btn-ghost{border:1px solid var(--line);color:var(--paper)}
+.btn-ghost:hover{border-color:var(--paper);background:rgba(38,36,32,.04)}
+.hero-meta{display:flex;gap:34px;margin-top:54px;flex-wrap:wrap;opacity:0;animation:rise .9s .9s forwards}
+.hero-meta .mi{display:flex;flex-direction:column;gap:5px}
+.hero-meta .mi .l{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--paper-faint);text-transform:uppercase}
+.hero-meta .mi .v{font-family:var(--serif);font-size:20px;font-weight:700}
+
+/* assessment card */
+.card{background:linear-gradient(160deg,#ffffff,#ebe7dd);border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 30px 70px rgba(120,80,60,.14);opacity:0;animation:rise 1s .5s forwards}
+.card-bar{display:flex;align-items:center;gap:10px;padding:16px 20px;border-bottom:1px solid var(--line);background:rgba(217,119,87,.05)}
+.card-bar .ico{width:22px;height:22px;border-radius:50%;background:var(--ember);display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;font-weight:700}
+.card-bar .t{font-family:var(--mono);font-size:12.5px;color:var(--paper-dim);letter-spacing:.04em}
+.card-body{padding:18px 22px}
+.asg{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line-soft);font-size:14px}
+.asg:last-child{border-bottom:0}
+.asg .lab{color:var(--paper-dim);font-family:var(--sans)}
+.asg .tag{font-family:var(--mono);font-size:11.5px;padding:3px 11px;border-radius:20px;color:var(--amber);background:rgba(184,92,56,.12)}
+.asg .tag.ok{color:var(--ember);background:rgba(217,119,87,.13)}
+.card-foot{padding:14px 22px;border-top:1px solid var(--line);font-family:var(--mono);font-size:12.5px;color:var(--paper-dim);background:rgba(38,36,32,.02)}
+.card-foot .seq{color:var(--ember)}
+.cursor-blink{display:inline-block;width:7px;height:13px;background:var(--ember);vertical-align:-2px;animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@keyframes rise{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+
+/* SECTION SHELL */
+section{padding:120px 0;position:relative}
+.sec-head{margin-bottom:60px;max-width:780px}
+.sec-head .kicker{display:block;margin-bottom:18px}
+.sec-head h2{font-family:var(--serif);font-weight:900;font-size:clamp(30px,4.2vw,52px);line-height:1.12;letter-spacing:-.01em}
+.sec-head h2 .em{color:var(--ember)}
+.sec-head h2 .it{font-family:var(--frau);font-style:italic;font-weight:400;color:var(--amber)}
+.sec-head p{margin-top:22px;color:var(--paper-dim);font-size:17px;max-width:48em}
+.reveal{opacity:0;transform:translateY(34px);transition:1s cubic-bezier(.16,1,.3,1)}
+.reveal.in{opacity:1;transform:none}
+
+/* SYSTEMS (four schools) */
+.systems{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:56px}
+@media(max-width:880px){.systems{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.systems{grid-template-columns:1fr}}
+.sys{border:1px solid var(--line);border-radius:8px;padding:26px 22px;transition:.4s;background:linear-gradient(160deg,rgba(255,255,255,.5),transparent)}
+.sys:hover{border-color:rgba(217,119,87,.4);transform:translateY(-4px)}
+.sys .abbr{font-family:var(--frau);font-weight:700;font-size:30px;color:var(--ember);line-height:1;margin-bottom:12px}
+.sys .full{font-family:var(--mono);font-size:11px;letter-spacing:.06em;color:var(--paper-faint);margin-bottom:12px;text-transform:uppercase}
+.sys p{font-size:14px;color:var(--paper-dim);line-height:1.7}
+
+/* VS */
+.vs{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+@media(max-width:780px){.vs{grid-template-columns:1fr}}
+.vs > div{padding:46px 40px}
+.vs .old{background:rgba(38,36,32,.02);border-right:1px solid var(--line)}
+.vs .new{background:linear-gradient(160deg,rgba(217,119,87,.07),transparent)}
+.vs h3{font-family:var(--mono);font-size:13px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:22px}
+.vs .old h3{color:var(--paper-faint)}
+.vs .new h3{color:var(--ember)}
+.vs .big{font-family:var(--serif);font-size:26px;font-weight:700;line-height:1.4;margin-bottom:16px}
+.vs .old .big{color:var(--paper-dim)}
+.vs p{color:var(--paper-dim);font-size:15.5px;line-height:1.8}
+.vs .strike{text-decoration:line-through;text-decoration-color:var(--ember);text-decoration-thickness:2px;opacity:.55}
+.pillars{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:52px}
+@media(max-width:780px){.pillars{grid-template-columns:1fr}}
+.pillar{padding:32px 28px;border:1px solid var(--line);border-radius:6px;transition:.4s}
+.pillar:hover{border-color:rgba(217,119,87,.4);transform:translateY(-4px)}
+.pillar .n{font-family:var(--frau);font-style:italic;font-size:42px;color:var(--ember);line-height:1;margin-bottom:18px}
+.pillar h4{font-family:var(--serif);font-size:21px;font-weight:700;margin-bottom:12px}
+.pillar p{color:var(--paper-dim);font-size:14.5px}
+
+/* THEORY flow + grid */
+.flow{border:1px solid var(--line);border-radius:8px;padding:38px 40px;background:linear-gradient(160deg,var(--ink-2),var(--ink));margin-bottom:48px}
+.flow-row{display:flex;align-items:center;gap:16px;flex-wrap:wrap;font-family:var(--mono)}
+.flow-node{padding:15px 20px;border:1px solid var(--line);border-radius:4px;font-size:14px;background:rgba(255,255,255,.5);white-space:nowrap}
+.flow-node.out{border-color:rgba(184,92,56,.5);color:var(--amber)}
+.flow-arrow{color:var(--ember);font-size:18px}
+.flow-cap{margin-top:24px;font-size:14.5px;color:var(--paper-dim)}
+.flow-cap b{color:var(--ember);font-weight:500}
+.builds{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:780px){.builds{grid-template-columns:1fr}}
+.build{display:flex;gap:20px;padding:28px;border:1px solid var(--line);border-radius:6px;transition:.4s}
+.build:hover{background:rgba(255,255,255,.4);transform:translateX(6px)}
+.build .ix{font-family:var(--mono);color:var(--ember);font-size:14px;font-weight:700;flex-shrink:0;padding-top:3px}
+.build h4{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:8px}
+.build p{color:var(--paper-dim);font-size:14.5px}
+
+/* THEORY MODULES */
+.mods{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+@media(max-width:780px){.mods{grid-template-columns:1fr}}
+.mod{border:1px solid var(--line);border-radius:10px;padding:34px 30px;background:linear-gradient(160deg,rgba(255,255,255,.5),transparent);transition:.4s}
+.mod:hover{border-color:rgba(217,119,87,.4);transform:translateY(-4px)}
+.mod .mh{display:flex;align-items:baseline;gap:14px;margin-bottom:14px}
+.mod .mh .no{font-family:var(--frau);font-style:italic;font-size:32px;color:var(--ember);line-height:1;flex-shrink:0}
+.mod .mh h4{font-family:var(--serif);font-size:22px;font-weight:900;line-height:1.25}
+.mod .lead{color:var(--paper-dim);font-size:15px;line-height:1.8;margin-bottom:18px}
+.mod .tags{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:20px}
+.mod .tags span{font-family:var(--mono);font-size:11.5px;color:var(--ember);background:rgba(217,119,87,.08);border:1px solid rgba(217,119,87,.18);padding:5px 10px;border-radius:16px}
+.mod .ana{font-size:13.5px;color:var(--paper-dim);border-left:2px solid var(--amber);padding:8px 0 8px 14px;line-height:1.7}
+.mod .ana b{color:var(--amber);font-weight:600}
+.tquote{margin-top:52px;text-align:center;font-family:var(--serif);font-weight:700;font-size:clamp(20px,2.6vw,30px);line-height:1.5;color:var(--paper);max-width:24em;margin-left:auto;margin-right:auto}
+.tquote .em{color:var(--ember)}
+.tquote small{display:block;font-family:var(--mono);font-weight:400;font-size:13px;color:var(--paper-faint);margin-top:18px;letter-spacing:.04em}
+
+/* CURRICULUM ladder */
+.levels-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:48px;align-items:start}
+@media(max-width:880px){.levels-grid{grid-template-columns:1fr}}
+.ladder{display:flex;flex-direction:column;gap:8px}
+.rung{display:flex;align-items:center;gap:16px;padding:16px 20px;border:1px solid var(--line);border-radius:6px;cursor:pointer;transition:.35s cubic-bezier(.16,1,.3,1);background:rgba(255,255,255,.35)}
+.rung:hover{border-color:rgba(217,119,87,.4);transform:translateX(6px)}
+.rung.active{background:linear-gradient(90deg,rgba(217,119,87,.14),transparent);border-color:var(--ember)}
+.rung .lv{font-family:var(--frau);font-weight:700;font-size:15px;color:var(--ember);width:60px;flex-shrink:0;letter-spacing:.02em}
+.rung .nm{font-family:var(--sans);font-weight:500;font-size:15.5px;color:var(--paper-dim)}
+.rung.active .nm{color:var(--paper)}
+.lv-detail{position:sticky;top:100px;border:1px solid var(--line);border-radius:10px;padding:38px;background:linear-gradient(160deg,#ffffff,var(--ink));min-height:340px;box-shadow:0 20px 50px rgba(120,80,60,.08)}
+.lv-detail .badge{font-family:var(--frau);font-style:italic;font-size:18px;color:var(--ember);letter-spacing:.08em}
+.lv-detail h3{font-family:var(--serif);font-size:26px;font-weight:900;margin:6px 0 18px}
+.lv-detail p{color:var(--paper-dim);font-size:15.5px;line-height:1.85;margin-bottom:22px}
+.lv-detail .tags{display:flex;flex-wrap:wrap;gap:8px}
+.lv-detail .tags span{font-family:var(--mono);font-size:12.5px;color:var(--ember);background:rgba(217,119,87,.08);border:1px solid rgba(217,119,87,.2);padding:6px 12px;border-radius:20px}
+
+/* METHOD quote */
+.codex{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}
+@media(max-width:880px){.codex{grid-template-columns:1fr;gap:40px}}
+.codex-points{display:flex;flex-direction:column;gap:8px}
+.cp{padding:22px 0;border-bottom:1px solid var(--line);display:flex;gap:18px;align-items:flex-start}
+.cp:last-child{border-bottom:0}
+.cp .k{font-family:var(--mono);color:var(--ember);font-size:13px;font-weight:700;flex-shrink:0;width:34px;padding-top:4px}
+.cp h4{font-family:var(--serif);font-size:20px;font-weight:700;margin-bottom:6px}
+.cp p{color:var(--paper-dim);font-size:14.5px}
+.codex-quote{font-family:var(--serif);font-weight:700;font-size:clamp(24px,3vw,34px);line-height:1.5}
+.codex-quote .em{color:var(--ember)}
+.codex-quote .sub{font-family:var(--mono);font-weight:400;font-size:14px;color:var(--paper-dim);display:block;margin-top:24px;line-height:1.9}
+
+/* ABILITIES stages */
+.stages{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:880px){.stages{grid-template-columns:1fr}}
+.stage{border:1px solid var(--line);border-radius:8px;padding:34px 30px;transition:.4s;position:relative;overflow:hidden}
+.stage::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--ember),transparent);transform:scaleX(0);transform-origin:left;transition:.5s}
+.stage:hover::before{transform:scaleX(1)}
+.stage:hover{transform:translateY(-6px);border-color:rgba(217,119,87,.3)}
+.stage .st{font-family:var(--mono);font-size:12px;letter-spacing:.14em;color:var(--paper-faint);text-transform:uppercase;margin-bottom:14px}
+.stage .st b{color:var(--ember)}
+.stage h3{font-family:var(--serif);font-size:23px;font-weight:900;margin-bottom:18px}
+.stage ul{list-style:none}
+.stage li{padding:9px 0;font-size:14.5px;color:var(--paper-dim);border-bottom:1px solid var(--line-soft);display:flex;gap:10px}
+.stage li:last-child{border-bottom:0}
+.stage li::before{content:"→";color:var(--ember);flex-shrink:0}
+
+/* ISSUES grid */
+.issues{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:880px){.issues{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.issues{grid-template-columns:1fr}}
+.issue{border:1px solid var(--line);border-radius:8px;padding:26px 22px;transition:.4s;background:linear-gradient(160deg,rgba(255,255,255,.4),transparent)}
+.issue:hover{border-color:rgba(217,119,87,.35);transform:translateY(-5px)}
+.issue .d{font-family:var(--mono);font-size:11px;letter-spacing:.08em;color:var(--amber);margin-bottom:12px;text-transform:uppercase}
+.issue h4{font-family:var(--serif);font-size:18px;font-weight:700;margin-bottom:8px;line-height:1.3}
+.issue p{color:var(--paper-dim);font-size:13.5px;line-height:1.7}
+
+/* WHO cases */
+.cases{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+@media(max-width:880px){.cases{grid-template-columns:1fr}}
+.case{border:1px solid var(--line);border-radius:8px;padding:34px 30px;transition:.4s;background:linear-gradient(160deg,rgba(255,255,255,.45),transparent)}
+.case:hover{border-color:rgba(217,119,87,.3);transform:translateY(-5px)}
+.case .tag{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ember);margin-bottom:16px}
+.case h4{font-family:var(--serif);font-size:21px;font-weight:900;margin-bottom:14px}
+.case p{color:var(--paper-dim);font-size:14.5px;line-height:1.8}
+
+/* INSTRUCTOR */
+.inst{display:grid;grid-template-columns:.8fr 1.2fr;gap:54px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:56px;background:linear-gradient(150deg,#ffffff,var(--ink))}
+@media(max-width:880px){.inst{grid-template-columns:1fr;gap:36px;padding:40px}}
+.inst-mark{font-family:var(--frau);font-weight:300;font-size:clamp(48px,7vw,96px);line-height:.95;color:var(--ember)}
+.inst-mark span{display:block;font-family:var(--serif);font-weight:900;font-size:clamp(34px,5vw,58px);color:var(--paper)}
+.inst h3{font-family:var(--mono);font-size:14px;letter-spacing:.1em;color:var(--ember);margin-bottom:18px;text-transform:uppercase}
+.inst p{color:var(--paper-dim);font-size:16px;line-height:1.9;margin-bottom:18px}
+.inst p b{color:var(--paper);font-weight:500}
+.inst .nums{display:flex;gap:40px;margin-top:28px;flex-wrap:wrap}
+.inst .nums .x{font-family:var(--frau);font-style:italic;font-size:34px;color:var(--amber);font-weight:600}
+.inst .nums .x small{display:block;font-family:var(--sans);font-style:normal;font-size:13px;color:var(--paper-faint);font-weight:300;margin-top:4px}
+
+/* AFTERCARE */
+.after{border:1px solid var(--line);border-radius:12px;overflow:hidden;display:grid;grid-template-columns:repeat(3,1fr);background:linear-gradient(150deg,var(--ink-2),var(--ink))}
+@media(max-width:880px){.after{grid-template-columns:1fr}}
+.after .ap{padding:42px 36px;border-right:1px solid var(--line)}
+.after .ap:last-child{border-right:0}
+@media(max-width:880px){.after .ap{border-right:0;border-bottom:1px solid var(--line)}.after .ap:last-child{border-bottom:0}}
+.after .step{font-family:var(--frau);font-style:italic;font-size:48px;color:var(--ember);line-height:1;margin-bottom:20px}
+.after .ap h4{font-family:var(--serif);font-size:21px;font-weight:900;margin-bottom:14px}
+.after .ap p{color:var(--paper-dim);font-size:14.5px;line-height:1.8}
+.after .ap .meta{font-family:var(--mono);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:14px;display:block}
+.after .ap.gold{background:linear-gradient(150deg,rgba(184,92,56,.08),transparent)}
+.after .ap.gold .step{color:var(--amber)}
+
+/* CTA */
+.final{text-align:center;padding:140px 0 120px}
+.final h2{font-family:var(--serif);font-weight:900;font-size:clamp(34px,6vw,72px);line-height:1.08;margin-bottom:26px}
+.final h2 .em{color:var(--ember)}
+.final h2 .it{font-family:var(--frau);font-style:italic;font-weight:400;color:var(--amber)}
+.final p{color:var(--paper-dim);font-size:18px;max-width:36em;margin:0 auto 44px}
+.info-card{display:grid;grid-template-columns:repeat(4,1fr);gap:0;max-width:840px;margin:0 auto 48px;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:rgba(255,255,255,.4)}
+@media(max-width:680px){.info-card{grid-template-columns:repeat(2,1fr)}}
+.info-card .ic{padding:28px 20px;border-right:1px solid var(--line);text-align:center}
+.info-card .ic:last-child{border-right:0}
+@media(max-width:680px){.info-card .ic:nth-child(2){border-right:0}.info-card .ic:nth-child(1),.info-card .ic:nth-child(2){border-bottom:1px solid var(--line)}}
+.info-card .ic .l{font-family:var(--mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--paper-faint);margin-bottom:10px}
+.info-card .ic .v{font-family:var(--serif);font-size:21px;font-weight:700}
+.final-note{font-family:var(--mono);font-size:12.5px;color:var(--paper-faint);margin-top:30px}
+
+footer{border-top:1px solid var(--line);padding:46px 0;text-align:center}
+footer .f{font-family:var(--mono);font-size:13px;color:var(--paper-faint);letter-spacing:.04em}
+footer .f .dot{color:var(--ember)}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <a href="#top" class="brand"><span class="dot"></span>体态觉醒 / 功能重建</a>
+  <div class="nav-links">
+    <a href="#why">课程体系</a>
+    <a href="#theory">底层理论</a>
+    <a href="#modules">四大板块</a>
+    <a href="#curriculum">六天详解</a>
+    <a href="#issues">能解决什么</a>
+    <a href="#join" class="nav-cta">报名进修</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="term-line"><span class="prompt">~ 体态觉醒与功能重建</span> · 6 天师资进修 · Lara 老师</div>
+      <h1>
+        <span>系统看懂体态，</span>
+        <span>让身体<span class="em">既好看</span><span class="it">又好用</span>。</span>
+      </h1>
+      <p class="lede">融合 <b>DNS / APTA / PRI / 关节松动</b> 四套国际前沿体系，6 天带你从"会带几个动作"升级到"会评估、会松解、会开方案"。<b>体态是结果，不是原因</b>——这门课教你找到中间那个过程，从根本上重建。</p>
+      <div class="hero-cta">
+        <a href="#join" class="btn btn-primary">报名进修 →</a>
+        <a href="#curriculum" class="btn btn-ghost">看六天详细课表</a>
+      </div>
+      <div class="hero-meta">
+        <div class="mi"><span class="l">主讲</span><span class="v">Lara 老师</span></div>
+        <div class="mi"><span class="l">时长</span><span class="v">6 天 · 系统进修</span></div>
+        <div class="mi"><span class="l">体系</span><span class="v">四大融合</span></div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-bar"><span class="ico">✓</span><span class="t">全身体态评估 · 示例</span></div>
+      <div class="card-body">
+        <div class="asg"><span class="lab">腹内压（IAP）</span><span class="tag">前侧塌陷</span></div>
+        <div class="asg"><span class="lab">胸廓 / 骨盆对位</span><span class="tag">骨盆前移</span></div>
+        <div class="asg"><span class="lab">腹型</span><span class="tag">悬垂腹</span></div>
+        <div class="asg"><span class="lab">下肢腿型</span><span class="tag">X 型腿</span></div>
+        <div class="asg"><span class="lab">肩胛 / 胸椎</span><span class="tag">翼状肩胛</span></div>
+        <div class="asg"><span class="lab">承重模式（PRI）</span><span class="tag ok">右侧承重</span></div>
+      </div>
+      <div class="card-foot"><span class="seq">评估</span> → 松解 → 训练 → <span class="seq">重建</span><span class="cursor-blink"></span></div>
+    </div>
+  </div>
+</header>
+
+<!-- SYSTEM / POSITIONING -->
+<section id="why">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 课程体系</span>
+      <h2>不是又一套动作，<br>是一套<span class="em">看懂身体</span>的系统。</h2>
+      <p>市面上多数体态课在教"这个问题练哪个动作"。这门课教你的是背后那套逻辑——综合四套国际前沿体系，让你面对任何一个身体，都能自己评估、自己判断、自己开方案。</p>
+    </div>
+    <div class="systems">
+      <div class="sys reveal"><div class="abbr">DNS</div><div class="full">捷克发育神经学</div><p>以婴儿发育模式为基础，从本质恢复人天生具备的体态与功能。</p></div>
+      <div class="sys reveal"><div class="abbr">APTA</div><div class="full">美国物理治疗</div><p>运动康复的底层逻辑，临床康复视角下的训练设计。</p></div>
+      <div class="sys reveal"><div class="abbr">PRI</div><div class="full">姿势恢复研究所</div><p>专门处理高低肩、长短腿、骨盆回旋等不对称问题。</p></div>
+      <div class="sys reveal"><div class="abbr">松动</div><div class="full">关节松动 · 魔力感</div><p>从关节层面解除卡压与受限，而不只是从肌肉入手。</p></div>
+    </div>
+    <div class="vs reveal">
+      <div class="old">
+        <h3>碎片化学动作</h3>
+        <div class="big strike">头痛医头，脚痛医脚</div>
+        <p>背了一堆"假胯宽练这个、圆肩练那个"。换一个身体、换一种组合就懵了——因为你只记住了招式，没看懂底层。</p>
+      </div>
+      <div class="new">
+        <h3>系统化懂原理</h3>
+        <div class="big">从整体入手，对症重建</div>
+        <p>理解筋膜整体观、腹内压、对位与不对称之后，你看到的不再是孤立问题，而是一条可追溯、可干预的链条。</p>
+      </div>
+    </div>
+    <div class="pillars">
+      <div class="pillar reveal"><div class="n">既</div><h4>既好看，又好用</h4><p>好看是审美，好用是功能。这门课的目标是两者同时具备，而不是只把外形掰直。</p></div>
+      <div class="pillar reveal"><div class="n">整</div><h4>全身整体观</h4><p>人是一张被筋膜包裹的蜘蛛网，牵一处而动全身。体态是系统问题，必须从整体调。</p></div>
+      <div class="pillar reveal"><div class="n">闭</div><h4>评估·手法·训练闭环</h4><p>先评估找到原因，再用松解手法解除卡压，最后用对症训练重建——一条完整闭环。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- THEORY -->
+<section id="theory">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 底层逻辑</span>
+      <h2>体态是<span class="em">结果</span>，<br>不是原因。</h2>
+      <p>所有体态问题都能沿着同一条链条往回推。看懂这条链，你才知道该在哪里下手——而不是对着外形硬掰。</p>
+    </div>
+    <div class="flow reveal">
+      <div class="flow-row">
+        <span class="flow-node">行为</span><span class="flow-arrow">→</span>
+        <span class="flow-node">姿势</span><span class="flow-arrow">→</span>
+        <span class="flow-node">结构</span><span class="flow-arrow">→</span>
+        <span class="flow-node out">体态（外在呈现）</span>
+      </div>
+      <div class="flow-cap">举例 · 悬垂腹：<b>久坐含胸看手机</b> → 胸廓塌陷呼吸短浅 → 骨盆前倾、腹内压往前走 → 悬垂腹。你要找的，是中间那个"他到底做错了什么"。</div>
+    </div>
+    <div class="builds">
+      <div class="build reveal"><span class="ix">01</span><div><h4>筋膜张拉结构</h4><p>从头到脚被筋膜包成一张蜘蛛网，任一处受力全网形变。这是"牵一发动全身"整体观的底层逻辑。</p></div></div>
+      <div class="build reveal"><span class="ix">02</span><div><h4>胸廓 / 骨盆对位</h4><p>胸廓与骨盆的相对位置，直接决定腹部形态与脊柱体态。对位错了，怎么练腹都没用。</p></div></div>
+      <div class="build reveal"><span class="ix">03</span><div><h4>腹内压（IAP）</h4><p>膈肌 + 盆底 + 腹横肌构成的内核心。腹内压的方向决定了你是收腹还是顶腹，是核心中的核心。</p></div></div>
+      <div class="build reveal"><span class="ix">04</span><div><h4>人体不对称理论</h4><p>人天生不对称。右侧承重模式带来全身连锁反应——PRI 视角让你看懂长短腿、骨盆回旋的真正成因。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- THEORY MODULES -->
+<section id="modules">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 四大理论板块</span>
+      <h2>每个动作背后，<br>都有一套<span class="em">说得清</span>的理论。</h2>
+      <p>理论不是背书，是你以后独立判断、给客户解释的底气。课程理论分为基础、中轴、下肢、上肢四个板块——这套认知体系，正是你和大多数培训师最大的差距来源。</p>
+    </div>
+    <div class="mods">
+      <div class="mod reveal">
+        <div class="mh"><span class="no">壹</span><h4>基础理论 · 看身体的底层语言</h4></div>
+        <p class="lead">用五大学科 + 四套国际体系，建立"整体观"与"对抗重力"这条贯穿全程的主线。先有共同语言，后面每个动作才讲得通。</p>
+        <div class="tags"><span>生物力学</span><span>神经科学</span><span>动态张拉整体</span><span>解剖 · 物理</span><span>DNS / APTA / PRI / 关节松动</span><span>行为→姿势→结构→体态</span><span>三维平面 · 三种力</span><span>关节联动 · 重心转换</span><span>调整顺序：中轴→四肢→整体</span></div>
+        <p class="ana"><b>蜘蛛网</b>：从任意一点施力，整张网都有响应。没有局部问题，只有整体失衡在某处的体现。</p>
+      </div>
+      <div class="mod reveal">
+        <div class="mh"><span class="no">贰</span><h4>中轴理论 · 决定一切的地基</h4></div>
+        <p class="lead">胸廓、骨盆、脊柱三者的对位，决定了腹内压、重心和四肢的起始角度。中轴没对位，加再多核心训练都是代偿。</p>
+        <div class="tags"><span>腹内压双层容器</span><span>外层骨性 + 内层肌肉</span><span>胸廓弹性</span><span>矢状面垂直对位</span><span>三平面参与的核心</span><span>胸廓恢复弹性</span><span>骨盆恢复旋转</span><span>两者恢复交互</span></div>
+        <p class="ana"><b>保温杯</b>：盖子歪了、底座裂了，再使劲拧也密封不住。看到客户"核心无力"，先问的不是肌肉强不强，而是"容器对位了吗"。</p>
+      </div>
+      <div class="mod reveal">
+        <div class="mh"><span class="no">叁</span><h4>下肢理论 · 从骨盆螺旋到足底</h4></div>
+        <p class="lead">下肢不是四个独立零件，而是一个从骨盆出发、一路螺旋到足底的完整系统。每一段反向扭转，整条腿才有张力、才能承重。</p>
+        <div class="tags"><span>下肢螺旋排列</span><span>骨盆运动规律：旋前→外展外旋</span><span>髋 · 股骨 · 膝 · 胫骨 · 足踝</span><span>髋膝踝动力链</span><span>妈妈臀</span><span>假胯宽</span><span>X 型腿 · O 型腿</span></div>
+        <p class="ana"><b>前轮定位</b>：定位歪了，换轮胎、换刹车片都没用——每次都在歪的方向上磨损。膝盖内扣，根源可能在骨盆、在髋、在踝。</p>
+      </div>
+      <div class="mod reveal">
+        <div class="mh"><span class="no">肆</span><h4>上肢理论 · 肩颈问题的真正源头</h4></div>
+        <p class="lead">颈椎病、富贵包、圆肩驼背、肩袖损伤——大多数根源不在肩颈，在中轴。上肢是从脊柱曲度一路传导到肱骨头的排列链。</p>
+        <div class="tags"><span>脊柱 S 型三段曲度</span><span>胸椎 = 旋转核心 & 最常见断点</span><span>肩胛骨贴合胸廓</span><span>翼状肩胛</span><span>圆肩驼背 · 头前引</span><span>富贵包 · 颈椎病</span></div>
+        <p class="ana"><b>多米诺骨牌</b>：第一张倒了，后面一路倒。很多人只去扶最后一张——颈椎、肩膀，却忘了找第一张是哪里倒的。</p>
+      </div>
+    </div>
+    <div class="tquote reveal">人与人的差距就在<span class="em">认知</span>，<br>认知的高度，决定了解决问题的能力。
+      <small>// 这门课的每个动作和理论，都有五个学科作为支撑，而不是凭经验摸索</small>
+    </div>
+  </div>
+</section>
+
+<!-- CURRICULUM -->
+<section id="curriculum">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 六天课程详解</span>
+      <h2>六天，<span class="it">逐日</span>带你打通全身。</h2>
+      <p>从核心地基（腹内压、腹部、悬垂腹），到不对称与骨盆，到下肢腿型与足部，再到上肢动力链。点开每一天，看看具体讲什么。</p>
+    </div>
+    <div class="levels-grid">
+      <div class="ladder reveal" id="ladder"></div>
+      <div class="lv-detail reveal" id="lvDetail"></div>
+    </div>
+  </div>
+</section>
+
+<!-- METHOD -->
+<section id="method">
+  <div class="wrap codex">
+    <div class="reveal">
+      <span class="kicker" style="display:block;margin-bottom:24px">// 为什么评估必须先行</span>
+      <div class="codex-quote">没评估就开练，<br>像 <span class="em">没诊断就开药</span>。
+        <span class="sub">同样是悬垂腹，有人是高张腹、有人是骨盆前移、有人是小肋骨角型——成因不同，方案完全不同。</span>
+      </div>
+    </div>
+    <div class="codex-points reveal">
+      <div class="cp"><span class="k">01</span><div><h4>先评估，找到真正成因</h4><p>三平面观察、杆子测试、奥博测试、肋骨角、假胯宽三步评估、足底功能测试——一套可复制的评估流程。</p></div></div>
+      <div class="cp"><span class="k">02</span><div><h4>再松解，解除卡压</h4><p>腹部擀皮、膈肌 / 盆底松解、胸腰筋膜松解、跟骨巨骨复位、髋 / 肩 / 足踝关节松动术。</p></div></div>
+      <div class="cp"><span class="k">03</span><div><h4>后训练，对症重建</h4><p>9090 系列、不对称训练、平衡训练、臀部塑形进阶——每个体态问题都配一套完整可落地的训练方案。</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABILITIES -->
+<section id="abilities">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 你将掌握的三大能力</span>
+      <h2>学完，你能<br><span class="em">自己评估、自己开方案</span>。</h2>
+    </div>
+    <div class="stages">
+      <div class="stage reveal">
+        <div class="st">能力 <b>01</b> · 评估力</div>
+        <h3>看一眼，就知道问题在哪</h3>
+        <ul>
+          <li>三个运动平面快速筛查</li>
+          <li>矢状面杆子测试 · 重心转换测试</li>
+          <li>髋关节下落（奥博）测试</li>
+          <li>肋骨角 / 假胯宽三步 / 足底功能测试</li>
+        </ul>
+      </div>
+      <div class="stage reveal">
+        <div class="st">能力 <b>02</b> · 手法力</div>
+        <h3>用手解除卡压与受限</h3>
+        <ul>
+          <li>腹部松解：擀皮 / 膈肌 / 盆底 / 疤痕</li>
+          <li>跟骨、巨骨复位与胸腰筋膜松解</li>
+          <li>髋、肩、足踝关节松动术</li>
+          <li>做前先评估，做后立刻复评见效</li>
+        </ul>
+      </div>
+      <div class="stage reveal">
+        <div class="st">能力 <b>03</b> · 方案力</div>
+        <h3>对症开出完整训练方案</h3>
+        <ul>
+          <li>9090 内核心激活系列</li>
+          <li>不对称训练 8 大核心动作</li>
+          <li>平衡训练：重心转换 + 关节联动</li>
+          <li>臀部塑形与下肢螺旋排列进阶</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ISSUES -->
+<section id="issues">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 你能搞定的体态问题</span>
+      <h2>常见的难题，<br>这门课<span class="em">逐一</span>给你解法。</h2>
+      <p>每一种都讲透：怎么识别、根本成因是什么、用什么手法、配什么训练。下面只是一部分。</p>
+    </div>
+    <div class="issues">
+      <div class="issue reveal"><div class="d">DAY 1</div><h4>高张腹 · 葫芦腹</h4><p>腹内压方向错乱导致的上凸，从内核心激活重建。</p></div>
+      <div class="issue reveal"><div class="d">DAY 1–2</div><h4>各型悬垂腹</h4><p>骨盆前移型、小肋骨角型——成因不同，分型施策。</p></div>
+      <div class="issue reveal"><div class="d">DAY 2</div><h4>八字背 · 钻石坑</h4><p>胸廓弹性缺失与旋转功能丢失，重建胸腰联动。</p></div>
+      <div class="issue reveal"><div class="d">DAY 4</div><h4>妈妈臀 · 假胯宽</h4><p>骨盆形变与髋部失能，收骨盆 + 青蛙趴激活。</p></div>
+      <div class="issue reveal"><div class="d">DAY 5</div><h4>X 型腿 · O 型腿</h4><p>下肢螺旋排列关系，从上往下调的核心逻辑。</p></div>
+      <div class="issue reveal"><div class="d">DAY 5</div><h4>足部功能退化</h4><p>足底三段功能结构，主动训练唤醒"地基"。</p></div>
+      <div class="issue reveal"><div class="d">DAY 6</div><h4>翼状肩胛 · 胸椎变直</h4><p>上肢动力链整体观，重建胸廓弹性与肩胛控制。</p></div>
+      <div class="issue reveal"><div class="d">DAY 6</div><h4>圆肩驼背 · 头前引</h4><p>分清真驼背与代偿，关节联动多米诺式调整。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- WHO -->
+<section id="who">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 适合谁来学</span>
+      <h2>如果你想从"带练"<br>升级成<span class="em">"解决问题"</span>。</h2>
+    </div>
+    <div class="cases">
+      <div class="case reveal"><div class="tag">体态 / 私教</div><h4>做体态调整方向的教练</h4><p>已经在带体态课，但常常凭经验、说不清原理，想要一套能复制、能讲透的评估与方案体系。</p></div>
+      <div class="case reveal"><div class="tag">普拉提 / 瑜伽</div><h4>普拉提 · 瑜伽老师</h4><p>想加深功能解剖与康复视角，让自己的课更专业、更有针对性，而不只是流程化带动作。</p></div>
+      <div class="case reveal"><div class="tag">想做高客单</div><h4>想升级客单价的老师</h4><p>体态调整强度不大却立竿见影，正是高客单人群想要的。学会解决问题，才配得上高定价。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- INSTRUCTOR -->
+<section id="inst">
+  <div class="wrap">
+    <div class="inst reveal">
+      <div class="inst-mark">体态<span>Lara</span></div>
+      <div>
+        <h3>// 主讲老师</h3>
+        <p><b>把四套国际前沿体系，融成一套能落地的教学。</b>DNS、APTA、PRI、关节松动——Lara 老师不是把它们简单拼在一起，而是用"行为→姿势→结构→体态"的逻辑串成一条线，让复杂的康复理论变成教练能直接上手的评估、手法和方案。</p>
+        <p>她强调的从来不是"练得多累"，而是"看得多准"：先看懂这个身体，再决定怎么调——让身体既好看，又好用。</p>
+        <div class="nums">
+          <div class="x">4 大体系<small>DNS / APTA / PRI / 松动</small></div>
+          <div class="x">6 天<small>系统进修，逐日打通全身</small></div>
+          <div class="x">20+ 体态<small>常见问题逐一讲透</small></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AFTERCARE / MONETIZE -->
+<section id="after">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <span class="kicker">// 学完不只是会调</span>
+      <h2>把专业，<br>变成<span class="it">能成交</span>的体验课。</h2>
+      <p>会评估、会调整还不够——这门课也教你怎么把"专业"呈现给客户、转化成订单。一套体验课开单思路，让你的实力被看见。</p>
+    </div>
+    <div class="after reveal">
+      <div class="ap">
+        <span class="meta">体验课 · 评估</span>
+        <div class="step">01</div>
+        <h4>全身评估筛查</h4>
+        <p>问卷 + 拍照存档 + 骨盆 / 胸廓 / 腿型 / 肩胛的现场评估，让客户第一次"看见"自己的身体到底怎么了。</p>
+      </div>
+      <div class="ap">
+        <span class="meta">现场 · 见效</span>
+        <div class="step">02</div>
+        <h4>手写方案 + 做前做后评分</h4>
+        <p>手写第 1 / 3 / 6 个月的训练计划（手写更显用心），选快速见效的动作，做前做后打分——立竿见影最有说服力。</p>
+      </div>
+      <div class="ap gold">
+        <span class="meta">谈单 · 成交</span>
+        <div class="step">03</div>
+        <h4>卖方案，不卖节数</h4>
+        <p>让客户知道钱花在哪、未来收获什么。报价后沉默等待，看着对方的眼睛——卖的是一个周期的改变，不是几节课。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="final" id="join">
+  <div class="wrap">
+    <div class="reveal">
+      <h2>别再对着外形<span class="it">硬掰</span>了。<br>来学一套<span class="em">看懂身体</span>的系统。</h2>
+      <p>带着你想搞懂的那些体态难题来，六天后带着一整套评估、手法和方案走。</p>
+      <div class="info-card">
+        <div class="ic"><div class="l">时间</div><div class="v">下一期 · 待定</div></div>
+        <div class="ic"><div class="l">地点</div><div class="v">待确认</div></div>
+        <div class="ic"><div class="l">形式</div><div class="v">线下 · 6 天</div></div>
+        <div class="ic"><div class="l">主讲</div><div class="v">Lara 老师</div></div>
+      </div>
+      <a href="#" class="btn btn-primary" style="font-size:16px;padding:18px 40px">报名进修 →</a>
+      <div class="final-note">// 开课时间、地点、费用与报名方式待补，确认后替换</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap"><div class="f">体态觉醒与功能重建 <span class="dot">·</span> 让身体既好看又好用 <span class="dot">·</span> Lara 老师</div></div>
+</footer>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>40));
+
+const io=new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%3*.08)+'s';io.observe(el)});
+
+// CURRICULUM data — 6 days
+const LV=[
+ {lv:'DAY 1',nm:'核心地基：腹内压与腹部',t:'体系 · 腹内压 · 腹部松解 · 高张腹',d:'打地基的一天。先建立筋膜整体观与胸廓骨盆对位概念，再深入腹内压理论与测试，学会腹部分型评估与六大松解手法，最后落到高张腹（葫芦腹）与骨盆前移型悬垂腹的完整方案。',tags:['筋膜张拉结构','胸廓骨盆对位','腹内压 IAP 测试','腹部类型评估','腹部 6 大松解手法','9090 系列','骨盆前移型悬垂腹']},
+ {lv:'DAY 2',nm:'胸廓弹性与悬垂腹分型',t:'复位 · 胸廓弹性 · 八字背 · 平衡训练',d:'聚焦胸廓。复习跟骨、巨骨复位细节，吃透"胸廓弹性"这一核心概念，处理小肋骨角型悬垂腹、八字背与钻石坑，并引入平衡训练体系（重心转换 + 关节联动）。',tags:['跟骨/巨骨复位','胸廓弹性','小肋骨角型悬垂腹','八字背与钻石坑','胸腰筋膜松解','平衡训练体系']},
+ {lv:'DAY 3',nm:'人体不对称理论（PRI）',t:'不对称 · 奥博测试 · 髋关节松动',d:'最硬核的理论日。讲透人天生不对称的成因与右侧承重模式的全身连锁反应，用髋关节下落（奥博）测试做评估，配 8 大不对称训练动作，再加长短腿评估与髋关节松动术。',tags:['人体不对称理论','右侧承重模式','奥博测试','8 大不对称训练','长短腿评估','髋关节松动术']},
+ {lv:'DAY 4',nm:'骨盆运动规律与下肢',t:'热身 · 骨盆 · 妈妈臀 · 假胯宽',d:'从骨盆出发。全身关节联动热身 + 平衡训练新动作，讲透骨盆运动规律，处理妈妈臀与假胯宽（三步评估法），配足踝松动手法与臀部塑形进阶训练。',tags:['全身关节热身','骨盆运动规律','妈妈臀 · 青蛙趴','假胯宽三步评估','足踝松动手法','臀部塑形进阶']},
+ {lv:'DAY 5',nm:'腿型与足部功能',t:'螺旋排列 · X/O 型腿 · 足部 · 肩松动',d:'下肢专题。理解下肢腿型的螺旋排列本质与"从上往下调"的逻辑，系统处理 X 型腿与 O 型腿，唤醒足底三段功能，并学习肩关节松动术。',tags:['下肢螺旋排列','X 型腿方案','O 型腿方案','足底三段功能','足部主动训练','肩关节松动术']},
+ {lv:'DAY 6',nm:'上肢动力链 + 体验课开单',t:'胸椎 · 翼状肩胛 · 圆肩驼背 · 变现',d:'收官的一天。建立上肢动力链整体观，处理胸椎变直、翼状肩胛、肱骨前移、圆肩溜肩、圆肩驼背与头前引，最后用一套体验课开单思路，把你的专业变成订单。',tags:['上肢动力链','胸椎变直','翼状肩胛','肱骨前移/圆肩溜肩','圆肩驼背 · 头前引','体验课开单思路']}
+];
+const ladder=document.getElementById('ladder'),detail=document.getElementById('lvDetail');
+LV.forEach((x,i)=>{const r=document.createElement('div');r.className='rung'+(i===0?' active':'');
+ r.innerHTML=`<span class="lv">${x.lv}</span><span class="nm">${x.nm}</span>`;
+ r.onclick=()=>{document.querySelectorAll('.rung').forEach(e=>e.classList.remove('active'));r.classList.add('active');render(x)};
+ ladder.appendChild(r)});
+function render(x){detail.innerHTML=`<div class="badge">${x.lv}</div><h3>${x.nm}</h3><p>${x.d}</p><div class="tags">${x.tags.map(t=>`<span>${t}</span>`).join('')}</div>`}
+render(LV[0]);
+</script>
+</body>
+</html>
