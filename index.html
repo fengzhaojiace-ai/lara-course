@@ -4,30 +4,30 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>体态觉醒与功能重建｜6天线下师资进修</title>
-  <meta name="description" content="面向健身教练、普拉提与瑜伽老师的6天线下师资进修：建立体态评估、训练干预、复测与课程交付的完整工作系统。">
+  <meta name="description" content="面向健身教练、普拉提和瑜伽老师的6天线下课程。学习体态观察、动作选择、现场带练和练前练后对比。">
   <meta name="theme-color" content="#d92930">
   <meta property="og:title" content="体态觉醒与功能重建｜6天线下师资进修">
-  <meta property="og:description" content="从会带动作，到能看懂身体、设计方案。">
+  <meta property="og:description" content="6天学会看体态、选动作和给会员上课。">
   <meta property="og:type" content="website">
   <style>
     :root {
       --red: #d92930;
-      --red-dark: #9f161c;
-      --red-soft: #f4d9d6;
-      --paper: #f3efe7;
+      --red-dark: #9d171c;
+      --red-pale: #f4d7d4;
+      --paper: #f3eee5;
       --paper-light: #fbf9f4;
-      --paper-deep: #e8e0d3;
-      --ink: #27231f;
-      --ink-soft: #625b53;
-      --muted: #8b8177;
-      --line: #d8d0c4;
+      --paper-deep: #e9e1d5;
+      --ink: #2a2521;
+      --ink-soft: #665d55;
+      --muted: #8f8479;
+      --line: #d8cec1;
       --serif: "Iowan Old Style", "Baskerville", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      --shadow: 0 24px 80px rgba(49, 37, 27, .10);
+      --shadow: 0 22px 70px rgba(60, 42, 30, .10);
     }
 
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    html { scroll-behavior: smooth; scroll-padding-top: 78px; }
     body {
       margin: 0;
       background: var(--paper);
@@ -38,584 +38,339 @@
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    button, summary { font: inherit; }
-    ::selection { background: #f0aaa7; color: #301817; }
-    .shell { width: min(1180px, calc(100% - 48px)); margin-inline: auto; }
-    .sans { font-family: var(--sans); }
+    ::selection { background: #efaaa7; color: #321918; }
+    .shell { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 
     .site-nav {
       position: sticky;
       z-index: 80;
       top: 0;
-      border-bottom: 1px solid rgba(101, 85, 71, .16);
-      background: rgba(243, 239, 231, .92);
+      border-bottom: 1px solid rgba(102, 85, 70, .16);
+      background: rgba(243, 238, 229, .94);
       backdrop-filter: blur(18px);
     }
-    .site-nav__inner {
-      display: flex;
-      min-height: 72px;
-      align-items: center;
-      justify-content: space-between;
-      gap: 28px;
-    }
-    .brand { display: inline-flex; align-items: center; gap: 11px; line-height: 1.15; }
-    .brand__seal {
-      display: grid;
-      width: 38px;
-      height: 38px;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--red);
-      color: #fff;
-      font-size: 19px;
-    }
-    .brand strong { display: block; font-size: 17px; letter-spacing: .06em; }
-    .brand small { display: block; margin-top: 5px; color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .1em; }
-    .nav-links { display: flex; align-items: center; gap: 30px; font-family: var(--sans); font-size: 12px; }
-    .nav-links > a:not(.nav-button) { position: relative; padding-block: 8px; }
-    .nav-links > a:not(.nav-button)::after {
-      position: absolute;
-      right: 0;
-      bottom: 2px;
-      left: 0;
-      height: 1px;
-      background: var(--red);
-      content: "";
-      transform: scaleX(0);
-      transition: transform .2s ease;
-    }
-    .nav-links > a:hover::after { transform: scaleX(1); }
+    .nav-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 24px; }
+    .brand { display: inline-flex; align-items: center; gap: 11px; line-height: 1.12; }
+    .brand-seal { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font-size: 18px; }
+    .brand strong { display: block; font-size: 16px; letter-spacing: .06em; }
+    .brand small { display: block; margin-top: 5px; color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .08em; }
+    .nav-links { display: flex; align-items: center; gap: 28px; font-family: var(--sans); font-size: 12px; }
     .nav-button, .button {
       display: inline-flex;
       min-height: 46px;
       align-items: center;
       justify-content: center;
-      gap: 12px;
+      gap: 11px;
       border: 1px solid var(--ink);
       border-radius: 999px;
       padding: 9px 20px;
       font-family: var(--sans);
       font-size: 12px;
       font-weight: 700;
-      transition: transform .2s ease, background .2s ease, color .2s ease, border-color .2s ease;
+      transition: transform .2s ease, background .2s ease, color .2s ease;
     }
-    .button:hover, .nav-button:hover { transform: translateY(-2px); }
-    .nav-button, .button--red { border-color: var(--red); background: var(--red); color: #fff; }
-    .nav-button:hover, .button--red:hover { border-color: var(--red-dark); background: var(--red-dark); }
-    .button--dark { background: var(--ink); color: var(--paper-light); }
-    .button--ghost { border-color: rgba(255,255,255,.42); color: #fff; }
-    .button--ghost:hover { background: #fff; color: var(--red-dark); }
+    .nav-button, .button-red { border-color: var(--red); background: var(--red); color: #fff; }
+    .button-dark { background: var(--ink); color: #fff; }
+    .button-light { border-color: rgba(255,255,255,.48); color: #fff; }
+    .nav-button:hover, .button:hover { transform: translateY(-2px); }
 
-    .hero {
-      overflow: hidden;
-      background: var(--red);
-      color: #fff;
-    }
-    .hero__inner {
+    .hero { background: var(--red); color: #fff; }
+    .hero-inner {
       display: grid;
-      min-height: min(820px, calc(100vh - 72px));
-      grid-template-columns: minmax(0, 1.25fr) minmax(330px, .75fr);
-      gap: 76px;
+      min-height: min(760px, calc(100vh - 70px));
+      grid-template-columns: minmax(0, 1.2fr) minmax(330px, .8fr);
+      gap: 72px;
       align-items: center;
-      padding-block: 86px 78px;
+      padding-block: 78px 70px;
     }
-    .hero__eyebrow, .eyebrow {
-      font-family: var(--sans);
-      font-size: 11px;
-      font-weight: 750;
-      letter-spacing: .16em;
-      line-height: 1.5;
-      text-transform: uppercase;
-    }
-    .hero__eyebrow { color: rgba(255,255,255,.76); }
-    .hero h1 {
-      max-width: 820px;
-      margin: 22px 0 0;
-      font-size: clamp(52px, 6.8vw, 96px);
-      font-weight: 500;
-      letter-spacing: -.055em;
-      line-height: 1.05;
-    }
-    .hero h1 em { color: #ffd9c8; font-style: normal; }
-    .hero__lead {
-      max-width: 700px;
-      margin: 30px 0 0;
-      color: rgba(255,255,255,.86);
-      font-family: var(--sans);
-      font-size: 18px;
-      line-height: 1.8;
-    }
-    .hero__lead strong { color: #fff; }
-    .hero__actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 34px; }
-    .hero__facts {
-      display: grid;
-      max-width: 700px;
-      grid-template-columns: repeat(4, 1fr);
-      margin-top: 50px;
-      border-top: 1px solid rgba(255,255,255,.28);
-    }
-    .hero__facts div { padding: 17px 10px 0 0; }
-    .hero__facts span { display: block; color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 9px; letter-spacing: .08em; }
-    .hero__facts strong { display: block; margin-top: 4px; font-size: 15px; font-weight: 500; }
+    .eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 800; letter-spacing: .14em; line-height: 1.5; }
+    .hero .eyebrow { color: rgba(255,255,255,.75); }
+    .hero h1 { margin: 20px 0 0; font-size: clamp(52px, 6.8vw, 92px); font-weight: 500; letter-spacing: -.055em; line-height: 1.05; }
+    .hero h1 em { color: #ffd8c6; font-style: normal; }
+    .hero-lead { max-width: 720px; margin: 28px 0 0; color: rgba(255,255,255,.88); font-family: var(--sans); font-size: 18px; line-height: 1.85; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 32px; }
+    .hero-facts { display: grid; grid-template-columns: repeat(4, 1fr); margin-top: 46px; border-top: 1px solid rgba(255,255,255,.3); }
+    .hero-facts div { padding: 15px 10px 0 0; }
+    .hero-facts span { display: block; color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 9px; }
+    .hero-facts strong { display: block; margin-top: 3px; font-size: 14px; font-weight: 500; }
 
-    .hero-system {
-      position: relative;
-      border: 1px solid rgba(255,255,255,.42);
-      border-radius: 22px;
-      background: rgba(117, 9, 14, .24);
-      box-shadow: 0 30px 90px rgba(85, 6, 8, .25);
-      padding: 25px;
-    }
-    .hero-system::before {
-      position: absolute;
-      top: -16px;
-      right: 26px;
-      width: 72px;
-      height: 30px;
-      border: 1px solid rgba(255,255,255,.34);
-      border-radius: 50%;
-      content: "";
-      transform: rotate(-7deg);
-    }
-    .hero-system__top { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding-bottom: 17px; border-bottom: 1px solid rgba(255,255,255,.25); }
-    .hero-system__top span { color: #ffd9c8; font-family: var(--sans); font-size: 10px; letter-spacing: .1em; }
-    .hero-system__top b { font-size: 17px; font-weight: 500; }
-    .system-step {
-      display: grid;
-      grid-template-columns: 34px 1fr auto;
-      gap: 13px;
-      align-items: center;
-      padding: 19px 0;
-      border-bottom: 1px solid rgba(255,255,255,.18);
-    }
-    .system-step:last-of-type { border-bottom: 0; }
-    .system-step > span { color: rgba(255,255,255,.55); font-family: var(--sans); font-size: 10px; }
-    .system-step strong { font-size: 18px; font-weight: 500; }
-    .system-step small { color: rgba(255,255,255,.66); font-family: var(--sans); font-size: 10px; }
-    .hero-system__foot { margin: 18px 0 0; color: rgba(255,255,255,.72); font-family: var(--sans); font-size: 11px; line-height: 1.7; }
+    .plain-card { border: 1px solid rgba(255,255,255,.42); border-radius: 20px; background: rgba(116, 8, 14, .2); box-shadow: 0 28px 80px rgba(87, 6, 10, .24); padding: 24px; }
+    .plain-card h2 { margin: 0; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 21px; font-weight: 500; }
+    .plain-row { display: grid; grid-template-columns: 32px 1fr; gap: 12px; border-bottom: 1px solid rgba(255,255,255,.18); padding: 18px 0; }
+    .plain-row:last-of-type { border-bottom: 0; }
+    .plain-row span { color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 10px; }
+    .plain-row strong { display: block; font-size: 17px; font-weight: 500; }
+    .plain-row small { display: block; margin-top: 4px; color: rgba(255,255,255,.67); font-family: var(--sans); font-size: 10px; }
+    .plain-card > p { margin: 17px 0 0; color: rgba(255,255,255,.72); font-family: var(--sans); font-size: 11px; }
 
-    .section { padding-block: 105px; }
-    .section--light { background: var(--paper-light); }
-    .section--ink { background: var(--ink); color: var(--paper-light); }
-    .section--red { background: var(--red); color: #fff; }
-    .section-heading { display: grid; grid-template-columns: 1fr minmax(320px, .65fr); gap: 80px; align-items: end; margin-bottom: 52px; }
-    .section-heading .eyebrow { color: var(--red-dark); }
-    .section-heading h2 {
-      max-width: 760px;
-      margin: 13px 0 0;
-      font-size: clamp(38px, 5.2vw, 70px);
-      font-weight: 500;
-      letter-spacing: -.045em;
-      line-height: 1.12;
-    }
-    .section-heading > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 15px; line-height: 1.9; }
-    .section--ink .section-heading .eyebrow, .section--red .section-heading .eyebrow { color: #e59b82; }
-    .section--ink .section-heading > p { color: #c5bdb2; }
-    .section--red .section-heading > p { color: rgba(255,255,255,.78); }
+    .section { padding-block: 94px; }
+    .section-light { background: var(--paper-light); }
+    .section-red { background: var(--red); color: #fff; }
+    .section-head { display: grid; grid-template-columns: 1fr minmax(290px, .65fr); gap: 70px; align-items: end; margin-bottom: 43px; }
+    .section-head .eyebrow, .simple-copy .eyebrow { color: var(--red-dark); }
+    .section-head h2, .simple-copy h2 { margin: 12px 0 0; font-size: clamp(39px, 5.2vw, 66px); font-weight: 500; letter-spacing: -.045em; line-height: 1.12; }
+    .section-head > p, .simple-copy > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 14px; line-height: 1.9; }
+    .section-red .section-head .eyebrow { color: rgba(255,255,255,.68); }
+    .section-red .section-head > p { color: rgba(255,255,255,.76); }
 
-    .pain-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
-    .pain-card {
-      min-height: 330px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: rgba(255,255,255,.34);
-      padding: 25px;
-    }
-    .pain-card__num { color: var(--red-dark); font-family: var(--sans); font-size: 11px; font-weight: 800; }
-    .pain-card h3 { max-width: 300px; margin: 56px 0 13px; font-size: 28px; font-weight: 500; line-height: 1.35; }
-    .pain-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; line-height: 1.85; }
-    .pain-answer { display: flex; justify-content: space-between; gap: 30px; margin-top: 28px; border-top: 1px solid var(--ink); padding-top: 23px; }
-    .pain-answer strong { font-size: 24px; font-weight: 500; }
-    .pain-answer span { color: var(--red-dark); font-family: var(--sans); font-size: 12px; font-weight: 800; }
+    .learn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .learn-card { min-height: 300px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.35); padding: 23px; }
+    .learn-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .learn-card h3 { margin: 50px 0 12px; font-size: 28px; font-weight: 500; }
+    .learn-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.85; }
 
-    .outcome-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; border: 1px solid #48413a; background: #48413a; }
-    .outcome {
-      min-height: 430px;
-      background: var(--ink);
-      padding: 31px;
-    }
-    .outcome > span { color: #e59b82; font-family: var(--sans); font-size: 10px; letter-spacing: .12em; }
-    .outcome h3 { margin: 74px 0 16px; font-size: 36px; font-weight: 500; line-height: 1.2; }
-    .outcome p { color: #c5bdb2; font-family: var(--sans); font-size: 13px; }
-    .outcome ul { margin: 28px 0 0; padding: 0; list-style: none; }
-    .outcome li { border-top: 1px solid #48413a; padding: 10px 0; color: #e7e0d6; font-size: 14px; }
+    .day-list { border-top: 1px solid var(--ink); }
+    .day-row { display: grid; grid-template-columns: 84px 270px 1fr; gap: 22px; align-items: start; border-bottom: 1px solid var(--line); padding: 23px 5px; }
+    .day-row > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .day-row strong { font-size: 20px; font-weight: 500; line-height: 1.4; }
+    .day-row p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; line-height: 1.75; }
 
-    .curriculum-intro {
-      display: grid;
-      grid-template-columns: .72fr 1.28fr;
-      gap: 80px;
-      align-items: start;
-    }
-    .curriculum-sticky { position: sticky; top: 112px; }
-    .curriculum-sticky .eyebrow { color: var(--red-dark); }
-    .curriculum-sticky h2 { margin: 14px 0 22px; font-size: clamp(40px, 5vw, 66px); font-weight: 500; letter-spacing: -.045em; line-height: 1.12; }
-    .curriculum-sticky p { color: var(--ink-soft); font-family: var(--sans); font-size: 14px; }
-    .curriculum-list { border-top: 1px solid var(--ink); }
-    .course-day { border-bottom: 1px solid var(--line); }
-    .course-day summary {
-      display: grid;
-      grid-template-columns: 78px 1fr 26px;
-      gap: 16px;
-      align-items: center;
-      min-height: 118px;
-      cursor: pointer;
-      list-style: none;
-    }
-    .course-day summary::-webkit-details-marker { display: none; }
-    .course-day summary > span { color: var(--red-dark); font-family: var(--sans); font-size: 11px; font-weight: 800; }
-    .course-day summary strong { display: block; font-size: 22px; font-weight: 500; line-height: 1.35; }
-    .course-day summary small { display: block; margin-top: 7px; color: var(--muted); font-family: var(--sans); font-size: 11px; }
-    .course-day summary b { color: var(--red); font-family: var(--sans); font-size: 24px; font-weight: 400; transition: transform .2s ease; }
-    .course-day[open] summary b { transform: rotate(45deg); }
-    .course-day__body { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; padding: 0 42px 34px 94px; }
-    .course-day__body p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
-    .course-day__body ul { margin: 0; padding: 0; list-style: none; }
-    .course-day__body li { border-top: 1px solid var(--line); padding: 9px 0; font-size: 13px; }
-    .course-day__body li::before { margin-right: 8px; color: var(--red); content: "•"; }
+    .class-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid #a51c21; background: #a51c21; }
+    .class-step { min-height: 280px; background: var(--red); padding: 24px; }
+    .class-step span { color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 10px; }
+    .class-step h3 { margin: 55px 0 12px; font-size: 27px; font-weight: 500; }
+    .class-step p { color: rgba(255,255,255,.76); font-family: var(--sans); font-size: 12px; }
 
-    .method-grid { display: grid; grid-template-columns: .72fr 1.28fr; gap: 90px; align-items: start; }
-    .method-copy .eyebrow { color: #e59b82; }
-    .method-copy h2 { margin: 14px 0 24px; font-size: clamp(42px, 5.4vw, 72px); font-weight: 500; letter-spacing: -.05em; line-height: 1.08; }
-    .method-copy p { color: #c5bdb2; font-family: var(--sans); font-size: 14px; }
-    .method-list { border-top: 1px solid #5a514a; }
-    .method-row { display: grid; grid-template-columns: 54px 160px 1fr; gap: 18px; align-items: baseline; border-bottom: 1px solid #5a514a; padding: 24px 0; }
-    .method-row > span { color: #e59b82; font-family: var(--sans); font-size: 10px; }
-    .method-row strong { font-size: 19px; font-weight: 500; }
-    .method-row p { margin: 0; color: #c5bdb2; font-family: var(--sans); font-size: 12px; }
+    .deliver-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 13px; }
+    .deliver-card { min-height: 270px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper-light); box-shadow: 0 12px 40px rgba(51, 36, 26, .05); padding: 21px; }
+    .deliver-card:first-child { grid-column: span 2; }
+    .deliver-card:nth-child(2) { grid-column: span 2; }
+    .deliver-card:nth-child(3) { grid-column: span 2; }
+    .deliver-card:nth-child(4) { grid-column: 2 / span 2; }
+    .deliver-card:nth-child(5) { grid-column: span 2; }
+    .deliver-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .deliver-card h3 { margin: 43px 0 11px; font-size: 27px; font-weight: 500; line-height: 1.3; }
+    .deliver-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.8; }
+    .deliver-note { margin: 24px 0 0; color: var(--muted); font-family: var(--sans); font-size: 10px; text-align: center; }
 
-    .support-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: 86px; align-items: center; }
-    .support-copy .eyebrow { color: var(--red-dark); }
-    .support-copy h2 { margin: 14px 0 24px; font-size: clamp(42px, 5.2vw, 70px); font-weight: 500; letter-spacing: -.05em; line-height: 1.1; }
-    .support-copy > p { color: var(--ink-soft); font-family: var(--sans); font-size: 14px; }
-    .support-stack { position: relative; min-height: 500px; }
-    .support-card {
-      position: absolute;
-      width: min(430px, 86%);
-      min-height: 270px;
-      border: 1px solid var(--line);
-      border-radius: 16px;
-      background: var(--paper-light);
-      box-shadow: var(--shadow);
-      padding: 25px;
-    }
-    .support-card:nth-child(1) { z-index: 3; top: 0; left: 0; transform: rotate(-2deg); }
-    .support-card:nth-child(2) { z-index: 2; top: 105px; left: 17%; transform: rotate(3deg); }
-    .support-card:nth-child(3) { z-index: 1; top: 210px; left: 3%; transform: rotate(-1deg); }
-    .support-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-    .support-card h3 { margin: 45px 0 12px; font-size: 31px; font-weight: 500; }
-    .support-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
+    .fit-teacher { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+    .info-box { border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
+    .info-box h3 { margin: 0 0 21px; font-size: 28px; font-weight: 500; }
+    .info-box ul { margin: 0; padding: 0; list-style: none; }
+    .info-box li { display: flex; gap: 11px; border-top: 1px solid var(--line); padding: 13px 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
+    .info-box li::before { color: var(--red); content: "✓"; font-weight: 800; }
+    .teacher-box { background: var(--paper-deep); }
+    .teacher-box p { color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
+    .teacher-quote { margin-top: 24px; border-top: 1px solid var(--ink); padding-top: 18px; font-size: 21px; }
 
-    .fit-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
-    .fit-card { border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
-    .fit-card h3 { margin: 0 0 22px; font-size: 26px; font-weight: 500; }
-    .fit-card ul { margin: 0; padding: 0; list-style: none; }
-    .fit-card li { display: flex; gap: 12px; border-top: 1px solid var(--line); padding: 14px 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
-    .fit-card li::before { color: var(--red); content: "✓"; font-weight: 800; }
-    .fit-card--quiet { background: var(--paper-deep); }
-    .fit-card--quiet li::before { color: var(--muted); content: "—"; }
-
-    .teacher {
-      display: grid;
-      grid-template-columns: .65fr 1.35fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .teacher-mark {
-      display: grid;
-      aspect-ratio: 1;
-      place-items: center;
-      border-radius: 50%;
-      background: var(--red);
-      color: #fff;
-      font-size: clamp(66px, 11vw, 150px);
-      line-height: 1;
-    }
-    .teacher-copy .eyebrow { color: var(--red-dark); }
-    .teacher-copy h2 { margin: 13px 0 23px; font-size: clamp(44px, 6vw, 78px); font-weight: 500; letter-spacing: -.05em; line-height: 1.08; }
-    .teacher-copy p { max-width: 720px; color: var(--ink-soft); font-family: var(--sans); font-size: 14px; }
-    .teacher-principle { margin-top: 28px; border-top: 1px solid var(--ink); padding-top: 22px; font-size: 23px; }
-
-    .enroll-grid { display: grid; grid-template-columns: 1fr .9fr; gap: 78px; align-items: start; }
-    .enroll-copy .eyebrow { color: rgba(255,255,255,.66); }
-    .enroll-copy h2 { margin: 14px 0 24px; font-size: clamp(48px, 6.4vw, 86px); font-weight: 500; letter-spacing: -.055em; line-height: 1.04; }
-    .enroll-copy > p { max-width: 660px; color: rgba(255,255,255,.78); font-family: var(--sans); font-size: 14px; }
-    .schedule { margin-top: 38px; border-top: 1px solid rgba(255,255,255,.35); }
-    .schedule-row { display: grid; grid-template-columns: 84px 1fr auto; gap: 18px; align-items: center; border-bottom: 1px solid rgba(255,255,255,.25); padding: 15px 0; }
-    .schedule-row span { color: rgba(255,255,255,.62); font-family: var(--sans); font-size: 10px; }
-    .schedule-row strong { font-size: 18px; font-weight: 500; }
+    .enroll-grid { display: grid; grid-template-columns: 1fr .85fr; gap: 72px; align-items: start; }
+    .enroll-copy .eyebrow { color: rgba(255,255,255,.68); }
+    .enroll-copy h2 { margin: 12px 0 22px; font-size: clamp(47px, 6.2vw, 82px); font-weight: 500; letter-spacing: -.05em; line-height: 1.05; }
+    .enroll-copy > p { color: rgba(255,255,255,.76); font-family: var(--sans); font-size: 13px; }
+    .schedule { margin-top: 34px; border-top: 1px solid rgba(255,255,255,.34); }
+    .schedule-row { display: grid; grid-template-columns: 70px 1fr auto; gap: 18px; align-items: center; border-bottom: 1px solid rgba(255,255,255,.24); padding: 13px 0; }
+    .schedule-row span { color: rgba(255,255,255,.6); font-family: var(--sans); font-size: 10px; }
+    .schedule-row strong { font-size: 17px; font-weight: 500; }
     .schedule-row em { font-family: var(--sans); font-size: 10px; font-style: normal; }
-    .price-card {
-      position: sticky;
-      top: 112px;
-      border-radius: 20px;
-      background: var(--paper-light);
-      color: var(--ink);
-      box-shadow: 0 34px 90px rgba(92, 7, 10, .28);
-      padding: 31px;
-    }
-    .price-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; letter-spacing: .1em; }
-    .price-card h3 { margin: 21px 0 9px; font-size: 33px; font-weight: 500; }
-    .price-card > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
-    .price { margin: 32px 0 25px; border-block: 1px solid var(--line); padding: 22px 0; }
-    .price small { display: block; color: var(--muted); font-family: var(--sans); font-size: 11px; text-decoration: line-through; }
-    .price strong { display: block; margin-top: 4px; color: var(--red); font-family: var(--sans); font-size: 42px; line-height: 1.2; }
-    .price-note { margin-top: 14px !important; color: var(--muted) !important; font-size: 10px !important; }
+    .price-card { border-radius: 18px; background: var(--paper-light); color: var(--ink); box-shadow: 0 30px 90px rgba(86, 7, 10, .28); padding: 29px; }
+    .price-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .price-card h3 { margin: 20px 0 9px; font-size: 31px; font-weight: 500; }
+    .price-card > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; }
+    .price { margin: 28px 0 23px; border-block: 1px solid var(--line); padding: 20px 0; }
+    .price small { display: block; color: var(--muted); font-family: var(--sans); font-size: 10px; text-decoration: line-through; }
+    .price strong { display: block; margin-top: 3px; color: var(--red); font-family: var(--sans); font-size: 40px; }
     .price-card .button { width: 100%; }
+    .price-note { margin-top: 12px !important; color: var(--muted) !important; font-size: 10px !important; }
 
     .faq-list { border-top: 1px solid var(--ink); }
     .faq { border-bottom: 1px solid var(--line); }
-    .faq summary { display: grid; grid-template-columns: 1fr 25px; gap: 20px; align-items: center; min-height: 78px; cursor: pointer; list-style: none; font-size: 18px; }
+    .faq summary { display: grid; grid-template-columns: 1fr 24px; gap: 18px; align-items: center; min-height: 74px; cursor: pointer; list-style: none; font-size: 17px; }
     .faq summary::-webkit-details-marker { display: none; }
-    .faq summary span { color: var(--red); font-family: var(--sans); font-size: 23px; transition: transform .2s ease; }
+    .faq summary span { color: var(--red); font-family: var(--sans); font-size: 22px; transition: transform .2s ease; }
     .faq[open] summary span { transform: rotate(45deg); }
-    .faq p { max-width: 820px; margin: -5px 0 25px; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
+    .faq p { max-width: 820px; margin: -3px 0 23px; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; }
 
-    .site-footer { display: flex; align-items: center; justify-content: space-between; gap: 30px; border-top: 1px solid var(--line); padding-block: 34px 96px; }
-    .site-footer p { margin: 0; font-size: 13px; }
-    .site-footer small { display: block; margin-top: 4px; color: var(--muted); font-family: var(--sans); font-size: 10px; }
-    .site-footer a { border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 11px; }
+    .footer { display: flex; align-items: center; justify-content: space-between; gap: 28px; border-top: 1px solid var(--line); padding-block: 31px 96px; }
+    .footer p { margin: 0; font-size: 13px; }
+    .footer small { display: block; margin-top: 4px; color: var(--muted); font-family: var(--sans); font-size: 9px; }
+    .footer a { border-bottom: 1px solid var(--ink); font-family: var(--sans); font-size: 10px; }
     .mobile-cta { display: none; }
 
-    @media (max-width: 920px) {
+    @media (max-width: 900px) {
       .nav-links > a:not(.nav-button) { display: none; }
-      .hero__inner, .section-heading, .curriculum-intro, .method-grid, .support-grid, .teacher, .enroll-grid { grid-template-columns: 1fr; }
-      .hero__inner { min-height: auto; gap: 60px; }
-      .section-heading { gap: 22px; }
-      .section-heading > p { max-width: 680px; }
-      .curriculum-intro, .method-grid, .support-grid, .teacher, .enroll-grid { gap: 50px; }
-      .curriculum-sticky, .price-card { position: static; }
-      .support-stack { max-width: 620px; }
-      .teacher-mark { width: min(340px, 76vw); }
+      .hero-inner, .section-head, .enroll-grid { grid-template-columns: 1fr; }
+      .hero-inner { min-height: auto; gap: 48px; }
+      .section-head { gap: 18px; }
+      .learn-grid, .class-grid { grid-template-columns: 1fr 1fr; }
+      .deliver-grid { grid-template-columns: 1fr 1fr; }
+      .deliver-card, .deliver-card:first-child, .deliver-card:nth-child(2), .deliver-card:nth-child(3), .deliver-card:nth-child(4), .deliver-card:nth-child(5) { grid-column: auto; }
     }
 
-    @media (max-width: 720px) {
+    @media (max-width: 700px) {
       body { font-size: 16px; }
-      .shell { width: min(100% - 30px, 1180px); }
-      .site-nav__inner { min-height: 64px; }
-      .brand__seal { width: 34px; height: 34px; font-size: 17px; }
+      .shell { width: min(100% - 28px, 1120px); }
+      .nav-inner { min-height: 63px; }
+      .brand-seal { width: 34px; height: 34px; font-size: 16px; }
       .brand strong { font-size: 15px; }
       .brand small { font-size: 8px; }
-      .nav-button { min-height: 39px; padding: 7px 14px; font-size: 11px; }
-      .hero__inner { padding-block: 62px 54px; }
-      .hero h1 { font-size: clamp(45px, 13vw, 68px); }
-      .hero__lead { font-size: 15px; }
-      .hero__facts { grid-template-columns: 1fr 1fr; row-gap: 16px; }
-      .hero-system { padding: 19px; }
-      .system-step { grid-template-columns: 28px 1fr; }
-      .system-step small { grid-column: 2; }
-      .section { padding-block: 76px; }
-      .section-heading { margin-bottom: 34px; }
-      .section-heading h2, .curriculum-sticky h2, .method-copy h2, .support-copy h2, .teacher-copy h2 { font-size: 42px; }
-      .pain-grid, .outcome-grid, .fit-grid { grid-template-columns: 1fr; }
-      .pain-card { min-height: 270px; }
-      .pain-card h3 { margin-top: 38px; }
-      .pain-answer { flex-direction: column; }
-      .outcome { min-height: 350px; }
-      .outcome h3 { margin-top: 48px; }
-      .course-day summary { grid-template-columns: 56px 1fr 22px; min-height: 106px; }
-      .course-day summary strong { font-size: 18px; }
-      .course-day__body { grid-template-columns: 1fr; padding: 0 10px 28px 72px; }
-      .method-row { grid-template-columns: 38px 1fr; }
-      .method-row p { grid-column: 2; }
-      .support-stack { min-height: 460px; }
-      .support-card { min-height: 245px; }
-      .support-card:nth-child(2) { top: 88px; left: 10%; }
-      .support-card:nth-child(3) { top: 176px; }
-      .teacher { gap: 35px; }
-      .schedule-row { grid-template-columns: 62px 1fr; }
+      .nav-button { min-height: 39px; padding: 7px 13px; font-size: 10px; }
+      .hero-inner { padding-block: 57px 50px; }
+      .hero h1 { font-size: clamp(44px, 13vw, 66px); }
+      .hero-lead { font-size: 15px; }
+      .hero-facts { grid-template-columns: 1fr 1fr; row-gap: 14px; }
+      .plain-card { padding: 19px; }
+      .section { padding-block: 70px; }
+      .section-head { margin-bottom: 30px; }
+      .section-head h2, .simple-copy h2 { font-size: 40px; }
+      .learn-grid, .class-grid, .deliver-grid, .fit-teacher { grid-template-columns: 1fr; }
+      .learn-card, .class-step, .deliver-card { min-height: 230px; }
+      .learn-card h3, .class-step h3, .deliver-card h3 { margin-top: 31px; }
+      .day-row { grid-template-columns: 54px 1fr; gap: 12px; }
+      .day-row p { grid-column: 2; }
+      .schedule-row { grid-template-columns: 54px 1fr; }
       .schedule-row em { grid-column: 2; }
-      .site-footer { flex-direction: column; align-items: flex-start; padding-bottom: 108px; }
+      .footer { flex-direction: column; align-items: flex-start; padding-bottom: 105px; }
       .mobile-cta {
         position: fixed;
         z-index: 90;
-        right: 12px;
-        bottom: calc(12px + env(safe-area-inset-bottom));
-        left: 12px;
+        right: 11px;
+        bottom: calc(11px + env(safe-area-inset-bottom));
+        left: 11px;
         display: grid;
         grid-template-columns: 1fr auto;
         gap: 8px;
-        border: 1px solid rgba(255,255,255,.55);
-        border-radius: 16px;
-        background: rgba(39,35,31,.95);
-        box-shadow: 0 18px 50px rgba(0,0,0,.25);
-        padding: 8px 8px 8px 15px;
+        border: 1px solid rgba(255,255,255,.5);
+        border-radius: 15px;
+        background: rgba(42,37,33,.96);
+        box-shadow: 0 18px 50px rgba(0,0,0,.24);
+        padding: 8px 8px 8px 14px;
         color: #fff;
         backdrop-filter: blur(14px);
       }
-      .mobile-cta span { align-self: center; font-family: var(--sans); font-size: 10px; }
-      .mobile-cta a { border-radius: 10px; background: var(--red); padding: 10px 15px; font-family: var(--sans); font-size: 11px; font-weight: 800; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after { transition-duration: .01ms !important; }
+      .mobile-cta span { align-self: center; font-family: var(--sans); font-size: 9px; }
+      .mobile-cta a { border-radius: 10px; background: var(--red); padding: 10px 14px; font-family: var(--sans); font-size: 10px; font-weight: 800; }
     }
   </style>
 </head>
 <body>
   <nav class="site-nav" aria-label="主导航">
-    <div class="shell site-nav__inner">
+    <div class="shell nav-inner">
       <a class="brand" href="#top" aria-label="返回课程介绍首页">
-        <span class="brand__seal">体</span>
+        <span class="brand-seal">体</span>
         <span><strong>体态觉醒</strong><small>EMBODIED REBALANCE®</small></span>
       </a>
       <div class="nav-links">
-        <a href="#outcomes">学完能做什么</a>
+        <a href="#learn">学什么</a>
         <a href="#curriculum">六天课表</a>
-        <a href="#support">课后配套</a>
-        <a href="#faq">常见问题</a>
-        <a class="nav-button" href="#enroll">查看期次与报名</a>
+        <a href="#deliverables">能带走什么</a>
+        <a class="nav-button" href="#enroll">期次与报名</a>
       </div>
     </div>
   </nav>
 
   <header class="hero" id="top">
-    <div class="shell hero__inner">
+    <div class="shell hero-inner">
       <div>
-        <div class="hero__eyebrow">广州 · 6天线下师资进修 · Lara老师</div>
-        <h1>不再靠猜动作，<br>建立一套<em>看懂身体</em>的系统。</h1>
-        <p class="hero__lead">这是一门面向<strong>健身教练、普拉提与瑜伽老师</strong>的体态课程。六天完成从评估、动作选择到复测与长期交付的完整训练，让你面对不同会员时，知道先看什么、为什么这样做、做完如何验证。</p>
-        <div class="hero__actions">
-          <a class="button button--dark" href="#enroll">咨询下一期 <span>→</span></a>
-          <a class="button button--ghost" href="#curriculum">先看六天课表</a>
+        <div class="eyebrow">广州 · 6天线下课 · Lara老师</div>
+        <h1>6天，学会<em>看体态、选动作、给会员上课</em>。</h1>
+        <p class="hero-lead">体态觉醒与功能重建是一门给健身教练、普拉提和瑜伽老师的线下课程。老师会带你从头到脚学习常见体态问题，并在现场练习怎么观察、怎么教动作、怎么安排一节课。</p>
+        <div class="hero-actions">
+          <a class="button button-dark" href="#enroll">查看期次与报名 <span>→</span></a>
+          <a class="button button-light" href="#curriculum">查看六天课表</a>
         </div>
-        <div class="hero__facts">
-          <div><span>课程名称</span><strong>体态觉醒与功能重建</strong></div>
-          <div><span>学习形式</span><strong>线下实操 · 6天</strong></div>
-          <div><span>课程地点</span><strong>广州</strong></div>
-          <div><span>课后配套</span><strong>教材 · 复习系统</strong></div>
+        <div class="hero-facts">
+          <div><span>主讲</span><strong>Lara老师</strong></div>
+          <div><span>时间</span><strong>连续6天</strong></div>
+          <div><span>地点</span><strong>广州</strong></div>
+          <div><span>早鸟价</span><strong>¥6,980</strong></div>
         </div>
       </div>
-      <aside class="hero-system" aria-label="课程工作流程">
-        <div class="hero-system__top"><b>一套完整工作链</b><span>COURSE METHOD</span></div>
-        <div class="system-step"><span>01</span><strong>明确目标与安全边界</strong><small>先问清，再开始</small></div>
-        <div class="system-step"><span>02</span><strong>完成整体观察与测试</strong><small>留下基线</small></div>
-        <div class="system-step"><span>03</span><strong>选择合适的训练方向</strong><small>从最低有效难度开始</small></div>
-        <div class="system-step"><span>04</span><strong>同条件复测并调整</strong><small>让结果可验证</small></div>
-        <p class="hero-system__foot">重点不是记住更多动作，而是掌握一套面对不同身体都能复用的判断顺序。</p>
+      <aside class="plain-card" aria-label="课程学习步骤">
+        <h2>上课会反复练这4步</h2>
+        <div class="plain-row"><span>01</span><div><strong>先问清会员想改善什么</strong><small>外形、不舒服、动作表现还是日常生活</small></div></div>
+        <div class="plain-row"><span>02</span><div><strong>看看问题主要出现在哪里</strong><small>站立、走路、下蹲、抬手和转身</small></div></div>
+        <div class="plain-row"><span>03</span><div><strong>选择合适的动作带着练</strong><small>先从会员能够做好的版本开始</small></div></div>
+        <div class="plain-row"><span>04</span><div><strong>练完再做一次，对比变化</strong><small>有效就继续，无效就换方向</small></div></div>
+        <p>这4步会用在腹部、肩颈、髋、腿型和足踝等不同内容中。</p>
       </aside>
     </div>
   </header>
 
   <main>
-    <section class="section" id="why">
+    <section class="section" id="learn">
       <div class="shell">
-        <div class="section-heading">
-          <div><div class="eyebrow">为什么需要这门课</div><h2>很多教练不缺动作，<br>缺的是判断。</h2></div>
-          <p>当体态、呼吸、承重和会员诉求同时出现，单靠动作库很容易失去方向。课程把零散知识重新组织成可观察、可解释、可复测的工作系统。</p>
+        <div class="section-head">
+          <div><div class="eyebrow">课程会教什么</div><h2>学完以后，能把一节体态课带完整。</h2></div>
+          <p>课程从会员进门开始讲，一直到观察、选动作、现场带练、练后对比和长期课程安排。</p>
         </div>
-        <div class="pain-grid">
-          <article class="pain-card"><span class="pain-card__num">01</span><h3>会员的问题一多，就不知道先处理哪里。</h3><p>腹部突出、圆肩、骨盆偏移和腿型可能同时出现。真正困难的不是找到动作，而是判断优先级。</p></article>
-          <article class="pain-card"><span class="pain-card__num">02</span><h3>做完似乎有效，却说不清为什么有效。</h3><p>缺少基线与复测，效果容易停留在感觉。教练也难以向会员解释训练思路与后续计划。</p></article>
-          <article class="pain-card"><span class="pain-card__num">03</span><h3>会带单节课，但还没有稳定的课程交付。</h3><p>从体验课到长期方案，需要评估、沟通、记录与阶段目标，而不仅是一张动作清单。</p></article>
+        <div class="learn-grid">
+          <article class="learn-card"><span>01 · 会看</span><h3>看出问题出现在哪</h3><p>从正面、侧面和背面观察，也会看会员走路、下蹲、抬手和单腿站立时的表现。</p></article>
+          <article class="learn-card"><span>02 · 会选</span><h3>知道先练什么</h3><p>面对腹部、肩颈、骨盆、腿型和足踝问题，能够排出先后顺序，不再随便挑动作。</p></article>
+          <article class="learn-card"><span>03 · 会教</span><h3>把动作教明白</h3><p>知道动作怎么开始、看哪里、出现什么情况要变简单，以及什么时候可以增加难度。</p></article>
+          <article class="learn-card"><span>04 · 会排课</span><h3>安排体验课和长期课</h3><p>把观察、训练和前后对比放进一节课，也会给会员说明后面几个月怎么练。</p></article>
         </div>
-        <div class="pain-answer"><strong>课程给你的不是标准答案，而是一套能持续做判断的方法。</strong><span>观察 → 假设 → 训练 → 复测</span></div>
       </div>
     </section>
 
-    <section class="section section--ink" id="outcomes">
+    <section class="section section-light" id="curriculum">
       <div class="shell">
-        <div class="section-heading">
-          <div><div class="eyebrow">学完能做什么</div><h2>把专业能力，<br>落在三件事上。</h2></div>
-          <p>减少空泛术语，把学习结果落实到真实工作：能够观察、能够选择、能够交付。</p>
+        <div class="section-head">
+          <div><div class="eyebrow">六天课程内容</div><h2>每天一个重点，<br>从腹部学到足踝。</h2></div>
+          <p>下面只列最主要的内容。上课时还会安排现场示范、两人练习、老师纠正和练前练后对比。</p>
         </div>
-        <div class="outcome-grid">
-          <article class="outcome"><span>ABILITY 01 · 评估</span><h3>看得懂</h3><p>从静态外观走向动态任务，建立完整、可重复的观察与测试流程。</p><ul><li>三维体态与承重观察</li><li>中轴、呼吸与活动测试</li><li>症状、目标与安全边界</li></ul></article>
-          <article class="outcome"><span>ABILITY 02 · 训练</span><h3>选得对</h3><p>根据主要限制因素选择训练方向，并能随动作质量进行退阶或进阶。</p><ul><li>排列与压力调节</li><li>活动度、稳定与承重</li><li>上肢、下肢与整体整合</li></ul></article>
-          <article class="outcome"><span>ABILITY 03 · 交付</span><h3>讲得清</h3><p>把复杂判断翻译成会员听得懂、做得到、能持续推进的课程计划。</p><ul><li>体验课与阶段目标</li><li>同条件复测与记录</li><li>专业表达与服务边界</li></ul></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--light" id="curriculum">
-      <div class="shell curriculum-intro">
-        <div class="curriculum-sticky">
-          <div class="eyebrow">六天课程地图</div>
-          <h2>从中轴出发，<br>最后回到真实动作。</h2>
-          <p>课表依据正式教材重新梳理。每一天都有清晰主线，理论、评估与实操相互连接，不再是一连串彼此孤立的动作。</p>
-          <a class="button button--red" href="#enroll">查看可报名期次</a>
-        </div>
-        <div class="curriculum-list">
-          <details class="course-day" open>
-            <summary><span>DAY 01</span><div><strong>判断系统、中轴基础与腹部专题</strong><small>从整体观察进入腹内压、胸廓弹性与悬垂腹评估</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>先建立全课程的共同语言：目标、安全边界、三维观察、训练假设与同条件复测，再把框架用于腹部专题。</p><ul><li>中轴稳定与压力基础</li><li>悬垂腹的多因素评估</li><li>多方向协调与站立承重</li></ul></div>
-          </details>
-          <details class="course-day">
-            <summary><span>DAY 02</span><div><strong>高张腹、上肢体态与肩胛胸廓整合</strong><small>理解腹部高张与肩胛、胸廓、肱骨之间的协同</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>区分腹部持续紧张和有效稳定，并通过手臂上举、肩胛运动与胸廓任务建立上肢评估思路。</p><ul><li>高张腹与葫芦腹</li><li>肩胛六方向与上举测试</li><li>肩胛—胸廓整合训练</li></ul></div>
-          </details>
-          <details class="course-day">
-            <summary><span>DAY 03</span><div><strong>颈胸肩、不对称体态与多方向协调</strong><small>用证据权重理解左右差异，并把单侧训练接回整体</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>不把圆肩、驼背、头前移和左右不对称直接当成处方，而是结合任务、症状与复测决定训练重点。</p><ul><li>颈胸肩三项基线</li><li>偏侧承重与单侧训练</li><li>动态转移、转身与协调</li></ul></div>
-          </details>
-          <details class="course-day">
-            <summary><span>DAY 04</span><div><strong>下肢动力链、髋骨盆与单腿承重</strong><small>把髋关节活动连接到步态、下蹲与动态进阶</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>从足、膝、髋、骨盆和躯干的力量传递出发，比较主动与辅助范围，再进入站立和单腿任务。</p><ul><li>髋关节六方向与步态观察</li><li>骨盆三平面活动</li><li>单腿旋转与协调跳跃</li></ul></div>
-          </details>
-          <details class="course-day">
-            <summary><span>DAY 05</span><div><strong>臀髋轮廓、下肢排列与单腿整合</strong><small>回应外观目标，同时把训练判断放回功能与承重</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>处理臀髋轮廓与常见腿型诉求，区分静态外观、结构背景和动态动作策略。</p><ul><li>髋部能力五个维度</li><li>足底、膝轨迹与髋踝联动</li><li>站立臀腿与单腿训练</li></ul></div>
-          </details>
-          <details class="course-day">
-            <summary><span>DAY 06</span><div><strong>足踝功能、体验课设计与长期交付</strong><small>完成全身整合，并把专业能力转成可持续服务</small></div><b>＋</b></summary>
-            <div class="course-day__body"><p>从动态足弓、缓冲与推进进入全身承重，最后完成体验课、专业沟通、记录与长期计划。</p><ul><li>足踝评估与多方向承重</li><li>体验课的基线与复测</li><li>长期课程、案例与信息边界</li></ul></div>
-          </details>
+        <div class="day-list">
+          <div class="day-row"><span>DAY 01</span><strong>核心、呼吸与腹部</strong><p>学习怎么看核心是否会用力，处理常见的悬垂腹，并练习从地面动作过渡到站立动作。</p></div>
+          <div class="day-row"><span>DAY 02</span><strong>高张腹、肩胛和上肢</strong><p>学习腹部一直绷紧、葫芦腹等问题，也会练习肩胛活动、抬手测试和上肢动作。</p></div>
+          <div class="day-row"><span>DAY 03</span><strong>圆肩、驼背和左右不对称</strong><p>学习观察头、肩、胸和左右承重差异，再用单侧动作、转身和走路练习做调整。</p></div>
+          <div class="day-row"><span>DAY 04</span><strong>髋、骨盆和单腿</strong><p>学习髋关节各个方向怎么动，怎么看走路和下蹲，并练习骨盆、臀腿和单腿动作。</p></div>
+          <div class="day-row"><span>DAY 05</span><strong>假胯宽、腿型和膝踝</strong><p>学习怎么看臀髋外侧轮廓、X型腿和O型腿，再练习足底、膝盖和髋一起配合。</p></div>
+          <div class="day-row"><span>DAY 06</span><strong>足踝、体验课和长期课程</strong><p>学习足弓、走路和多方向承重，也会完整练习体验课、会员沟通和长期课程安排。</p></div>
         </div>
       </div>
     </section>
 
-    <section class="section section--ink" id="method">
-      <div class="shell method-grid">
-        <div class="method-copy"><div class="eyebrow">课程方法</div><h2>不追求动作数量，<br>追求判断闭环。</h2><p>课程会参考 DNS、PRI、运动康复与关节松动等思路，但重点不是堆叠体系名称，而是把它们转化成教练可以安全使用的观察与训练语言。</p></div>
-        <div class="method-list">
-          <div class="method-row"><span>01</span><strong>先描述，不贴标签</strong><p>记录看见的表现，不把外观词直接变成原因或诊断。</p></div>
-          <div class="method-row"><span>02</span><strong>先基线，再改变</strong><p>选择与目标相关、容易重复的测试，留下训练前基线。</p></div>
-          <div class="method-row"><span>03</span><strong>一次改变主要变量</strong><p>从合适难度开始，根据呼吸、症状和动作质量调整。</p></div>
-          <div class="method-row"><span>04</span><strong>同条件复测</strong><p>用相同体位、提示与任务验证改变，决定下一步。</p></div>
-          <div class="method-row"><span>05</span><strong>回到真实任务</strong><p>让地面获得的能力重新进入站立、走路、力量和生活。</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="support">
-      <div class="shell support-grid">
-        <div class="support-copy">
-          <div class="eyebrow">课后不是结束</div>
-          <h2>学得懂，<br>也要复习得回来。</h2>
-          <p>课程已经配套完整复习系统。上课时先理解和实操，课后再通过详细教材、快速复习与知识库把内容重新找回来。</p>
-          <a class="button" href="/lara-course/review/">查看课后复习系统 <span>↗</span></a>
-        </div>
-        <div class="support-stack" aria-label="课程课后配套">
-          <article class="support-card"><span>01 · 正式教材</span><h3>详细教材</h3><p>按六天、课段和章节保留完整内容，适合系统学习、备课与打印。</p></article>
-          <article class="support-card"><span>02 · 快速回忆</span><h3>复习路径</h3><p>每个课段都有一句话原则、工作链、核心主题和自我检查题。</p></article>
-          <article class="support-card"><span>03 · 带着问题找</span><h3>知识库</h3><p>按概念、评估、训练、安全边界和沟通表达重新组织知识。</p></article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section--light" id="fit">
+    <section class="section section-red" id="class-format">
       <div class="shell">
-        <div class="section-heading"><div><div class="eyebrow">适合谁来学</div><h2>适合想建立系统的人，<br>不适合只想拿动作表的人。</h2></div><p>课程包含大量判断、练习、同伴观察与复测。愿意带着真实问题来，收获会更大。</p></div>
-        <div class="fit-grid">
-          <article class="fit-card"><h3>更适合你，如果你是——</h3><ul><li>正在从事健身私教、体态训练或运动指导</li><li>希望增加评估与功能训练能力的普拉提、瑜伽老师</li><li>会带动作，但缺少清晰判断与复测流程</li><li>准备设计体验课与长期体态课程的从业者</li></ul></article>
-          <article class="fit-card fit-card--quiet"><h3>这门课不会承诺——</h3><ul><li>用一个动作解决所有人的同一问题</li><li>把外观差异直接解释为疾病或损伤</li><li>用短期前后对比代替长期训练与生活管理</li><li>跨越健身教练的专业边界进行医疗诊断</li></ul></article>
+        <div class="section-head">
+          <div><div class="eyebrow">六天怎么上课</div><h2>老师讲完，<br>现场就练。</h2></div>
+          <p>每个主题都会从讲解进入示范和练习。现场发现问题，现场改，避免回去只剩一堆听过的名词。</p>
+        </div>
+        <div class="class-grid">
+          <article class="class-step"><span>01</span><h3>老师讲清楚</h3><p>说明这个问题怎么看、常见原因有哪些、哪些情况不适合继续练。</p></article>
+          <article class="class-step"><span>02</span><h3>老师现场示范</h3><p>把手放哪里、口令怎么说、动作怎么做简单或做困难。</p></article>
+          <article class="class-step"><span>03</span><h3>学员两人练习</h3><p>轮流做教练和会员，把观察、动作教学和前后对比都做一遍。</p></article>
+          <article class="class-step"><span>04</span><h3>老师现场纠正</h3><p>发现看错、说不清或动作不合适时，现场调整并重新练习。</p></article>
         </div>
       </div>
     </section>
 
-    <section class="section" id="teacher">
-      <div class="shell teacher">
-        <div class="teacher-mark" aria-hidden="true">体</div>
-        <div class="teacher-copy"><div class="eyebrow">课程主讲</div><h2>Lara 老师</h2><p>课程把不同理论与实操思路放进同一条工作链：从会员目标与安全边界开始，用观察和测试形成假设，再通过训练与复测验证。复杂知识最终都要变成教练能看懂、能操作、能向会员解释的语言。</p><p>教学不会要求所有身体追求同一个静态模板，而是尊重外观目标，同时关注呼吸、活动、承重、协调和真实任务。</p><div class="teacher-principle">“先看懂这个身体，再决定怎么练。”</div></div>
+    <section class="section" id="deliverables">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="eyebrow">完成课程后能带走什么</div><h2>上完六天，<br>资料和课后支持都会保留。</h2></div>
+          <p>这些内容用于课后复习、自己练习和以后给会员备课。具体发放方式与服务时间，以当期课程通知为准。</p>
+        </div>
+        <div class="deliver-grid">
+          <article class="deliver-card"><span>01</span><h3>结业证书</h3><p>完成六天学习并达到当期结业要求后，发放课程结业证书。</p></article>
+          <article class="deliver-card"><span>02</span><h3>6天详细课程笔记</h3><p>按照每天的课程内容整理。可以在手机上阅读，也可以打印出来复习和备课。</p></article>
+          <article class="deliver-card"><span>03</span><h3>线上动作库</h3><p>课后可以按身体部位、训练目标和动作难度回看课堂动作。</p></article>
+          <article class="deliver-card"><span>04</span><h3>课程复习网站</h3><p>可以按六天课程浏览，也可以直接搜索腹部、肩颈、髋、腿型和足踝等内容。</p></article>
+          <article class="deliver-card"><span>05</span><h3>课后群内答疑陪跑</h3><p>复习、练动作或给会员上课时遇到问题，可以在群内提问并参加课后答疑。</p></article>
+        </div>
+        <p class="deliver-note">结业要求、动作库开放方式和群内答疑周期，以当期课程通知为准。</p>
       </div>
     </section>
 
-    <section class="section section--red" id="enroll">
+    <!-- 往期学员合照与评价：收到已授权的照片和评价原文后，在此处加入。 -->
+
+    <section class="section section-light" id="fit">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="eyebrow">适合参加的人</div><h2>适合已经在带课，<br>想把体态课讲得更清楚的人。</h2></div>
+        </div>
+        <div class="fit-teacher">
+          <article class="info-box"><h3>适合这些老师</h3><ul><li>健身私教和体态训练教练</li><li>普拉提、瑜伽和运动指导老师</li><li>会带动作，但不知道面对不同会员怎么选择</li><li>准备开设体态体验课和长期课程</li></ul></article>
+          <article class="info-box teacher-box"><h3>主讲：Lara老师</h3><p>课程会把复杂内容转成课堂上能直接使用的方法。每个主题都会说明怎么看、怎么教、动作太难时怎么改，以及练完以后怎么做对比。</p><p>课程也会说明健身教练可以做什么、哪些情况应该停止训练并建议会员找医生或康复专业人员。</p><div class="teacher-quote">“先看清会员现在怎么动，再决定带他练什么。”</div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-red" id="enroll">
       <div class="shell enroll-grid">
         <div class="enroll-copy">
-          <div class="eyebrow">2026 · 广州线下课</div>
-          <h2>选择适合你的<br>六天期次。</h2>
-          <p>以下为现有招生资料中的 2026 年后续期次。开课安排可能调整，提交咨询后请以课程顾问最终确认为准。</p>
+          <div class="eyebrow">2026年 · 广州线下课</div>
+          <h2>选择可以参加的<br>六天时间。</h2>
+          <p>下面是现有招生资料中的后续期次。开课时间和上课地址可能调整，报名之前请向课程顾问确认。</p>
           <div class="schedule" aria-label="2026年课程期次">
             <div class="schedule-row"><span>8月</span><strong>8.11 — 8.16</strong><em>广州 · 6天</em></div>
             <div class="schedule-row"><span>9月</span><strong>9.7 — 9.12</strong><em>广州 · 6天</em></div>
@@ -626,32 +381,31 @@
         </div>
         <aside class="price-card">
           <span>报名咨询</span>
-          <h3>先确认课程是否适合你</h3>
-          <p>添加课程顾问，咨询具体期次、名额、上课地址与报名流程。</p>
+          <h3>先向课程顾问确认期次和名额</h3>
+          <p>咨询时可以说明你的职业、目前怎么带课，以及最想解决的课程问题。</p>
           <div class="price"><small>课程原价 ¥7,980</small><strong>早鸟价 ¥6,980</strong></div>
-          <a class="button button--red" href="https://u.wechat.com/EEIuFPVVf4vXzaF5g3VkfHw?s=2" target="_blank" rel="noopener">微信咨询课程 <span>↗</span></a>
-          <p class="price-note">早鸟名额及截止时间以课程顾问确认信息为准。</p>
+          <a class="button button-red" href="https://u.wechat.com/EEIuFPVVf4vXzaF5g3VkfHw?s=2" target="_blank" rel="noopener">微信咨询课程 <span>↗</span></a>
+          <p class="price-note">早鸟名额和截止时间，以课程顾问回复为准。</p>
         </aside>
       </div>
     </section>
 
-    <section class="section section--light" id="faq">
+    <section class="section section-light" id="faq">
       <div class="shell">
-        <div class="section-heading"><div><div class="eyebrow">常见问题</div><h2>报名之前，<br>先把这些问题说清楚。</h2></div></div>
+        <div class="section-head"><div><div class="eyebrow">报名常见问题</div><h2>报名之前可以先了解这些。</h2></div></div>
         <div class="faq-list">
-          <details class="faq"><summary>没有体态课程经验，可以直接参加吗？<span>＋</span></summary><p>具备基本训练经验和人体知识会更容易进入课程。基础较少的学习者也可以先向课程顾问说明背景，由老师判断是否需要提前预习。</p></details>
-          <details class="faq"><summary>六天是不是一直学理论？<span>＋</span></summary><p>不是。课程把理论、观察、测试、动作练习与复测放在同一条主线上。理论用于解释为什么这样判断，实操用于把判断真正做出来。</p></details>
-          <details class="faq"><summary>课程会教手法吗？<span>＋</span></summary><p>课程包含相应的辅助活动与接触实操，但所有操作都必须遵守知情同意、安全筛查和专业边界。课程不会把健身训练包装成医疗治疗。</p></details>
-          <details class="faq"><summary>学完之后还有资料吗？<span>＋</span></summary><p>有。课程配套六天详细教材、快速复习与结构化知识库，方便课后复习、备课与查找具体概念。</p></details>
-          <details class="faq"><summary>如何确认最近一期的名额？<span>＋</span></summary><p>点击“微信咨询课程”，向课程顾问发送你的职业背景、想解决的问题和计划参加的月份，即可确认最新安排。</p></details>
+          <details class="faq"><summary>没有上过体态课程，可以参加吗？<span>＋</span></summary><p>有基本训练经验和人体知识会更容易跟上。可以先把自己的学习和工作背景告诉课程顾问，再确认是否需要提前预习。</p></details>
+          <details class="faq"><summary>六天是不是一直听老师讲？<span>＋</span></summary><p>不是。每个主题都会安排老师示范、学员两人练习和现场纠正。</p></details>
+          <details class="faq"><summary>详细课程笔记可以打印吗？<span>＋</span></summary><p>可以。课程笔记可以在手机上阅读，也会保留适合打印的详细版本。</p></details>
+          <details class="faq"><summary>课程结束以后遇到问题怎么办？<span>＋</span></summary><p>可以在课后群内提问，并参加当期安排的答疑。具体服务时间以当期课程通知为准。</p></details>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="shell site-footer">
-    <div><p>体态觉醒与功能重建 · Embodied Rebalance®</p><small>线下师资进修课程 · Lara老师 · 广州</small></div>
-    <a href="/lara-course/review/">进入课后复习系统</a>
+  <footer class="shell footer">
+    <div><p>体态觉醒与功能重建 · 6天线下师资进修</p><small>Lara老师 · 广州</small></div>
+    <a href="/lara-course/review/">查看课程复习网站</a>
   </footer>
 
   <div class="mobile-cta"><span>广州 · 6天线下课 · 早鸟价 ¥6,980</span><a href="https://u.wechat.com/EEIuFPVVf4vXzaF5g3VkfHw?s=2" target="_blank" rel="noopener">微信咨询</a></div>
