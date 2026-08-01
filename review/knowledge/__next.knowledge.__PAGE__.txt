@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[8500,["500","static/chunks/500-c99b8dfd3de17c86.js","92","static/chunks/92-861461505b45e160.js","49","static/chunks/app/knowledge/page-4d6957420cfff3f4.js"],""]
+3:I[220,["500","static/chunks/500-c99b8dfd3de17c86.js","92","static/chunks/92-861461505b45e160.js","49","static/chunks/app/knowledge/page-4d6957420cfff3f4.js"],"KnowledgeLibrary"]
+4:I[484,[],"OutletBoundary"]
+5:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","main",null,{"className":"knowledge-page","children":[["$","section",null,{"className":"page-shell subpage-hero","children":[["$","div",null,{"className":"breadcrumbs","children":[["$","$L2",null,{"href":"/","children":"首页"}],["$","span",null,{"children":"/"}],["$","span",null,{"children":"知识库"}]]}],["$","div",null,{"className":"eyebrow","children":"Knowledge Library · 六天全课程"}],["$","h1",null,{"children":["从问题出发，",["$","br",null,{}],"重新找到知识。"]}],["$","p",null,{"children":"知识库不是教材的缩写，而是另一种入口。每张卡片保留来源，可以随时回到正式教材核对上下文。"}]]}],["$","section",null,{"className":"page-shell knowledge-section","children":["$","$L3",null,{}]}]]}],null,["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"4hYhcqoNKnXM9JtBqFF42"}
+6:null

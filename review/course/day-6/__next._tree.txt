@@ -1,0 +1,2 @@
+:HL["/lara-course/review/_next/static/css/819c4c7bdd532ba6.css","style"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"course","param":null,"prefetchHints":0,"slots":{"children":{"name":"day-6","param":null,"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}}}},"staleTime":300,"buildId":"4hYhcqoNKnXM9JtBqFF42"}
