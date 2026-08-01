@@ -5,25 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>体态觉醒与功能重建｜6天线下师资进修</title>
   <meta name="description" content="面向健身教练、普拉提和瑜伽老师的6天线下课程。学习体态观察、动作选择、现场带练和练前练后对比。">
-  <meta name="theme-color" content="#d13d36">
+  <meta name="theme-color" content="#d92930">
   <meta property="og:title" content="体态觉醒与功能重建｜6天线下师资进修">
   <meta property="og:description" content="6天学会看体态、选动作和给会员上课。">
   <meta property="og:type" content="website">
   <style>
     :root {
-      --red: #d13d36;
-      --red-dark: #b4312b;
-      --red-pale: #f7dfdd;
-      --paper: #ffffff;
-      --paper-light: #f7f7f8;
-      --paper-deep: #eef0f2;
-      --ink: #171717;
-      --ink-soft: #555a64;
-      --muted: #7a7f88;
-      --line: #e1e2e5;
+      --red: #d92930;
+      --red-dark: #9d171c;
+      --red-pale: #f4d7d4;
+      --paper: #f3eee5;
+      --paper-light: #fbf9f4;
+      --paper-deep: #e9e1d5;
+      --ink: #2a2521;
+      --ink-soft: #665d55;
+      --muted: #8f8479;
+      --line: #d8cec1;
       --serif: "Iowan Old Style", "Baskerville", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-      --shadow: 0 22px 70px rgba(20, 20, 24, .08);
+      --shadow: 0 22px 70px rgba(60, 42, 30, .10);
     }
 
     * { box-sizing: border-box; }
@@ -38,15 +38,15 @@
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    ::selection { background: #efb4b1; color: #24100f; }
+    ::selection { background: #efaaa7; color: #321918; }
     .shell { width: min(1120px, calc(100% - 44px)); margin-inline: auto; }
 
     .site-nav {
       position: sticky;
       z-index: 80;
       top: 0;
-      border-bottom: 1px solid rgba(23, 23, 23, .10);
-      background: rgba(255, 255, 255, .94);
+      border-bottom: 1px solid rgba(102, 85, 70, .16);
+      background: rgba(243, 238, 229, .94);
       backdrop-filter: blur(18px);
     }
     .nav-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 24px; }
@@ -107,45 +107,45 @@
     .section-light { background: var(--paper-light); }
     .section-red { background: var(--red); color: #fff; }
     .section-head { display: grid; grid-template-columns: 1fr minmax(290px, .65fr); gap: 70px; align-items: end; margin-bottom: 43px; }
-    .section-head .eyebrow, .simple-copy .eyebrow { color: var(--red); }
-    .section-head h2, .simple-copy h2 { margin: 12px 0 0; color: var(--red); font-size: clamp(39px, 5.2vw, 66px); font-weight: 500; letter-spacing: -.045em; line-height: 1.12; }
+    .section-head .eyebrow, .simple-copy .eyebrow { color: var(--red-dark); }
+    .section-head h2, .simple-copy h2 { margin: 12px 0 0; font-size: clamp(39px, 5.2vw, 66px); font-weight: 500; letter-spacing: -.045em; line-height: 1.12; }
     .section-head > p, .simple-copy > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 14px; line-height: 1.9; }
     .section-red .section-head .eyebrow { color: rgba(255,255,255,.68); }
     .section-red .section-head > p { color: rgba(255,255,255,.76); }
 
     .learn-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .learn-card { min-height: 300px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: 0 12px 40px rgba(20, 20, 24, .04); padding: 23px; }
-    .learn-card > span { color: var(--red); font-family: var(--sans); font-size: 10px; font-weight: 800; }
-    .learn-card h3 { margin: 50px 0 12px; color: var(--ink); font-size: 28px; font-weight: 500; }
+    .learn-card { min-height: 300px; border: 1px solid var(--line); border-radius: 15px; background: rgba(255,255,255,.35); padding: 23px; }
+    .learn-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .learn-card h3 { margin: 50px 0 12px; font-size: 28px; font-weight: 500; }
     .learn-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.85; }
 
     .day-list { border-top: 1px solid var(--ink); }
     .day-row { display: grid; grid-template-columns: 84px 270px 1fr; gap: 22px; align-items: start; border-bottom: 1px solid var(--line); padding: 23px 5px; }
-    .day-row > span { color: var(--red); font-family: var(--sans); font-size: 10px; font-weight: 800; }
-    .day-row strong { color: var(--ink); font-size: 20px; font-weight: 500; line-height: 1.4; }
+    .day-row > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .day-row strong { font-size: 20px; font-weight: 500; line-height: 1.4; }
     .day-row p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; line-height: 1.75; }
 
-    .class-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid var(--line); background: var(--line); }
-    .class-step { min-height: 280px; background: #fff; padding: 24px; }
-    .class-step span { color: var(--red); font-family: var(--sans); font-size: 10px; font-weight: 800; }
-    .class-step h3 { margin: 55px 0 12px; color: var(--ink); font-size: 27px; font-weight: 500; }
-    .class-step p { color: var(--ink-soft); font-family: var(--sans); font-size: 12px; }
+    .class-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid #a51c21; background: #a51c21; }
+    .class-step { min-height: 280px; background: var(--red); padding: 24px; }
+    .class-step span { color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 10px; }
+    .class-step h3 { margin: 55px 0 12px; font-size: 27px; font-weight: 500; }
+    .class-step p { color: rgba(255,255,255,.76); font-family: var(--sans); font-size: 12px; }
 
     .deliver-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 13px; }
-    .deliver-card { min-height: 270px; border: 1px solid var(--line); border-radius: 15px; background: #fff; box-shadow: 0 12px 40px rgba(20, 20, 24, .04); padding: 21px; }
+    .deliver-card { min-height: 270px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper-light); box-shadow: 0 12px 40px rgba(51, 36, 26, .05); padding: 21px; }
     .deliver-card:first-child { grid-column: span 2; }
     .deliver-card:nth-child(2) { grid-column: span 2; }
     .deliver-card:nth-child(3) { grid-column: span 2; }
     .deliver-card:nth-child(4) { grid-column: 2 / span 2; }
     .deliver-card:nth-child(5) { grid-column: span 2; }
-    .deliver-card > span { color: var(--red); font-family: var(--sans); font-size: 10px; font-weight: 800; }
-    .deliver-card h3 { margin: 43px 0 11px; color: var(--ink); font-size: 27px; font-weight: 500; line-height: 1.3; }
+    .deliver-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .deliver-card h3 { margin: 43px 0 11px; font-size: 27px; font-weight: 500; line-height: 1.3; }
     .deliver-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.8; }
     .deliver-note { margin: 24px 0 0; color: var(--muted); font-family: var(--sans); font-size: 10px; text-align: center; }
 
     .fit-teacher { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
     .info-box { border: 1px solid var(--line); border-radius: 16px; padding: 28px; }
-    .info-box h3 { margin: 0 0 21px; color: var(--ink); font-size: 28px; font-weight: 500; }
+    .info-box h3 { margin: 0 0 21px; font-size: 28px; font-weight: 500; }
     .info-box ul { margin: 0; padding: 0; list-style: none; }
     .info-box li { display: flex; gap: 11px; border-top: 1px solid var(--line); padding: 13px 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; }
     .info-box li::before { color: var(--red); content: "✓"; font-weight: 800; }
@@ -163,7 +163,7 @@
     .schedule-row strong { font-size: 17px; font-weight: 500; }
     .schedule-row em { font-family: var(--sans); font-size: 10px; font-style: normal; }
     .price-card { border-radius: 18px; background: var(--paper-light); color: var(--ink); box-shadow: 0 30px 90px rgba(86, 7, 10, .28); padding: 29px; }
-    .price-card > span { color: var(--red); font-family: var(--sans); font-size: 10px; font-weight: 800; }
+    .price-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
     .price-card h3 { margin: 20px 0 9px; font-size: 31px; font-weight: 500; }
     .price-card > p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; }
     .price { margin: 28px 0 23px; border-block: 1px solid var(--line); padding: 20px 0; }
@@ -319,7 +319,7 @@
       </div>
     </section>
 
-    <section class="section section-light" id="class-format">
+    <section class="section section-red" id="class-format">
       <div class="shell">
         <div class="section-head">
           <div><div class="eyebrow">六天怎么上课</div><h2>老师讲完，<br>现场就练。</h2></div>
@@ -342,7 +342,7 @@
         </div>
         <div class="deliver-grid">
           <article class="deliver-card"><span>01</span><h3>结业证书</h3><p>完成六天学习并达到当期结业要求后，发放课程结业证书。</p></article>
-          <article class="deliver-card"><span>02</span><h3>761页 A4详细教材</h3><p>全书共761页，其中正文754页，带三级目录、页眉、页脚和页码。可以在手机上阅读，也适合打印复习和备课。</p></article>
+          <article class="deliver-card"><span>02</span><h3>6天详细课程笔记</h3><p>按照每天的课程内容整理。可以在手机上阅读，也可以打印出来复习和备课。</p></article>
           <article class="deliver-card"><span>03</span><h3>线上动作库</h3><p>课后可以按身体部位、训练目标和动作难度回看课堂动作。</p></article>
           <article class="deliver-card"><span>04</span><h3>课程复习网站</h3><p>可以按六天课程浏览，也可以直接搜索腹部、肩颈、髋、腿型和足踝等内容。</p></article>
           <article class="deliver-card"><span>05</span><h3>课后群内答疑陪跑</h3><p>复习、练动作或给会员上课时遇到问题，可以在群内提问并参加课后答疑。</p></article>
@@ -396,7 +396,7 @@
         <div class="faq-list">
           <details class="faq"><summary>没有上过体态课程，可以参加吗？<span>＋</span></summary><p>有基本训练经验和人体知识会更容易跟上。可以先把自己的学习和工作背景告诉课程顾问，再确认是否需要提前预习。</p></details>
           <details class="faq"><summary>六天是不是一直听老师讲？<span>＋</span></summary><p>不是。每个主题都会安排老师示范、学员两人练习和现场纠正。</p></details>
-          <details class="faq"><summary>A4详细教材可以打印吗？<span>＋</span></summary><p>可以。教材已经按A4版式整理，带目录、页眉、页脚和页码；可以在手机上阅读，也适合打印装订。</p></details>
+          <details class="faq"><summary>详细课程笔记可以打印吗？<span>＋</span></summary><p>可以。课程笔记可以在手机上阅读，也会保留适合打印的详细版本。</p></details>
           <details class="faq"><summary>课程结束以后遇到问题怎么办？<span>＋</span></summary><p>可以在课后群内提问，并参加当期安排的答疑。具体服务时间以当期课程通知为准。</p></details>
         </div>
       </div>
