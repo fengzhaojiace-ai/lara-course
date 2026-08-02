@@ -119,10 +119,14 @@
     .learn-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.85; }
 
     .day-list { border-top: 1px solid var(--ink); }
-    .day-row { display: grid; grid-template-columns: 84px 270px 1fr; gap: 22px; align-items: start; border-bottom: 1px solid var(--line); padding: 23px 5px; }
+    .day-row { display: grid; grid-template-columns: 84px 270px 1fr; gap: 22px; align-items: start; border-bottom: 1px solid var(--line); padding: 27px 5px; }
     .day-row > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
     .day-row strong { font-size: 20px; font-weight: 500; line-height: 1.4; }
-    .day-row p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; line-height: 1.75; }
+    .day-points { margin: 0; padding: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 13px; line-height: 1.75; list-style: none; }
+    .day-points li { position: relative; padding-left: 16px; }
+    .day-points li + li { margin-top: 7px; }
+    .day-points li::before { position: absolute; top: .7em; left: 0; width: 5px; height: 5px; border-radius: 50%; background: var(--red); content: ""; }
+    .day-points strong { color: var(--ink); font-size: inherit; font-weight: 700; }
 
     .class-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; border: 1px solid #a51c21; background: #a51c21; }
     .class-step { min-height: 280px; background: var(--red); padding: 24px; }
@@ -146,13 +150,8 @@
     .case-details .case-feedback dd { color: var(--ink); font-weight: 600; }
     .case-note { margin: 22px auto 0; max-width: 880px; color: var(--muted); font-size: 10px; line-height: 1.8; text-align: center; }
 
-    .deliver-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 13px; }
+    .deliver-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
     .deliver-card { min-height: 270px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper-light); box-shadow: 0 12px 40px rgba(51, 36, 26, .05); padding: 21px; }
-    .deliver-card:first-child { grid-column: span 2; }
-    .deliver-card:nth-child(2) { grid-column: span 2; }
-    .deliver-card:nth-child(3) { grid-column: span 2; }
-    .deliver-card:nth-child(4) { grid-column: 2 / span 2; }
-    .deliver-card:nth-child(5) { grid-column: span 2; }
     .deliver-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
     .deliver-card h3 { margin: 43px 0 11px; font-size: 27px; font-weight: 500; line-height: 1.3; }
     .deliver-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.8; }
@@ -194,11 +193,11 @@
 
     .faq-list { border-top: 1px solid var(--ink); }
     .faq { border-bottom: 1px solid var(--line); }
-    .faq summary { display: grid; grid-template-columns: 1fr 24px; gap: 18px; align-items: center; min-height: 74px; cursor: pointer; list-style: none; font-size: 17px; }
+    .faq summary { display: grid; grid-template-columns: 1fr 24px; gap: 18px; align-items: center; min-height: 82px; cursor: pointer; list-style: none; font-size: 19px; font-weight: 600; line-height: 1.5; }
     .faq summary::-webkit-details-marker { display: none; }
     .faq summary span { color: var(--red); font-family: var(--sans); font-size: 22px; transition: transform .2s ease; }
     .faq[open] summary span { transform: rotate(45deg); }
-    .faq p { max-width: 820px; margin: -3px 0 23px; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; }
+    .faq p { max-width: 860px; margin: -3px 0 27px; color: var(--ink-soft); font-family: var(--sans); font-size: 14px; line-height: 1.95; }
 
     .footer { display: flex; align-items: center; justify-content: space-between; gap: 28px; border-top: 1px solid var(--line); padding-block: 31px 96px; }
     .footer p { margin: 0; font-size: 13px; }
@@ -214,7 +213,7 @@
       .case-study { grid-template-columns: 1fr; }
       .learn-grid, .class-grid { grid-template-columns: 1fr 1fr; }
       .deliver-grid { grid-template-columns: 1fr 1fr; }
-      .deliver-card, .deliver-card:first-child, .deliver-card:nth-child(2), .deliver-card:nth-child(3), .deliver-card:nth-child(4), .deliver-card:nth-child(5) { grid-column: auto; }
+      .deliver-card { grid-column: auto; }
     }
 
     @media (max-width: 700px) {
@@ -242,7 +241,7 @@
       .case-body h3 { margin-bottom: 20px; font-size: 27px; }
       .case-details > div { grid-template-columns: 1fr; gap: 4px; }
       .day-row { grid-template-columns: 54px 1fr; gap: 12px; }
-      .day-row p { grid-column: 2; }
+      .day-points { grid-column: 2; }
       .schedule-row { grid-template-columns: 54px 1fr; }
       .schedule-row em { grid-column: 2; }
       .price-card { padding: 24px 20px; }
@@ -284,6 +283,7 @@
         <a href="#curriculum">六天课表</a>
         <a href="#cases">真实案例</a>
         <a href="#deliverables">能带走什么</a>
+        <a href="#faq">常见问题</a>
         <a class="nav-button" href="#enroll">期次与报名</a>
       </div>
     </div>
@@ -294,7 +294,7 @@
       <div>
         <div class="eyebrow">广州 · 6天线下课 · Lara老师</div>
         <h1>6天学会<em>评估、排方案、给会员上课</em>。</h1>
-        <p class="hero-lead">体态觉醒与功能重建是一门给健身教练、普拉提和瑜伽老师的线下课程。老师会带你从头到脚学习常见体态问题，并在现场练习怎么完成评估、怎么排训练方案、怎么把一节课带完整。</p>
+        <p class="hero-lead">体态觉醒与功能重建主要面向健身教练、普拉提和瑜伽老师，也适合想系统改善自己体态的人。老师会带你从头到脚学习常见体态问题，并在现场练习怎么完成评估、怎么排训练方案、怎么把一节课带完整。</p>
         <div class="hero-actions">
           <a class="button button-dark" href="#enroll">查看期次与报名 <span>→</span></a>
           <a class="button button-light" href="#curriculum">查看六天课表</a>
@@ -340,12 +340,60 @@
           <p>下面只列最主要的内容。上课时还会安排现场示范、两人练习、老师纠正和练前练后对比。</p>
         </div>
         <div class="day-list">
-          <div class="day-row"><span>DAY 01</span><strong>核心、呼吸与腹部</strong><p>学习怎么看核心是否会用力，处理常见的悬垂腹，并练习从地面动作过渡到站立动作。</p></div>
-          <div class="day-row"><span>DAY 02</span><strong>高张腹、肩胛和上肢</strong><p>学习腹部一直绷紧、葫芦腹等问题，也会练习肩胛活动、抬手测试和上肢动作。</p></div>
-          <div class="day-row"><span>DAY 03</span><strong>圆肩、驼背和左右不对称</strong><p>学习观察头、肩、胸和左右承重差异，再用单侧动作、转身和走路练习做调整。</p></div>
-          <div class="day-row"><span>DAY 04</span><strong>髋、骨盆和单腿</strong><p>学习髋关节各个方向怎么动，怎么看走路和下蹲，并练习骨盆、臀腿和单腿动作。</p></div>
-          <div class="day-row"><span>DAY 05</span><strong>假胯宽、腿型和膝踝</strong><p>学习怎么看臀髋外侧轮廓、X型腿和O型腿，再练习足底、膝盖和髋一起配合。</p></div>
-          <div class="day-row"><span>DAY 06</span><strong>足踝、体验课和长期课程</strong><p>学习足弓、走路和多方向承重，也会完整练习体验课、会员沟通和长期课程安排。</p></div>
+          <div class="day-row">
+            <span>DAY 01</span><strong>腰腹结构与核心功能</strong>
+            <ul class="day-points">
+              <li>基础理论：身体结构与功能</li>
+              <li>悬垂腹、骨盆前移、小腹凸出：评估、解决思路与训练方案精讲</li>
+              <li>腰腹筋膜与疤痕手法</li>
+              <li><strong>晚课：</strong>腰腹曲线和平衡训练</li>
+            </ul>
+          </div>
+          <div class="day-row">
+            <span>DAY 02</span><strong>上肢结构与肩背体态</strong>
+            <ul class="day-points">
+              <li>高张腹、葫芦腹：评估、解决思路与训练方案精讲</li>
+              <li>上肢结构与功能基础理论、肩关节松动</li>
+              <li>胸廓压缩、胸曲变直、翼状肩胛、溜肩、圆肩：评估、解决思路与训练方案精讲</li>
+              <li><strong>晚课：</strong>气质肩背和平衡训练</li>
+            </ul>
+          </div>
+          <div class="day-row">
+            <span>DAY 03</span><strong>圆肩驼背与不对称体态</strong>
+            <ul class="day-points">
+              <li>圆肩驼背、头前引：评估、解决思路与训练方案精讲</li>
+              <li>不对称体态基础理论</li>
+              <li>高低肩、骨盆胸廓回旋、长短腿：评估、解决思路与训练方案精讲</li>
+              <li>脊柱侧弯案例分析、解决思路与训练方案精讲</li>
+              <li><strong>晚课：</strong>不对称体态与平衡训练</li>
+            </ul>
+          </div>
+          <div class="day-row">
+            <span>DAY 04</span><strong>下肢动力链与臀部形态</strong>
+            <ul class="day-points">
+              <li>下肢动力链、结构与功能</li>
+              <li>髋关节功能评估与关节松动</li>
+              <li>妈妈臀、扁平塌臀、臀凹陷：评估、解决思路与训练方案精讲</li>
+              <li><strong>晚课：</strong>美臀和平衡训练</li>
+            </ul>
+          </div>
+          <div class="day-row">
+            <span>DAY 05</span><strong>假胯宽与腿型调整</strong>
+            <ul class="day-points">
+              <li>假胯宽分型：评估、解决思路与训练方案精讲</li>
+              <li>X型腿：评估、解决思路与训练方案精讲</li>
+              <li>O型腿：评估、解决思路与训练方案精讲</li>
+              <li><strong>晚课：</strong>美腿和平衡训练</li>
+            </ul>
+          </div>
+          <div class="day-row">
+            <span>DAY 06</span><strong>足部功能与体验课营销</strong>
+            <ul class="day-points">
+              <li>足部基础理论、结构与功能</li>
+              <li>拇外翻、高足弓、扁平足：评估、解决思路与训练方案精讲</li>
+              <li><strong>营销板块：</strong>体验课流程、周期方案设计、朋友圈文案与私域营销</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -489,8 +537,9 @@
           <article class="deliver-card"><span>01</span><h3>结业证书</h3><p>完成六天学习并达到当期结业要求后，发放课程结业证书。</p></article>
           <article class="deliver-card"><span>02</span><h3>6天详细课程笔记</h3><p>按照每天的课程内容整理。可以在手机上阅读，也可以打印出来复习和备课。</p></article>
           <article class="deliver-card"><span>03</span><h3>线上动作库</h3><p>课后可以按身体部位、训练目标和动作难度回看课堂动作。</p></article>
-          <article class="deliver-card"><span>04</span><h3>课程复习网站</h3><p>可以按六天课程浏览，也可以直接搜索腹部、肩颈、髋、腿型和足踝等内容。</p></article>
-          <article class="deliver-card"><span>05</span><h3>课后群内答疑陪跑</h3><p>复习、练动作或给会员上课时遇到问题，可以在群内提问并参加课后答疑。</p></article>
+          <article class="deliver-card"><span>04</span><h3>线上视频复习</h3><p>线上视频可在课后不限次数复习，帮助零基础学员预习，也方便线下课后反复巩固。</p></article>
+          <article class="deliver-card"><span>05</span><h3>课程复习网站</h3><p>可以按六天课程浏览，也可以直接搜索腹部、肩颈、髋、腿型和足踝等内容。</p></article>
+          <article class="deliver-card"><span>06</span><h3>课后群内答疑陪跑</h3><p>复习、练动作或给会员上课时遇到问题，可以继续在课程群内提问并与老师沟通。</p></article>
         </div>
         <p class="deliver-note">结业要求、动作库开放方式和群内答疑周期，以当期课程通知为准。</p>
       </div>
@@ -501,10 +550,10 @@
     <section class="section section-light" id="fit">
       <div class="shell">
         <div class="section-head">
-          <div><div class="eyebrow">适合参加的人</div><h2>适合已经在带课，<br>想把体态课讲得更清楚的人。</h2></div>
+          <div><div class="eyebrow">适合参加的人</div><h2>从零基础到正在带课，<br>都能找到自己的学习入口。</h2></div>
         </div>
         <div class="fit-teacher">
-          <article class="info-box"><h3>适合这些老师</h3><ul><li>健身私教和体态训练教练</li><li>普拉提、瑜伽和运动指导老师</li><li>会带动作，但不知道面对不同会员怎么选择</li><li>准备开设体态体验课和长期课程</li></ul></article>
+          <article class="info-box"><h3>适合这些人</h3><ul><li>刚入行、希望从底层逻辑开始学习的新教练</li><li>健身私教、普拉提、瑜伽和体态训练老师</li><li>会带动作，但面对不同会员不知道怎么评估和排课</li><li>想系统了解身体、改善自己体态的非教练学员</li></ul></article>
           <article class="info-box teacher-box"><h3>主讲：Lara老师</h3><p>课程会把复杂内容转成课堂上能直接使用的方法。每个主题都会说明怎么看、怎么教、动作太难时怎么改，以及练完以后怎么做对比。</p><p>课程也会说明健身教练可以做什么、哪些情况应该停止训练并建议会员找医生或康复专业人员。</p><div class="teacher-quote">“先看清会员现在怎么动，再决定带他练什么。”</div></article>
         </div>
       </div>
@@ -543,12 +592,17 @@
 
     <section class="section section-light" id="faq">
       <div class="shell">
-        <div class="section-head"><div><div class="eyebrow">报名常见问题</div><h2>报名之前可以先了解这些。</h2></div></div>
+        <div class="section-head">
+          <div><div class="eyebrow">高频咨询问题</div><h2>报名前最常被问到的6个问题。</h2></div>
+          <p>如果你的情况不在下面，也可以扫码把职业背景、目前的带课方式和最想解决的问题告诉课程顾问。</p>
+        </div>
         <div class="faq-list">
-          <details class="faq"><summary>没有上过体态课程，可以参加吗？<span>＋</span></summary><p>有基本训练经验和人体知识会更容易跟上。可以先把自己的学习和工作背景告诉课程顾问，再确认是否需要提前预习。</p></details>
-          <details class="faq"><summary>六天是不是一直听老师讲？<span>＋</span></summary><p>不是。每个主题都会安排老师示范、学员两人练习和现场纠正。</p></details>
-          <details class="faq"><summary>详细课程笔记可以打印吗？<span>＋</span></summary><p>可以。课程笔记可以在手机上阅读，也会保留适合打印的详细版本。</p></details>
-          <details class="faq"><summary>课程结束以后遇到问题怎么办？<span>＋</span></summary><p>可以在课后群内提问，并参加当期安排的答疑。具体服务时间以当期课程通知为准。</p></details>
+          <details class="faq" open><summary>我是零基础的新教练，能听懂、学会吗？<span>＋</span></summary><p>可以。课程就是按照零基础也能跟上的顺序设计：不会先让你死记一堆动作，而是从身体结构、生物力学和神经科学的基本概念开始，逐步建立“观察—评估—选动作—复测”的思路。报名后有线上笔记可以提前预习，线上视频可以反复复习；线下六天会把更多时间放在老师示范、学员实操和现场纠正，帮助你带走一套能用于上课的完整流程。</p></details>
+          <details class="faq"><summary>我是瑜伽、普拉提或撸铁塑形老师，课程能和原来的体系融合吗？<span>＋</span></summary><p>可以。课程不是要求你把以前学过的内容全部丢掉，而是给现有的动作和排课方式补上一套判断逻辑。你仍然可以使用熟悉的瑜伽、普拉提或力量训练动作，只是会更清楚面对不同会员时先观察什么、为什么选择这个动作、练完以后怎么判断是否有效，让会员的身体感受、课堂反馈和案例呈现更清楚。</p></details>
+          <details class="faq"><summary>课程好落地吗？学完能直接用来给会员上课吗？<span>＋</span></summary><p>课程会把常见问题按照“评估—激活与准备—整合—强化—复测”的顺序讲解，并现场练习怎么排进一节体验课和长期课程。学员可以先按课堂模板练习，再根据会员当下的表现、反馈和复测结果调整，而不是回去只记住一堆零散动作。</p></details>
+          <details class="faq"><summary>课程里有产后相关内容吗？<span>＋</span></summary><p>有。课程会涉及悬垂腹、腹内压、盆底协同、骨盆与胸廓排列等产后人群常见问题，并讲解如何从整体结构和功能出发安排训练。产后恢复阶段和个体情况差异较大，实际带课时仍需结合会员状态判断；出现疼痛或其他异常情况时，应先建议会员接受相应的专业评估。</p></details>
+          <details class="faq"><summary>课程结束以后遇到问题，还能问老师吗？<span>＋</span></summary><p>可以。课程提供课后陪伴式答疑，课程群会长期保留。复习笔记、练习动作或给会员上课时遇到问题，都可以继续在群内提问并与老师沟通。具体答疑安排以当期课程通知为准。</p></details>
+          <details class="faq"><summary>我不是教练，也能学习并调整自己的体态吗？<span>＋</span></summary><p>可以。课程中的身体结构、观察和训练逻辑同样可以用于了解自己。线下实操时，你既会练习怎么看别人，也会在同学和老师的帮助下体验评估与训练。不过课程属于专业学习和训练指导，不替代医疗诊断或治疗。</p></details>
         </div>
       </div>
     </section>
