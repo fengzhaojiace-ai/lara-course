@@ -7,7 +7,7 @@
   <meta name="description" content="面向健身教练、普拉提和瑜伽老师的6天线下课程。学习体态观察、动作选择、现场带练和练前练后对比。">
   <meta name="theme-color" content="#d92930">
   <meta property="og:title" content="体态觉醒与功能重建｜6天线下师资进修">
-  <meta property="og:description" content="6天学会看体态、选动作和给会员上课。">
+  <meta property="og:description" content="6天学会评估、排方案、给会员上课。">
   <meta property="og:type" content="website">
   <style>
     :root {
@@ -21,7 +21,6 @@
       --ink-soft: #665d55;
       --muted: #8f8479;
       --line: #d8cec1;
-      --serif: "Iowan Old Style", "Baskerville", "Songti SC", "STSong", "Noto Serif CJK SC", serif;
       --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
       --shadow: 0 22px 70px rgba(60, 42, 30, .10);
     }
@@ -32,7 +31,7 @@
       margin: 0;
       background: var(--paper);
       color: var(--ink);
-      font-family: var(--serif);
+      font-family: var(--sans);
       font-size: 17px;
       line-height: 1.75;
       -webkit-font-smoothing: antialiased;
@@ -171,6 +170,11 @@
     .price strong { display: block; margin-top: 3px; color: var(--red); font-family: var(--sans); font-size: 40px; }
     .price-card .button { width: 100%; }
     .price-note { margin-top: 12px !important; color: var(--muted) !important; font-size: 10px !important; }
+    .qr-contact { display: grid; justify-items: center; gap: 11px; margin-top: 23px; }
+    .qr-contact a { display: block; border-radius: 14px; background: #fff; padding: 10px; line-height: 0; }
+    .qr-contact img { display: block; width: min(230px, 100%); height: auto; border-radius: 7px; }
+    .qr-contact strong { color: var(--red); font-size: 16px; }
+    .qr-contact span { color: var(--ink-soft); font-size: 11px; text-align: center; }
 
     .faq-list { border-top: 1px solid var(--ink); }
     .faq { border-bottom: 1px solid var(--line); }
@@ -262,8 +266,8 @@
     <div class="shell hero-inner">
       <div>
         <div class="eyebrow">广州 · 6天线下课 · Lara老师</div>
-        <h1>6天，学会<em>看体态、选动作、给会员上课</em>。</h1>
-        <p class="hero-lead">体态觉醒与功能重建是一门给健身教练、普拉提和瑜伽老师的线下课程。老师会带你从头到脚学习常见体态问题，并在现场练习怎么观察、怎么教动作、怎么安排一节课。</p>
+        <h1>6天学会<em>评估、排方案、给会员上课</em>。</h1>
+        <p class="hero-lead">体态觉醒与功能重建是一门给健身教练、普拉提和瑜伽老师的线下课程。老师会带你从头到脚学习常见体态问题，并在现场练习怎么完成评估、怎么排训练方案、怎么把一节课带完整。</p>
         <div class="hero-actions">
           <a class="button button-dark" href="#enroll">查看期次与报名 <span>→</span></a>
           <a class="button button-light" href="#curriculum">查看六天课表</a>
@@ -384,7 +388,13 @@
           <h3>先向课程顾问确认期次和名额</h3>
           <p>咨询时可以说明你的职业、目前怎么带课，以及最想解决的课程问题。</p>
           <div class="price"><small>课程原价 ¥7,980</small><strong>早鸟价 ¥6,980</strong></div>
-          <a class="button button-red" href="https://u.wechat.com/EEIuFPVVf4vXzaF5g3VkfHw?s=2" target="_blank" rel="noopener">微信咨询课程 <span>↗</span></a>
+          <div class="qr-contact">
+            <a href="assets/wechat-course-consultation.png" aria-label="打开课程咨询微信二维码">
+              <img src="assets/wechat-course-consultation.png" alt="课程咨询微信二维码" width="774" height="768">
+            </a>
+            <strong>微信扫码咨询课程</strong>
+            <span>手机访问可以长按二维码识别</span>
+          </div>
           <p class="price-note">早鸟名额和截止时间，以课程顾问回复为准。</p>
         </aside>
       </div>
@@ -408,6 +418,6 @@
     <a href="/lara-course/review/">查看课程复习网站</a>
   </footer>
 
-  <div class="mobile-cta"><span>广州 · 6天线下课 · 早鸟价 ¥6,980</span><a href="https://u.wechat.com/EEIuFPVVf4vXzaF5g3VkfHw?s=2" target="_blank" rel="noopener">微信咨询</a></div>
+  <div class="mobile-cta"><span>广州 · 6天线下课 · 早鸟价 ¥6,980</span><a href="#enroll">查看二维码</a></div>
 </body>
 </html>
