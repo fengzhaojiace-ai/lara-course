@@ -93,7 +93,17 @@
     .hero-facts span { display: block; color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 9px; }
     .hero-facts strong { display: block; margin-top: 3px; font-size: 14px; font-weight: 500; }
 
-    .plain-card { border: 1px solid rgba(255,255,255,.42); border-radius: 20px; background: rgba(116, 8, 14, .2); box-shadow: 0 28px 80px rgba(87, 6, 10, .24); padding: 24px; }
+    .plain-card {
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.42);
+      border-radius: 20px;
+      background-color: rgba(116, 8, 14, .38);
+      background-image: linear-gradient(180deg, rgba(78,5,10,.58), rgba(66,4,8,.93)), url("assets/classroom-practice.jpg");
+      background-position: center;
+      background-size: cover;
+      box-shadow: 0 28px 80px rgba(87, 6, 10, .24);
+      padding: 24px;
+    }
     .plain-card h2 { margin: 0; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 21px; font-weight: 500; }
     .plain-row { display: grid; grid-template-columns: 32px 1fr; gap: 12px; border-bottom: 1px solid rgba(255,255,255,.18); padding: 18px 0; }
     .plain-row:last-of-type { border-bottom: 0; }
@@ -133,6 +143,12 @@
     .class-step span { color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 10px; }
     .class-step h3 { margin: 55px 0 12px; font-size: 27px; font-weight: 500; }
     .class-step p { color: rgba(255,255,255,.76); font-family: var(--sans); font-size: 12px; }
+    .classroom-proof { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(250px, .65fr); overflow: hidden; margin: 22px 0 0; border: 1px solid rgba(255,255,255,.28); border-radius: 18px; background: #a51c21; }
+    .classroom-proof img { display: block; width: 100%; height: 100%; min-height: 420px; object-fit: cover; object-position: center; }
+    .classroom-proof figcaption { display: flex; flex-direction: column; justify-content: flex-end; padding: 34px; }
+    .classroom-proof figcaption span { color: rgba(255,255,255,.58); font-size: 9px; font-weight: 800; letter-spacing: .1em; }
+    .classroom-proof figcaption strong { display: block; margin-top: 13px; font-size: 31px; font-weight: 500; line-height: 1.35; }
+    .classroom-proof figcaption p { margin: 15px 0 0; color: rgba(255,255,255,.73); font-size: 12px; line-height: 1.85; }
 
     .case-list { display: grid; gap: 22px; }
     .case-study { display: grid; grid-template-columns: minmax(320px, .9fr) minmax(0, 1.1fr); overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper-light); box-shadow: 0 16px 54px rgba(51,36,26,.07); }
@@ -175,11 +191,25 @@
     .feedback-points li::before { position: absolute; top: 2px; left: 0; color: var(--red-dark); content: counter(feedback-point, decimal-leading-zero); font-size: 10px; font-weight: 800; }
     .feedback-note { margin: 22px auto 0; max-width: 800px; color: var(--muted); font-size: 10px; line-height: 1.8; text-align: center; }
 
+    .cohort-proof { background: var(--ink); color: #fff; }
+    .cohort-proof .section-head .eyebrow { color: #f58e91; }
+    .cohort-proof .section-head > p { color: rgba(255,255,255,.68); }
+    .cohort-mosaic { display: grid; grid-template-columns: minmax(0, 1.35fr) minmax(310px, .65fr); grid-template-rows: 1fr 1fr; gap: 14px; }
+    .cohort-photo { position: relative; overflow: hidden; min-height: 260px; margin: 0; border: 1px solid rgba(255,255,255,.16); border-radius: 18px; background: #171412; }
+    .cohort-photo--main { grid-row: 1 / span 2; min-height: 560px; }
+    .cohort-photo img { display: block; width: 100%; height: 100%; min-height: inherit; object-fit: cover; transition: transform .5s ease; }
+    .cohort-photo--main img { object-position: center; }
+    .cohort-photo:hover img { transform: scale(1.015); }
+    .cohort-photo figcaption { position: absolute; right: 0; bottom: 0; left: 0; padding: 48px 20px 17px; background: linear-gradient(transparent, rgba(0,0,0,.72)); font-size: 11px; font-weight: 700; letter-spacing: .03em; }
+
     .deliver-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
     .deliver-card { min-height: 270px; border: 1px solid var(--line); border-radius: 15px; background: var(--paper-light); box-shadow: 0 12px 40px rgba(51, 36, 26, .05); padding: 21px; }
     .deliver-card > span { color: var(--red-dark); font-family: var(--sans); font-size: 10px; font-weight: 800; }
     .deliver-card h3 { margin: 43px 0 11px; font-size: 27px; font-weight: 500; line-height: 1.3; }
     .deliver-card p { margin: 0; color: var(--ink-soft); font-family: var(--sans); font-size: 12px; line-height: 1.8; }
+    .deliver-card--photo { border-color: rgba(42,37,33,.24); background-color: var(--ink); background-image: linear-gradient(180deg, rgba(25,20,17,.22), rgba(25,20,17,.9)), url("assets/cohort-graduation-a.jpg"); background-position: center; background-size: cover; color: #fff; }
+    .deliver-card--photo > span { color: rgba(255,255,255,.68); }
+    .deliver-card--photo p { color: rgba(255,255,255,.78); }
     .deliver-note { margin: 24px 0 0; color: var(--muted); font-family: var(--sans); font-size: 10px; text-align: center; }
 
     .fit-teacher { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
@@ -238,6 +268,10 @@
       .case-study { grid-template-columns: 1fr; }
       .case-gallery-head { grid-template-columns: 1fr; gap: 14px; }
       .learn-grid, .class-grid { grid-template-columns: 1fr 1fr; }
+      .classroom-proof { grid-template-columns: 1fr; }
+      .classroom-proof img { min-height: 360px; }
+      .cohort-mosaic { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+      .cohort-photo--main { grid-column: 1 / span 2; grid-row: auto; min-height: 480px; }
       .deliver-grid { grid-template-columns: 1fr 1fr; }
       .deliver-card { grid-column: auto; }
     }
@@ -268,10 +302,16 @@
       .case-details > div { grid-template-columns: 1fr; gap: 4px; }
       .case-gallery { grid-template-columns: 1fr; }
       .case-visual-media { min-height: 0; }
+      .classroom-proof img { min-height: 260px; }
+      .classroom-proof figcaption { padding: 25px 21px 27px; }
+      .classroom-proof figcaption strong { font-size: 26px; }
       .feedback-card { padding: 25px 21px 27px; }
       .feedback-card::after { right: 16px; font-size: 62px; }
       .feedback-card h3 { padding-right: 42px; font-size: 23px; }
       .feedback-copy { font-size: 14px; line-height: 1.9; }
+      .cohort-mosaic { grid-template-columns: 1fr; }
+      .cohort-photo, .cohort-photo--main { grid-column: auto; min-height: 250px; }
+      .cohort-photo img { aspect-ratio: 4 / 3; }
       .day-row { grid-template-columns: 54px 1fr; gap: 12px; }
       .day-points { grid-column: 2; }
       .schedule-row { grid-template-columns: 54px 1fr; }
@@ -443,6 +483,14 @@
           <article class="class-step"><span>03</span><h3>学员两人练习</h3><p>轮流做教练和会员，把观察、动作教学和前后对比都做一遍。</p></article>
           <article class="class-step"><span>04</span><h3>老师现场纠正</h3><p>发现看错、说不清或动作不合适时，现场调整并重新练习。</p></article>
         </div>
+        <figure class="classroom-proof">
+          <img src="assets/classroom-theory.jpg" alt="Lara老师在广州线下课堂讲解体态与功能" width="1600" height="1066" loading="lazy">
+          <figcaption>
+            <span>REAL CLASSROOM · 真实课堂</span>
+            <strong>理论讲清楚，<br>再把它练到手里。</strong>
+            <p>六天里既有结构与原理讲解，也有围绕真实身体表现的现场示范、记录、实操和纠正。</p>
+          </figcaption>
+        </figure>
       </div>
     </section>
 
@@ -653,6 +701,29 @@
       </div>
     </section>
 
+    <section class="section cohort-proof" id="cohorts">
+      <div class="shell">
+        <div class="section-head">
+          <div><div class="eyebrow">往期课堂与结业记录</div><h2>每一期，<br>都有真实的学习现场。</h2></div>
+          <p>这些不是宣传素材里的模特照，而是往期学员完成学习、实操和结业时留下的课堂记录。</p>
+        </div>
+        <div class="cohort-mosaic">
+          <figure class="cohort-photo cohort-photo--main">
+            <img src="assets/cohort-april-2026.jpg" alt="2026年4月广州体态觉醒与功能重建课程结业合照" width="1800" height="1261" loading="lazy">
+            <figcaption>2026年4月 · 广州结业记录</figcaption>
+          </figure>
+          <figure class="cohort-photo">
+            <img src="assets/cohort-july-2026.jpg" alt="2026年7月广州课程学员手持结业证书合照" width="1440" height="1080" loading="lazy">
+            <figcaption>2026年7月 · 广州结业记录</figcaption>
+          </figure>
+          <figure class="cohort-photo">
+            <img src="assets/cohort-may-2026.jpg" alt="2026年5月广州体态觉醒课程学员合照" width="1800" height="1199" loading="lazy">
+            <figcaption>2026年5月 · 广州结业记录</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="deliverables">
       <div class="shell">
         <div class="section-head">
@@ -660,7 +731,7 @@
           <p>这些内容用于课后复习、自己练习和以后给会员备课。具体发放方式与服务时间，以当期课程通知为准。</p>
         </div>
         <div class="deliver-grid">
-          <article class="deliver-card"><span>01</span><h3>结业证书</h3><p>完成六天学习并达到当期结业要求后，发放课程结业证书。</p></article>
+          <article class="deliver-card deliver-card--photo"><span>01 · 真实结业记录</span><h3>结业证书</h3><p>完成六天学习并达到当期结业要求后，发放课程结业证书。</p></article>
           <article class="deliver-card"><span>02</span><h3>6天详细课程笔记</h3><p>按照每天的课程内容整理。可以在手机上阅读，也可以打印出来复习和备课。</p></article>
           <article class="deliver-card"><span>03</span><h3>线上动作库</h3><p>课后可以按身体部位、训练目标和动作难度回看课堂动作。</p></article>
           <article class="deliver-card"><span>04</span><h3>线上视频复习</h3><p>线上视频可在课后不限次数复习，帮助零基础学员预习，也方便线下课后反复巩固。</p></article>
@@ -670,8 +741,6 @@
         <p class="deliver-note">结业要求、动作库开放方式和群内答疑周期，以当期课程通知为准。</p>
       </div>
     </section>
-
-    <!-- 往期学员合照与评价：收到已授权的照片和评价原文后，在此处加入。 -->
 
     <section class="section section-light" id="fit">
       <div class="shell">
