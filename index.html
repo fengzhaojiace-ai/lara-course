@@ -73,18 +73,49 @@
     .button-light { border-color: rgba(255,255,255,.48); color: #fff; }
     .nav-button:hover, .button:hover { transform: translateY(-2px); }
 
-    .hero { background: var(--red); color: #fff; }
-    .hero-inner {
-      display: grid;
-      min-height: min(760px, calc(100vh - 70px));
-      grid-template-columns: minmax(0, 1.2fr) minmax(330px, .8fr);
-      gap: 72px;
-      align-items: center;
-      padding-block: 78px 70px;
+    .hero {
+      position: relative;
+      overflow: hidden;
+      isolation: isolate;
+      background: #5d0c12;
+      color: #fff;
     }
+    .hero::before {
+      position: absolute;
+      z-index: -2;
+      inset: 0;
+      background-image:
+        linear-gradient(90deg, rgba(67, 6, 11, .97) 0%, rgba(105, 9, 15, .91) 39%, rgba(95, 8, 13, .55) 67%, rgba(31, 4, 7, .36) 100%),
+        linear-gradient(180deg, rgba(217, 41, 48, .23), rgba(28, 4, 7, .58)),
+        url("assets/classroom-practice.jpg");
+      background-position: center, center, center 46%;
+      background-size: cover;
+      content: "";
+      transform: scale(1.01);
+    }
+    .hero::after {
+      position: absolute;
+      z-index: -1;
+      inset: auto 0 0;
+      height: 34%;
+      background: linear-gradient(180deg, transparent, rgba(31, 3, 6, .56));
+      content: "";
+      pointer-events: none;
+    }
+    .hero-inner {
+      position: relative;
+      display: grid;
+      z-index: 1;
+      min-height: min(820px, calc(100vh - 70px));
+      grid-template-columns: minmax(0, 1.15fr) minmax(340px, .62fr);
+      gap: clamp(42px, 6vw, 92px);
+      align-items: center;
+      padding-block: 84px 62px;
+    }
+    .hero-copy { max-width: 720px; }
     .eyebrow { font-family: var(--sans); font-size: 11px; font-weight: 800; letter-spacing: .14em; line-height: 1.5; }
     .hero .eyebrow { color: rgba(255,255,255,.75); }
-    .hero h1 { margin: 20px 0 0; font-size: clamp(52px, 6.8vw, 92px); font-weight: 500; letter-spacing: -.055em; line-height: 1.05; }
+    .hero h1 { margin: 20px 0 0; font-size: clamp(52px, 6.15vw, 86px); font-weight: 500; letter-spacing: -.055em; line-height: 1.05; text-wrap: balance; }
     .hero h1 em { color: #ffd8c6; font-style: normal; }
     .hero-lead { max-width: 720px; margin: 28px 0 0; color: rgba(255,255,255,.88); font-family: var(--sans); font-size: 18px; line-height: 1.85; }
     .hero-actions { display: flex; flex-wrap: wrap; gap: 11px; margin-top: 32px; }
@@ -94,23 +125,25 @@
     .hero-facts strong { display: block; margin-top: 3px; font-size: 14px; font-weight: 500; }
 
     .plain-card {
+      width: min(100%, 410px);
+      align-self: end;
+      justify-self: end;
       overflow: hidden;
-      border: 1px solid rgba(255,255,255,.42);
-      border-radius: 20px;
-      background-color: rgba(116, 8, 14, .38);
-      background-image: linear-gradient(180deg, rgba(78,5,10,.58), rgba(66,4,8,.93)), url("assets/classroom-practice.jpg");
-      background-position: center;
-      background-size: cover;
-      box-shadow: 0 28px 80px rgba(87, 6, 10, .24);
-      padding: 24px;
+      border: 1px solid rgba(255,255,255,.26);
+      border-radius: 22px;
+      background: rgba(34, 10, 12, .66);
+      box-shadow: 0 26px 70px rgba(22, 2, 5, .30);
+      padding: 24px 26px;
+      backdrop-filter: blur(14px) saturate(118%);
     }
-    .plain-card h2 { margin: 0; padding-bottom: 15px; border-bottom: 1px solid rgba(255,255,255,.25); font-size: 21px; font-weight: 500; }
-    .plain-row { display: grid; grid-template-columns: 32px 1fr; gap: 12px; border-bottom: 1px solid rgba(255,255,255,.18); padding: 18px 0; }
+    .plain-card-kicker { margin-bottom: 10px; color: rgba(255,255,255,.54); font-size: 9px; font-weight: 800; letter-spacing: .16em; }
+    .plain-card h2 { margin: 0; padding-bottom: 14px; border-bottom: 1px solid rgba(255,255,255,.22); font-size: 21px; font-weight: 500; }
+    .plain-row { display: grid; grid-template-columns: 30px 1fr; gap: 12px; border-bottom: 1px solid rgba(255,255,255,.16); padding: 15px 0; }
     .plain-row:last-of-type { border-bottom: 0; }
     .plain-row span { color: rgba(255,255,255,.58); font-family: var(--sans); font-size: 10px; }
     .plain-row strong { display: block; font-size: 17px; font-weight: 500; }
     .plain-row small { display: block; margin-top: 4px; color: rgba(255,255,255,.67); font-family: var(--sans); font-size: 10px; }
-    .plain-card > p { margin: 17px 0 0; color: rgba(255,255,255,.72); font-family: var(--sans); font-size: 11px; }
+    .plain-card > p { margin: 14px 0 0; color: rgba(255,255,255,.68); font-family: var(--sans); font-size: 10px; }
 
     .section { padding-block: 94px; }
     .section-light { background: var(--paper-light); }
@@ -263,7 +296,15 @@
     @media (max-width: 900px) {
       .nav-links > a:not(.nav-button) { display: none; }
       .hero-inner, .section-head, .enroll-grid { grid-template-columns: 1fr; }
-      .hero-inner { min-height: auto; gap: 48px; }
+      .hero::before {
+        background-image:
+          linear-gradient(180deg, rgba(76, 7, 12, .94) 0%, rgba(97, 8, 14, .76) 52%, rgba(27, 3, 6, .74) 100%),
+          url("assets/classroom-practice.jpg");
+        background-position: center, 54% center;
+      }
+      .hero-inner { min-height: auto; gap: 40px; }
+      .hero-copy { max-width: 680px; }
+      .plain-card { width: min(100%, 540px); justify-self: start; }
       .section-head { gap: 18px; }
       .case-study { grid-template-columns: 1fr; }
       .case-gallery-head { grid-template-columns: 1fr; gap: 14px; }
@@ -284,11 +325,11 @@
       .brand strong { font-size: 15px; }
       .brand small { font-size: 8px; }
       .nav-button { min-height: 39px; padding: 7px 13px; font-size: 10px; }
-      .hero-inner { padding-block: 57px 50px; }
+      .hero-inner { padding-block: 57px 46px; }
       .hero h1 { font-size: clamp(44px, 13vw, 66px); }
       .hero-lead { font-size: 15px; }
       .hero-facts { grid-template-columns: 1fr 1fr; row-gap: 14px; }
-      .plain-card { padding: 19px; }
+      .plain-card { padding: 19px 20px; border-radius: 18px; }
       .section { padding-block: 70px; }
       .section-head { margin-bottom: 30px; }
       .section-head h2, .simple-copy h2 { font-size: 40px; }
@@ -364,7 +405,7 @@
 
   <header class="hero" id="top">
     <div class="shell hero-inner">
-      <div>
+      <div class="hero-copy">
         <div class="eyebrow">广州 · 6天线下课 · Lara老师</div>
         <h1>6天学会<em>评估、排方案、给会员上课</em>。</h1>
         <p class="hero-lead">体态觉醒与功能重建主要面向健身教练、普拉提和瑜伽老师，也适合想系统改善自己体态的人。老师会带你从头到脚学习常见体态问题，并在现场练习怎么完成评估、怎么排训练方案、怎么把一节课带完整。</p>
@@ -380,7 +421,8 @@
         </div>
       </div>
       <aside class="plain-card" aria-label="课程学习步骤">
-        <h2>上课会反复练这4步</h2>
+        <div class="plain-card-kicker">COURSE METHOD · 现场实操流程</div>
+        <h2>一节课，反复练这4步</h2>
         <div class="plain-row"><span>01</span><div><strong>先问清会员想改善什么</strong><small>外形、不舒服、动作表现还是日常生活</small></div></div>
         <div class="plain-row"><span>02</span><div><strong>看看问题主要出现在哪里</strong><small>站立、走路、下蹲、抬手和转身</small></div></div>
         <div class="plain-row"><span>03</span><div><strong>选择合适的动作带着练</strong><small>先从会员能够做好的版本开始</small></div></div>
