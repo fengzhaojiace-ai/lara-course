@@ -161,17 +161,17 @@
     .case-visual p { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.8; }
     .case-note { margin: 22px auto 0; max-width: 880px; color: var(--muted); font-size: 10px; line-height: 1.8; text-align: center; }
 
-    .feedback-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-    .feedback-card { overflow: hidden; border: 1px solid var(--line); border-radius: 18px; background: var(--paper-light); box-shadow: 0 16px 50px rgba(51,36,26,.06); }
-    .feedback-media { display: block; overflow: hidden; aspect-ratio: 4 / 5; background: var(--paper-deep); }
-    .feedback-media img { display: block; width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: transform .3s ease; }
-    .feedback-media:hover img { transform: scale(1.015); }
-    .feedback-media--pair { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
-    .feedback-media--pair a { display: block; overflow: hidden; min-width: 0; }
-    .feedback-body { border-top: 1px solid var(--line); padding: 22px 24px 25px; }
-    .feedback-body span { color: var(--red-dark); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
-    .feedback-body h3 { margin: 8px 0 10px; font-size: 25px; font-weight: 600; line-height: 1.4; }
-    .feedback-body p { margin: 0; color: var(--ink-soft); font-size: 11px; line-height: 1.8; }
+    .feedback-grid { display: grid; max-width: 920px; gap: 18px; margin-inline: auto; }
+    .feedback-card { position: relative; overflow: hidden; border: 1px solid var(--line); border-left: 4px solid var(--red); border-radius: 18px; background: var(--paper-light); box-shadow: 0 16px 50px rgba(51,36,26,.06); padding: 31px 34px 34px; }
+    .feedback-card::after { position: absolute; top: 11px; right: 25px; color: var(--red-pale); content: "“"; font-size: 76px; font-weight: 700; line-height: 1; }
+    .feedback-card > span { position: relative; z-index: 1; color: var(--red-dark); font-size: 9px; font-weight: 800; letter-spacing: .08em; }
+    .feedback-card h3 { position: relative; z-index: 1; margin: 9px 0 0; padding-right: 52px; font-size: 27px; font-weight: 600; line-height: 1.4; }
+    .feedback-copy { position: relative; z-index: 1; margin-top: 19px; color: var(--ink-soft); font-size: 15px; line-height: 2; }
+    .feedback-copy p { margin: 0; }
+    .feedback-copy p + p { margin-top: 14px; }
+    .feedback-points { display: grid; gap: 7px; margin: 17px 0 0; padding: 17px 0 0; border-top: 1px solid var(--line); list-style: none; counter-reset: feedback-point; }
+    .feedback-points li { position: relative; padding-left: 30px; counter-increment: feedback-point; }
+    .feedback-points li::before { position: absolute; top: 2px; left: 0; color: var(--red-dark); content: counter(feedback-point, decimal-leading-zero); font-size: 10px; font-weight: 800; }
     .feedback-note { margin: 22px auto 0; max-width: 800px; color: var(--muted); font-size: 10px; line-height: 1.8; text-align: center; }
 
     .deliver-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 13px; }
@@ -267,7 +267,10 @@
       .case-details > div { grid-template-columns: 1fr; gap: 4px; }
       .case-gallery { grid-template-columns: 1fr; }
       .case-visual-media { min-height: 0; }
-      .feedback-grid { grid-template-columns: 1fr; }
+      .feedback-card { padding: 25px 21px 27px; }
+      .feedback-card::after { right: 16px; font-size: 62px; }
+      .feedback-card h3 { padding-right: 42px; font-size: 23px; }
+      .feedback-copy { font-size: 14px; line-height: 1.9; }
       .day-row { grid-template-columns: 54px 1fr; gap: 12px; }
       .day-points { grid-column: 2; }
       .schedule-row { grid-template-columns: 54px 1fr; }
@@ -591,42 +594,60 @@
       <div class="shell">
         <div class="section-head">
           <div><div class="eyebrow">往期学员课程反馈</div><h2>学完以后，<br>他们这样评价这门课。</h2></div>
-          <p>我们保留学员反馈原文，只裁去手机状态栏、输入框和无关画面。点击图片可以查看对应的完整重点截图。</p>
+          <p>以下内容根据学员反馈截图整理，删除了表情、重复语句和无关信息，并重新分段、补充标点，尽量保留学员原本的表达和意思。</p>
         </div>
         <div class="feedback-grid">
           <article class="feedback-card">
-            <a class="feedback-media" href="assets/feedback-01-course-logic.jpg" aria-label="查看学员关于课程逻辑与课堂体验的反馈截图">
-              <img src="assets/feedback-01-course-logic.jpg" alt="往期学员反馈：课程帮助把训练逻辑串联起来，并认可老师的课堂状态与教学方式" width="1060" height="1260" loading="lazy">
-            </a>
-            <div class="feedback-body"><span>FEEDBACK 01</span><h3>把零散的训练逻辑串起来</h3><p>学员提到，课程帮助自己重新理解体态、功能与日常运动之间的关系。</p></div>
-          </article>
-          <article class="feedback-card">
-            <a class="feedback-media" href="assets/feedback-02-teaching-care.jpg" aria-label="查看学员关于专业教学与耐心指导的反馈截图">
-              <img src="assets/feedback-02-teaching-care.jpg" alt="往期学员反馈：老师讲解细致、反复纠正并耐心回答问题" width="1060" height="1260" loading="lazy">
-            </a>
-            <div class="feedback-body"><span>FEEDBACK 02</span><h3>讲得透彻，也愿意反复纠正</h3><p>学员评价老师严谨细致、温和耐心，并分享了多年带课经验。</p></div>
-          </article>
-          <article class="feedback-card">
-            <a class="feedback-media" href="assets/feedback-03-system-thinking.jpg" aria-label="查看学员关于系统理解底层逻辑的反馈截图">
-              <img src="assets/feedback-03-system-thinking.jpg" alt="往期学员反馈：对体态重建和功能重塑的底层逻辑有了更系统的理解" width="1060" height="960" loading="lazy">
-            </a>
-            <div class="feedback-body"><span>FEEDBACK 03</span><h3>理解底层逻辑，不再迷信一个动作</h3><p>学员提到，学习后开始从更整体、更理性的角度理解训练知识。</p></div>
-          </article>
-          <article class="feedback-card">
-            <a class="feedback-media" href="assets/feedback-04-new-coach.jpg" aria-label="查看新手教练关于课程实用性的反馈截图">
-              <img src="assets/feedback-04-new-coach.jpg" alt="往期学员反馈：新手教练能通过课程少走弯路" width="950" height="1080" loading="lazy">
-            </a>
-            <div class="feedback-body"><span>FEEDBACK 04</span><h3>让新手教练少走一些弯路</h3><p>学员认为课程讲解清楚，尤其适合想尽早建立完整思路的新手老师。</p></div>
-          </article>
-          <article class="feedback-card">
-            <div class="feedback-media feedback-media--pair">
-              <a href="assets/feedback-05-flow-and-logic-a.jpg" aria-label="查看学员关于课程流程和动作编排的反馈截图上半部分"><img src="assets/feedback-05-flow-and-logic-a.jpg" alt="往期学员反馈：课程流程流畅，动作编排与理论逻辑相互关联" width="950" height="1180" loading="lazy"></a>
-              <a href="assets/feedback-05-flow-and-logic-b.jpg" aria-label="查看学员关于核心思路和整体调整的反馈截图下半部分"><img src="assets/feedback-05-flow-and-logic-b.jpg" alt="往期学员反馈：核心思路和底层逻辑获得提升，并准备继续实践落地" width="950" height="1250" loading="lazy"></a>
+            <span>FEEDBACK 01 · 往期学员</span>
+            <h3>把零散的训练逻辑串起来</h3>
+            <div class="feedback-copy">
+              <p>集训结束，学了一个“大合集”：从骨盆、胸廓到上下肢动力链，从肩胛稳定到内核心激活，把市面上主流的训练逻辑都串起来了。</p>
+              <p>最大的收获，是重新理解了“美”这件事。美不该是咬牙硬撑的结果，而是把轻运动融入日常，让身体在舒服中变好看。长期主义下的运动美，其实是好的身体功能、生活所需的力量和灵活敏捷，这些才是真正的颜值地基。</p>
+              <p>除了干货，也在 Lara 老师身上看到了自己欠缺的地方：</p>
+              <ol class="feedback-points">
+                <li>全程微笑，不急不躁，能量温和，不被杂音打断。</li>
+                <li>说到的事情，真的能做到。</li>
+                <li>引导动作时，完全从学员感受出发；话不多，但每句话都在点上。</li>
+                <li>随时觉察课堂气氛，灵活调整节奏，不让任何一个人掉队。</li>
+              </ol>
             </div>
-            <div class="feedback-body"><span>FEEDBACK 05</span><h3>课程流程清楚，核心思路更系统</h3><p>一条较长的反馈分为两张重点截图，分别记录课程编排、现场答疑与整体调整思路。</p></div>
+          </article>
+          <article class="feedback-card">
+            <span>FEEDBACK 02 · 往期学员</span>
+            <h3>讲得透彻，也愿意反复纠正</h3>
+            <div class="feedback-copy">
+              <p>您不只是在教专业、教技术，更是在用行动告诉我们：作为一名健身教练，真正的责任和热爱是什么。</p>
+              <p>课堂上您严谨细致，每一个知识点都讲得透彻明白，每一个动作细节都反复纠正，生怕我们没有学会、没有记牢。哪怕我们反复提问，您也始终温和耐心，毫无保留地把多年的经验和心得分享给我们。</p>
+              <p>跟着您学习的这几天，我不仅补齐了很多知识短板，更重新找回了刚入行时的初心——用心教学，对每一个信任自己的人负责。</p>
+            </div>
+          </article>
+          <article class="feedback-card">
+            <span>FEEDBACK 03 · 往期学员</span>
+            <h3>理解底层逻辑，不再迷信“一个动作搞定”</h3>
+            <div class="feedback-copy">
+              <p>通过这几天的学习，我开始对体态重建、功能重塑的底层逻辑有了更系统的理解，能够从更全局、更系统的层面，理性看待网络上的相关知识，不再被所谓的“邪修就是快”“一个动作搞定”迷惑。</p>
+              <p>搞懂底层逻辑以后，就会明白一个普遍的真相：不走捷径，才是真正的捷径。健身如此，健身教学如此，其他领域其实也是如此。</p>
+            </div>
+          </article>
+          <article class="feedback-card">
+            <span>FEEDBACK 04 · 往期学员</span>
+            <h3>让新手教练少走一些弯路</h3>
+            <div class="feedback-copy">
+              <p>老师真的教得很好。新手老师能学到您的课，简直太幸运了，能够少走很多弯路。因为我自己就走过很多弯路。</p>
+            </div>
+          </article>
+          <article class="feedback-card">
+            <span>FEEDBACK 05 · 往期学员</span>
+            <h3>课程流程清楚，核心思路更系统</h3>
+            <div class="feedback-copy">
+              <p>一开始来的目标其实已经达到了。原来气质、个人魅力加上专业，真的会同时出现在一个人身上。</p>
+              <p>我之前参加过一些培训，从来没有感受过这么流畅的课程流程。动作编排和逻辑非常通顺，不是东一块、西一块，今天和明天没有太大关联。所学的理论知识和动作都是由简到难，专业知识也不繁琐复杂，学下来有一种大道至简的感觉。</p>
+              <p>这几天的卡点和问题，都是现场想到、现场提问、现场解决。课后遇到就业思路和发展方向的问题，老师也很耐心地回答。虽然几天之内不可能把所有知识点、手法和动作全部内化吸收，但最基本的核心思路和底层逻辑，已经在脑海中提升了一个层次，认知也有了新的突破。后续还需要加入实践，继续磨合和落地。</p>
+              <p>以前接触到不对称的会员，我的思路没有这么全面，只想着哪里出现问题就调整哪里，更多是在处理局部。学习完体态觉醒以后，当初自己疑惑的很多问题有了答案，而且真正学起来也没有想象中那么困难。</p>
+            </div>
           </article>
         </div>
-        <p class="feedback-note">反馈内容来自往期学员公开或群内提交的学习记录；头像与无关身份信息已尽量避开，文字保留原意。</p>
+        <p class="feedback-note">以上为往期学员反馈的文字整理版。部分反馈来自此前的课程期次，当前课程时长与内容以本页面公布的六天安排为准。</p>
       </div>
     </section>
 
