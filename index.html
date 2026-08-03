@@ -50,7 +50,7 @@
     }
     .nav-inner { display: flex; min-height: 70px; align-items: center; justify-content: space-between; gap: 24px; }
     .brand { display: inline-flex; align-items: center; gap: 11px; line-height: 1.12; }
-    .brand-seal { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font-size: 18px; }
+    .brand-seal { display: grid; width: 37px; height: 37px; place-items: center; border-radius: 50%; background: var(--red); color: #fff; font-family: var(--sans); font-size: 10px; font-weight: 800; letter-spacing: -.03em; }
     .brand strong { display: block; font-size: 16px; letter-spacing: .06em; }
     .brand small { display: block; margin-top: 5px; color: var(--muted); font-family: var(--sans); font-size: 9px; letter-spacing: .08em; }
     .nav-links { display: flex; align-items: center; gap: 28px; font-family: var(--sans); font-size: 12px; }
@@ -142,6 +142,7 @@
     .case-body { align-self: center; padding: 34px; }
     .case-kicker { color: var(--red-dark); font-size: 10px; font-weight: 800; letter-spacing: .08em; }
     .case-body h3 { margin: 12px 0 24px; font-size: 31px; font-weight: 600; line-height: 1.3; }
+    .case-template-note { margin: -8px 0 22px; border-left: 3px solid var(--red); padding-left: 13px; color: var(--ink-soft); font-size: 12px; line-height: 1.85; }
     .case-details { margin: 0; }
     .case-details > div { display: grid; grid-template-columns: 84px 1fr; gap: 15px; border-top: 1px solid var(--line); padding: 13px 0; }
     .case-details dt { color: var(--red-dark); font-size: 11px; font-weight: 800; }
@@ -245,7 +246,7 @@
       body { font-size: 16px; }
       .shell { width: min(100% - 28px, 1120px); }
       .nav-inner { min-height: 63px; }
-      .brand-seal { width: 34px; height: 34px; font-size: 16px; }
+      .brand-seal { width: 34px; height: 34px; font-size: 9px; }
       .brand strong { font-size: 15px; }
       .brand small { font-size: 8px; }
       .nav-button { min-height: 39px; padding: 7px 13px; font-size: 10px; }
@@ -306,7 +307,7 @@
   <nav class="site-nav" aria-label="主导航">
     <div class="shell nav-inner">
       <a class="brand" href="#top" aria-label="返回课程介绍首页">
-        <span class="brand-seal">体</span>
+        <span class="brand-seal">Lara</span>
         <span><strong>体态觉醒</strong><small>EMBODIED REBALANCE®</small></span>
       </a>
       <div class="nav-links">
@@ -448,7 +449,7 @@
     <section class="section section-light" id="cases">
       <div class="shell">
         <div class="section-head">
-          <div><div class="eyebrow">往期学员应用案例</div><h2>学完以后，已经有人这样给会员上课。</h2></div>
+          <div><div class="eyebrow">往期学员应用案例</div><h2>优秀学员案例</h2></div>
           <p>下面是学员在群内提交的匿名带课记录。重点不只是前后照片，而是学员能否按照评估、排方案、带练和复测的顺序，把课程方法真正用在会员身上。</p>
         </div>
         <div class="case-list">
@@ -471,17 +472,18 @@
 
           <article class="case-study">
             <div class="case-media">
-              <img src="assets/case-02-before-after.jpg" alt="案例二：会员课前课后侧面体态对比，面部已遮挡" width="1279" height="1600" loading="lazy">
+              <img src="assets/case-02-review-template.jpg" alt="案例二：会员训练前后侧面体态对比，面部已遮挡" width="962" height="1202" loading="lazy">
             </div>
             <div class="case-body">
-              <div class="case-kicker">CASE 02 · 学员带练记录</div>
-              <h3>腰部、肩背不适与身体排列</h3>
+              <div class="case-kicker">CASE 02 · 案例复盘模板</div>
+              <h3>小腹突出与肩颈经常酸</h3>
+              <p class="case-template-note">为了帮助大家更高效地梳理思路，建议分享案例时统一使用下面的五步逻辑。手机端可长按文字复制。</p>
               <dl class="case-details">
-                <div><dt>会员主诉</dt><dd>腰部疼痛、肩背疼痛。</dd></div>
-                <div><dt>评估观察</dt><dd>骨盆前倾，圆肩头前引，胸椎曲度偏平，胸廓存在压缩表现。</dd></div>
-                <div><dt>调整思路</dt><dd>减轻胸廓压缩，恢复骨盆与胸廓的排列，重新调整身体重心。</dd></div>
-                <div><dt>训练方案</dt><dd>腹内压建立、仰卧 90/90、海底捞、青蛙趴、多关节联动练习。</dd></div>
-                <div class="case-feedback"><dt>动态反馈</dt><dd>会员当次反馈腰部不再疼痛，站立时感觉更挺拔。</dd></div>
+                <div><dt>1 会员主诉</dt><dd>小腹突出，肩颈经常酸。</dd></div>
+                <div><dt>2 核心评估</dt><dd>骨盆旋前、胸廓压缩、脊柱曲度消失，呼吸短浅。</dd></div>
+                <div><dt>3 调整策略</dt><dd>解除胸廓前后侧压缩，恢复胸廓弹性，加入关节联动与重心转移训练。</dd></div>
+                <div class="case-feedback"><dt>4 动态反馈</dt><dd>肩颈不适有所缓解；训练后协调性增加，能够感受到下腹向上提。</dd></div>
+                <div><dt>5 训练方案</dt><dd>仰卧 90/90 吹吸管、移动式动态平衡训练、俯卧三月位练习、抱球转体步态练习、靠墙画圈，最后再次测试。</dd></div>
               </dl>
             </div>
           </article>
